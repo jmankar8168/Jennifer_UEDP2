@@ -6,66 +6,72 @@ export interface ModeToggleProps {
   className?: string;
   /** Figma Variant State */
   State?: 'Default' | 'Selected' | 'Hover';
-  /** Left option label */
-  leftLabel?: string;
-  /** Right option label */
-  rightLabel?: string;
-  /** Controlled active side ('left' | 'right') */
-  activeSide?: 'left' | 'right';
-  /** Change callback */
-  onChange?: (active: 'left' | 'right') => void;
+  /** Text for left tab (Instance: "Background") */
+  leftText?: string;
+  /** Text for right tab (Instance: "Background+Border") */
+  rightText?: string;
+  /** Controlled active tab ('left' | 'right') */
+  activeTab?: 'left' | 'right';
+  /** Callback when a tab is clicked */
+  onTabChange?: (tab: 'left' | 'right') => void;
 }
 
 /**
- * ModeToggle (2-Way Segmented Control) Component
+ * ModeToggle Component
  * Preserved Figma Layer Name: "mode toggle" (Node ID: 30:125)
+ * Composed of Figma sub-instances: "Background" (30:113) + "Background+Border" (30:114)
  */
 export const ModeToggle: React.FC<ModeToggleProps> = ({
   className = '',
   State = 'Default',
-  leftLabel = 'DARK',
-  rightLabel = 'LIGHT',
-  activeSide,
-  onChange,
+  leftText = 'TEXT',
+  rightText = 'TEXT',
+  activeTab,
+  onTabChange,
 }) => {
-  // If controlled, use activeSide; otherwise initialize based on Figma State variant (Selected = left active, Default = right active)
   const [internalActive, setInternalActive] = useState<'left' | 'right'>(
-    State === 'Selected' ? 'left' : 'right'
+    State === 'Selected' ? 'right' : 'right'
   );
 
-  const currentActive = activeSide !== undefined ? activeSide : internalActive;
+  const currentActive = activeTab !== undefined ? activeTab : internalActive;
 
-  const handleSelect = (side: 'left' | 'right') => {
-    if (activeSide === undefined) {
-      setInternalActive(side);
+  const handleTabClick = (tab: 'left' | 'right') => {
+    if (activeTab === undefined) {
+      setInternalActive(tab);
     }
-    if (onChange) {
-      onChange(side);
+    if (onTabChange) {
+      onTabChange(tab);
     }
   };
 
-  const stateClass = `uedp-mode-toggle--${State.toLowerCase()}`;
+  const stateClass = `uedp-modetoggle--state-${State.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
 
   return (
-    <div className={`uedp-mode-toggle ${stateClass} ${className}`.trim()} role="group" aria-label="Mode Toggle">
-      {/* Left Segment */}
+    <div
+      className={`uedp-modetoggle ${stateClass} ${className}`.trim()}
+      role="radiogroup"
+      aria-label="mode toggle"
+    >
+      {/* Left Tab: Instance "Background" (Node 30:113) */}
       <button
         type="button"
-        className={`uedp-mode-toggle-segment ${currentActive === 'left' ? 'uedp-mode-toggle-segment--active-light' : 'uedp-mode-toggle-segment--inactive-dark'}`}
-        onClick={() => handleSelect('left')}
-        aria-pressed={currentActive === 'left'}
+        role="radio"
+        aria-checked={currentActive === 'left'}
+        className={`uedp-modetoggle-tab uedp-modetoggle-tab--left ${currentActive === 'left' ? 'uedp-modetoggle-tab--active' : 'uedp-modetoggle-tab--inactive'}`}
+        onClick={() => handleTabClick('left')}
       >
-        <span className="uedp-mode-toggle-text">{leftLabel}</span>
+        <span className="uedp-modetoggle-tab-text">{leftText}</span>
       </button>
 
-      {/* Right Segment */}
+      {/* Right Tab: Instance "Background+Border" (Node 30:114) */}
       <button
         type="button"
-        className={`uedp-mode-toggle-segment ${currentActive === 'right' ? 'uedp-mode-toggle-segment--active-light' : 'uedp-mode-toggle-segment--inactive-dark'}`}
-        onClick={() => handleSelect('right')}
-        aria-pressed={currentActive === 'right'}
+        role="radio"
+        aria-checked={currentActive === 'right'}
+        className={`uedp-modetoggle-tab uedp-modetoggle-tab--right ${currentActive === 'right' ? 'uedp-modetoggle-tab--active' : 'uedp-modetoggle-tab--inactive'}`}
+        onClick={() => handleTabClick('right')}
       >
-        <span className="uedp-mode-toggle-text">{rightLabel}</span>
+        <span className="uedp-modetoggle-tab-text">{rightText}</span>
       </button>
     </div>
   );

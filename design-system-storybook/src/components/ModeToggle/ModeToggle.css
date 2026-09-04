@@ -1,43 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 /**
- * CSS for ModeToggle Component
+ * CSS for ModeToggle ("mode toggle")
  * Figma Node ID: 30:125
- * Preserved Layer Name: "mode toggle"
+ * Left Tab (Instance "Background"): 169px × 40px
+ * Right Tab (Instance "Background+Border"): 171px × 40px
+ * Total Dimensions: 342px × 40px
  */
 
-.uedp-mode-toggle {
+.uedp-modetoggle {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
-  width: 100%;
-  max-width: 342px;
+  justify-content: flex-start;
+  width: 342px;
+  max-width: 100%;
   height: 40px;
   min-height: 40px;
   padding: 0;
+  margin: 0;
+  gap: 0px;
   border-radius: 0px;
   background-color: transparent;
-  gap: 0px;
-}
-
-.uedp-mode-toggle-segment {
-  box-sizing: border-box;
-  flex: 1;
-  height: 40px;
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-  border: none;
-  border-radius: 0px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
 }
 
-.uedp-mode-toggle-text {
+/* Individual Segment Tab */
+.uedp-modetoggle-tab {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 16px;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.uedp-modetoggle-tab--left {
+  width: 169px;
+  flex: 0 0 169px;
+}
+
+.uedp-modetoggle-tab--right {
+  width: 171px;
+  flex: 0 0 171px;
+}
+
+/* Text Layer */
+.uedp-modetoggle-tab-text {
   font-family: 'Space Mono', monospace, sans-serif;
   font-size: 9px;
   font-weight: 700;
@@ -48,28 +63,61 @@
   white-space: nowrap;
 }
 
-/* Active Segment (White background, Black text) */
-.uedp-mode-toggle-segment--active-light {
-  background-color: var(--uedp-base-white, #ffffff);
-  border: 1px solid var(--uedp-base-white, #ffffff);
-}
-.uedp-mode-toggle-segment--active-light .uedp-mode-toggle-text {
-  color: var(--uedp-base-black, #000000);
-}
-
-/* Inactive Segment (Black background, White border, White text) */
-.uedp-mode-toggle-segment--inactive-dark {
+/* === VARIANT: State = Default === */
+/* Left Tab: Black fill (VariableID:1:3), 1px solid white border (VariableID:1:4), White text */
+.uedp-modetoggle--state-default .uedp-modetoggle-tab--left {
   background-color: var(--uedp-base-black, #000000);
   border: 1px solid var(--uedp-base-white, #ffffff);
 }
-.uedp-mode-toggle-segment--inactive-dark .uedp-mode-toggle-text {
+.uedp-modetoggle--state-default .uedp-modetoggle-tab--left .uedp-modetoggle-tab-text {
   color: var(--uedp-base-white, #ffffff);
 }
-.uedp-mode-toggle-segment--inactive-dark:hover {
-  background-color: #262626;
+
+/* Right Tab: White fill (VariableID:1:4), No border, Black text (VariableID:1:3) */
+.uedp-modetoggle--state-default .uedp-modetoggle-tab--right {
+  background-color: var(--uedp-base-white, #ffffff);
+  border: 1px solid transparent;
+}
+.uedp-modetoggle--state-default .uedp-modetoggle-tab--right .uedp-modetoggle-tab-text {
+  color: var(--uedp-base-black, #000000);
 }
 
-/* State = Hover variant */
-.uedp-mode-toggle--hover .uedp-mode-toggle-segment--inactive-dark {
-  background-color: #334155;
+/* === VARIANT: State = Hover === */
+/* Left Tab: Dark Gray fill #404040 (VariableID:1:45), 1px solid white border, White text */
+.uedp-modetoggle--state-hover .uedp-modetoggle-tab--left,
+.uedp-modetoggle--state-default .uedp-modetoggle-tab--left:hover {
+  background-color: #404040;
+  border: 1px solid var(--uedp-base-white, #ffffff);
+}
+.uedp-modetoggle--state-hover .uedp-modetoggle-tab--left .uedp-modetoggle-tab-text,
+.uedp-modetoggle--state-default .uedp-modetoggle-tab--left:hover .uedp-modetoggle-tab-text {
+  color: var(--uedp-base-white, #ffffff);
+}
+
+/* Right Tab in Hover state: White fill, Black text */
+.uedp-modetoggle--state-hover .uedp-modetoggle-tab--right {
+  background-color: var(--uedp-base-white, #ffffff);
+  border: 1px solid transparent;
+}
+.uedp-modetoggle--state-hover .uedp-modetoggle-tab--right .uedp-modetoggle-tab-text {
+  color: var(--uedp-base-black, #000000);
+}
+
+/* === VARIANT: State = Selected === */
+/* Left Tab: Black fill, 1px solid white border, White text */
+.uedp-modetoggle--state-selected .uedp-modetoggle-tab--left {
+  background-color: var(--uedp-base-black, #000000);
+  border: 1px solid var(--uedp-base-white, #ffffff);
+}
+.uedp-modetoggle--state-selected .uedp-modetoggle-tab--left .uedp-modetoggle-tab-text {
+  color: var(--uedp-base-white, #ffffff);
+}
+
+/* Right Tab: Lime Accent fill #B7FF4D (VariableID:17:2340), Black text (VariableID:1:3) */
+.uedp-modetoggle--state-selected .uedp-modetoggle-tab--right {
+  background-color: #b7ff4d;
+  border: 1px solid transparent;
+}
+.uedp-modetoggle--state-selected .uedp-modetoggle-tab--right .uedp-modetoggle-tab-text {
+  color: var(--uedp-base-black, #000000);
 }

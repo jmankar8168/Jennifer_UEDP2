@@ -15,26 +15,31 @@ const meta: Meta<typeof ModeToggle> = {
 | --- | --- |
 | **Exact Layer Name** | \`mode toggle\` |
 | **Figma Node ID** | \`30:125\` |
-| **Subcomponents** | \`Background\` (\`30:113\`) + \`Background+Border\` (\`30:114\`) |
-| **Dimensions** | 342px width × 40px height |
+| **Dimensions** | 342px total width × 40px height |
+| **Left Subcomponent** | \`Background\` (30:113) - 169px width × 40px height |
+| **Right Subcomponent** | \`Background+Border\` (30:114) - 171px width × 40px height |
 | **Typography** | \`Space Mono\`, 9px, 700 Bold, Uppercase, Letter-spacing: 1.08px |
-| **Variants** | \`Default\`, \`Selected\`, \`Hover\` |
+| **Figma Variants** | \`Default\`, \`Selected\` (Lime Accent), \`Hover\` |
+| **Bound Variables** | \`VariableID:1:3\` (#000000), \`VariableID:1:4\` (#FFFFFF), \`VariableID:17:2340\` (#B7FF4D), \`VariableID:1:45\` (#404040) |
         `,
       },
     },
   },
   argTypes: {
-    leftLabel: {
+    leftText: {
       control: { type: 'text' },
-      defaultValue: 'DARK'
+      description: 'Text in left segment (Background)',
+      defaultValue: 'TEXT'
     },
-    rightLabel: {
+    rightText: {
       control: { type: 'text' },
-      defaultValue: 'LIGHT'
+      description: 'Text in right segment (Background+Border)',
+      defaultValue: 'TEXT'
     },
     State: {
       control: { type: 'select' },
-      options: ['Default', 'Selected', 'Hover']
+      options: ['Default', 'Selected', 'Hover'],
+      description: 'Figma visual state variant'
     }
   }
 };
@@ -44,41 +49,49 @@ type Story = StoryObj<typeof ModeToggle>;
 
 export const Default: Story = {
   args: {
-    leftLabel: 'DARK',
-    rightLabel: 'LIGHT',
+    leftText: 'TEXT',
+    rightText: 'TEXT',
     State: 'Default'
   }
 };
 
 export const Selected: Story = {
   args: {
-    leftLabel: 'DARK',
-    rightLabel: 'LIGHT',
+    leftText: 'TEXT',
+    rightText: 'TEXT',
     State: 'Selected'
   }
 };
 
-export const RoleToggle: Story = {
+export const HoverState: Story = {
   args: {
-    leftLabel: 'VOLUNTEER',
-    rightLabel: 'VISION SEEKER',
-    State: 'Default'
+    leftText: 'TEXT',
+    rightText: 'TEXT',
+    State: 'Hover'
+  }
+};
+
+export const RoleSwitchExample: Story = {
+  args: {
+    leftText: 'VOLUNTEER',
+    rightText: 'SEEKER',
+    State: 'Selected'
   }
 };
 
 export const InteractiveDemo: Story = {
   render: () => {
-    const [active, setActive] = useState<'left' | 'right'>('right');
+    const [state, setState] = useState<'Default' | 'Selected'>('Default');
     return (
-      <div style={{ padding: '24px', backgroundColor: '#0F172A', borderRadius: '12px', maxWidth: '400px' }}>
-        <div style={{ color: '#94A3B8', fontSize: '13px', marginBottom: '16px', fontFamily: 'monospace' }}>
-          Current Active Mode: <strong style={{ color: '#38BDF8' }}>{active.toUpperCase()}</strong>
+      <div style={{ padding: '32px', backgroundColor: '#0F172A', borderRadius: '12px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div style={{ color: '#94A3B8', fontSize: '13px', fontFamily: 'monospace' }}>
+          Current Active Variant: <strong style={{ color: state === 'Selected' ? '#B7FF4D' : '#FFFFFF' }}>{state}</strong>
         </div>
         <ModeToggle
-          leftLabel="VOLUNTEER"
-          rightLabel="VISION SEEKER"
-          activeSide={active}
-          onChange={setActive}
+          leftText="VOLUNTEER"
+          rightText="SEEKER"
+          State={state}
+          onTabChange={(tab) => setState(tab === 'left' ? 'Default' : 'Selected')}
         />
       </div>
     );
