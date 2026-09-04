@@ -1,38 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
 /**
- * CSS for ModeToggle
- * Figma Preserved Layer Name: "mode toggle"
+ * CSS for ModeToggle Component
+ * Figma Node ID: 30:125
+ * Preserved Layer Name: "mode toggle"
  */
 
-.uedp-modetoggle {
+.uedp-mode-toggle {
   box-sizing: border-box;
-  padding: 12px 16px;
-  border-radius: var(--uedp-rounded-md, 6px);
-  background-color: var(--uedp-slate-800, #1e293b);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-family: sans-serif;
-  font-size: 14px;
-  transition: all 0.2s ease-in-out;
-  min-width: 342px;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  max-width: 342px;
+  height: 40px;
   min-height: 40px;
+  padding: 0;
+  border-radius: 0px;
+  background-color: transparent;
+  gap: 0px;
 }
 
-.uedp-component-label {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.uedp-modetoggle--state-default {
-  min-width: 342px;
+.uedp-mode-toggle-segment {
+  box-sizing: border-box;
+  flex: 1;
+  height: 40px;
   min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
 }
 
-.uedp-modetoggle--state-hover {
-  min-width: 342px;
-  min-height: 40px;
+.uedp-mode-toggle-text {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 13.33px;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.uedp-modetoggle--state-selected {
-  min-width: 342px;
-  min-height: 40px;
+/* Active Segment (White background, Black text) */
+.uedp-mode-toggle-segment--active-light {
+  background-color: var(--uedp-base-white, #ffffff);
+  border: 1px solid var(--uedp-base-white, #ffffff);
+}
+.uedp-mode-toggle-segment--active-light .uedp-mode-toggle-text {
+  color: var(--uedp-base-black, #000000);
 }
 
+/* Inactive Segment (Black background, White border, White text) */
+.uedp-mode-toggle-segment--inactive-dark {
+  background-color: var(--uedp-base-black, #000000);
+  border: 1px solid var(--uedp-base-white, #ffffff);
+}
+.uedp-mode-toggle-segment--inactive-dark .uedp-mode-toggle-text {
+  color: var(--uedp-base-white, #ffffff);
+}
+.uedp-mode-toggle-segment--inactive-dark:hover {
+  background-color: #262626;
+}
+
+/* State = Hover variant */
+.uedp-mode-toggle--hover .uedp-mode-toggle-segment--inactive-dark {
+  background-color: #334155;
+}

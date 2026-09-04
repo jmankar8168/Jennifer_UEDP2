@@ -1,24 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
 /**
- * CSS for BackgroundBorder
- * Figma Preserved Layer Name: "Background+Border"
+ * CSS for BackgroundBorder Component
+ * Figma Node ID: 30:114 (Light) & 30:113 (Dark)
+ * Preserved Layer Name: "Background+Border"
  */
 
-.uedp-backgroundborder {
+.uedp-bg-border {
   box-sizing: border-box;
-  padding: 12px 16px;
-  border-radius: var(--uedp-rounded-md, 6px);
-  background-color: var(--uedp-slate-800, #1e293b);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-family: sans-serif;
-  font-size: 14px;
-  transition: all 0.2s ease-in-out;
-  background-color: #FFFFFF;
-  min-width: 171px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 171px;
+  height: 40px;
   min-height: 40px;
+  padding: 0 16px;
+  border-radius: 0px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
 }
 
-.uedp-component-label {
-  font-weight: 500;
-  letter-spacing: 0.02em;
+.uedp-bg-border-text {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 13.33px;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
 }
 
+/* Light Variant (Node 30:114) */
+.uedp-bg-border--light {
+  background-color: var(--uedp-base-white, #ffffff);
+  border: 1px solid transparent;
+}
+.uedp-bg-border--light .uedp-bg-border-text {
+  color: var(--uedp-base-black, #000000);
+}
+.uedp-bg-border--light:hover {
+  background-color: #f1f5f9;
+}
+
+/* Dark Variant (Node 30:113) */
+.uedp-bg-border--dark {
+  background-color: var(--uedp-base-black, #000000);
+  border: 1px solid var(--uedp-base-white, #ffffff);
+}
+.uedp-bg-border--dark .uedp-bg-border-text {
+  color: var(--uedp-base-white, #ffffff);
+}
+.uedp-bg-border--dark:hover {
+  background-color: #262626;
+}
+
+/* Active State */
+.uedp-bg-border--active {
+  box-shadow: 0 0 0 2px #38bdf8;
+}
