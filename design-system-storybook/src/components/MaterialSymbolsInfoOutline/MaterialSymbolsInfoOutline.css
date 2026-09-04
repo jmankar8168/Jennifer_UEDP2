@@ -1,0 +1,24 @@
+/**
+ * CSS for MaterialSymbolsInfoOutline
+ * Figma Preserved Layer Name: "material-symbols:info-outline"
+ */
+
+.uedp-materialsymbolsinfooutline {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: var(--uedp-rounded-md, 6px);
+  background-color: var(--uedp-slate-800, #1e293b);
+  color: var(--uedp-slate-50, #f8fafc);
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  background-color: #FFFFFF;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.uedp-component-label {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+

@@ -1,0 +1,56 @@
+/**
+ * CSS for Component14
+ * Figma Preserved Layer Name: "Component 14"
+ */
+
+.uedp-component14 {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: var(--uedp-rounded-md, 6px);
+  background-color: var(--uedp-slate-800, #1e293b);
+  color: var(--uedp-slate-50, #f8fafc);
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  background-color: #171717;
+  border-radius: 26px;
+  border: 1px solid #525252;
+  min-width: 52px;
+  min-height: 52px;
+}
+
+.uedp-component-label {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.uedp-component14--vision-blind--type-default {
+  background-color: #171717;
+  border-radius: 26px;
+  border: 1px solid #525252;
+  min-width: 52px;
+  min-height: 52px;
+}
+
+.uedp-component14--vision-sighted--type-default {
+  background-color: #171717;
+  border-radius: 26px;
+  border: 1px solid #525252;
+  min-width: 52px;
+  min-height: 52px;
+}
+
+.uedp-component14--vision-blind--type-selected {
+  background-color: #FFFFFF;
+  border-radius: 26px;
+  min-width: 52px;
+  min-height: 52px;
+}
+
+.uedp-component14--vision-sighte--type-selected {
+  background-color: #FFFFFF;
+  border-radius: 26px;
+  min-width: 52px;
+  min-height: 52px;
+}
+

@@ -1,0 +1,34 @@
+/**
+ * CSS for Background2
+ * Figma Preserved Layer Name: "Background"
+ */
+
+.uedp-background2 {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: var(--uedp-rounded-md, 6px);
+  background-color: var(--uedp-slate-800, #1e293b);
+  color: var(--uedp-slate-50, #f8fafc);
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  min-width: 139px;
+  min-height: 39px;
+}
+
+.uedp-component-label {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.uedp-background2--property-1-no {
+  min-width: 139px;
+  min-height: 39px;
+}
+
+.uedp-background2--property-1-yes {
+  background-color: #FFFFFF;
+  min-width: 139px;
+  min-height: 39px;
+}
+

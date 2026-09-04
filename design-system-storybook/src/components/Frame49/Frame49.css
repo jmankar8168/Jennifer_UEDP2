@@ -1,0 +1,26 @@
+/**
+ * CSS for Frame49
+ * Figma Preserved Layer Name: "Frame 49"
+ */
+
+.uedp-frame49 {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: var(--uedp-rounded-md, 6px);
+  background-color: var(--uedp-slate-800, #1e293b);
+  color: var(--uedp-slate-50, #f8fafc);
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 252px;
+  min-height: 79px;
+}
+
+.uedp-component-label {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+

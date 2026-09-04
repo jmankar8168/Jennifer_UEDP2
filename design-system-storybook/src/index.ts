@@ -1,0 +1,66 @@
+/**
+ * Figma Design System - Component Library Barrel Export
+ * Auto-generated with Preserved Layer Names
+ */
+
+export { ChooseYourRoleForAPersonalisedExperience } from './components/ChooseYourRoleForAPersonalisedExperience/ChooseYourRoleForAPersonalisedExperience';
+export { Frame37 } from './components/Frame37/Frame37';
+export { Frame8 } from './components/Frame8/Frame8';
+export { Group13Default } from './components/Group13Default/Group13Default';
+export { HowWouldYouLikeToUseVisionsync } from './components/HowWouldYouLikeToUseVisionsync/HowWouldYouLikeToUseVisionsync';
+export { PleaseRateYourVolunteerOutOf5StarsItHelpsUsImproveYourExperience } from './components/PleaseRateYourVolunteerOutOf5StarsItHelpsUsImproveYourExperience/PleaseRateYourVolunteerOutOf5StarsItHelpsUsImproveYourExperience';
+export { SelectHelpType } from './components/SelectHelpType/SelectHelpType';
+export { Step1Of2 } from './components/Step1Of2/Step1Of2';
+export { Step1Of3 } from './components/Step1Of3/Step1Of3';
+export { SwitchRole } from './components/SwitchRole/SwitchRole';
+export { GridiconsCross } from './components/GridiconsCross/GridiconsCross';
+export { IcSharpFlipCameraIos } from './components/IcSharpFlipCameraIos/IcSharpFlipCameraIos';
+export { MaterialSymbolsLightMissedVideoCall } from './components/MaterialSymbolsLightMissedVideoCall/MaterialSymbolsLightMissedVideoCall';
+export { MaterialSymbolsInfoOutline } from './components/MaterialSymbolsInfoOutline/MaterialSymbolsInfoOutline';
+export { Component7 } from './components/Component7/Component7';
+export { Group7 } from './components/Group7/Group7';
+export { Group8 } from './components/Group8/Group8';
+export { VoiceNote } from './components/VoiceNote/VoiceNote';
+export { VoiceNote1 } from './components/VoiceNote1/VoiceNote1';
+export { Frame39 } from './components/Frame39/Frame39';
+export { VoicePromptBlock } from './components/VoicePromptBlock/VoicePromptBlock';
+export { VoicePromptBlock1 } from './components/VoicePromptBlock1/VoicePromptBlock1';
+export { VoicePromptBlock2 } from './components/VoicePromptBlock2/VoicePromptBlock2';
+export { Background } from './components/Background/Background';
+export { BackgroundBorder } from './components/BackgroundBorder/BackgroundBorder';
+export { Background1 } from './components/Background1/Background1';
+export { ModeToggle } from './components/ModeToggle/ModeToggle';
+export { Search } from './components/Search/Search';
+export { HelpTypeOptionsLargeTouchTargets } from './components/HelpTypeOptionsLargeTouchTargets/HelpTypeOptionsLargeTouchTargets';
+export { Component10 } from './components/Component10/Component10';
+export { Component11 } from './components/Component11/Component11';
+export { Group11Group16 } from './components/Group11Group16/Group11Group16';
+export { Component12 } from './components/Component12/Component12';
+export { BackgroundHorizontalborder } from './components/BackgroundHorizontalborder/BackgroundHorizontalborder';
+export { Group25 } from './components/Group25/Group25';
+export { IonToggle } from './components/IonToggle/IonToggle';
+export { Camera } from './components/Camera/Camera';
+export { Lable } from './components/Lable/Lable';
+export { Component9 } from './components/Component9/Component9';
+export { Component14 } from './components/Component14/Component14';
+export { Component15 } from './components/Component15/Component15';
+export { Group32 } from './components/Group32/Group32';
+export { JobCards } from './components/JobCards/JobCards';
+export { JobCardsBackground } from './components/JobCardsBackground/JobCardsBackground';
+export { Component16 } from './components/Component16/Component16';
+export { Tab } from './components/Tab/Tab';
+export { Search1 } from './components/Search1/Search1';
+export { Frame49 } from './components/Frame49/Frame49';
+export { Background2 } from './components/Background2/Background2';
+export { VoicePromptBlock3 } from './components/VoicePromptBlock3/VoicePromptBlock3';
+export { StarsSingle } from './components/StarsSingle/StarsSingle';
+export { Stars } from './components/Stars/Stars';
+export { Frame38 } from './components/Frame38/Frame38';
+export { VoiceNote2 } from './components/VoiceNote2/VoiceNote2';
+export { Frame60 } from './components/Frame60/Frame60';
+export { Component21 } from './components/Component21/Component21';
+export { Frame63 } from './components/Frame63/Frame63';
+export { VoicePromptBlock4 } from './components/VoicePromptBlock4/VoicePromptBlock4';
+export { Listening } from './components/Listening/Listening';
+export { Component23 } from './components/Component23/Component23';
+export { MenuBaseline } from './components/MenuBaseline/MenuBaseline';

@@ -1,0 +1,37 @@
+/**
+ * CSS for Step1Of2
+ * Figma Preserved Layer Name: "Step 1 of 2"
+ */
+
+.uedp-step1of2 {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: var(--uedp-rounded-md, 6px);
+  background-color: var(--uedp-slate-800, #1e293b);
+  color: var(--uedp-slate-50, #f8fafc);
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  background-color: #FFFFFF;
+  min-width: 92px;
+  min-height: 15px;
+}
+
+.uedp-component-label {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.uedp-step1of2--property-1-default {
+  background-color: #FFFFFF;
+  min-width: 92px;
+  min-height: 15px;
+}
+
+.uedp-step1of2--property-1-variant2 {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  min-width: 92px;
+  min-height: 15px;
+}
+

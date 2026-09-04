@@ -1,0 +1,15 @@
+# Node dependencies
+node_modules/
+.npm/
+
+# Build outputs
+dist/
+storybook-static/
+.cache/
+
+# Environment / Logs / Scratch
+*.log
+.DS_Store
+scratch/
+figma-file-response.json
+figma-variables-response.json

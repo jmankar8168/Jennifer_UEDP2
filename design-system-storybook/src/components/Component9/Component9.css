@@ -1,0 +1,43 @@
+/**
+ * CSS for Component9
+ * Figma Preserved Layer Name: "Component 9"
+ */
+
+.uedp-component9 {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: var(--uedp-rounded-md, 6px);
+  background-color: var(--uedp-slate-800, #1e293b);
+  color: var(--uedp-slate-50, #f8fafc);
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #525252;
+  min-width: 342px;
+  min-height: 98px;
+}
+
+.uedp-component-label {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.uedp-component9--property-1-option-b---sighted-user--unselected- {
+  border: 1px solid #525252;
+  min-width: 342px;
+  min-height: 98px;
+}
+
+.uedp-component9--property-1-variant2 {
+  border: 1px solid #FFFFFF;
+  min-width: 342px;
+  min-height: 98px;
+}
+
+.uedp-component9--property-1-variant3 {
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  min-width: 342px;
+  min-height: 98px;
+}
+
