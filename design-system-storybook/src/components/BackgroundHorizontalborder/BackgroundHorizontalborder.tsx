@@ -29,11 +29,14 @@ export interface BackgroundHorizontalborderProps extends React.HTMLAttributes<HT
 }
 
 /**
- * Icons matching Figma Node 30:262 / 30:180 - 30:183 specifications
+ * Assist = Eye icon
+ * Figma: Frame 16:816 — 24x24
+ * Vector 16:817: rel=(2,4) size=(20x16) — eye outer shape
+ * Vector 16:818: rel=(9,9) size=(6x6) — iris
  */
-const AssistIcon: React.FC<{ className?: string }> = ({ className }) => (
+const AssistIcon: React.FC = () => (
   <svg
-    className={`uedp-nav-icon ${className || ''}`.trim()}
+    className="uedp-nav-icon"
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -41,28 +44,35 @@ const AssistIcon: React.FC<{ className?: string }> = ({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    {/* Camera Viewfinder Body */}
+    {/* Eye outer shape: bounding (2,4) → (22,20), lense curve through (12,4) top and (12,20) bottom */}
     <path
-      d="M7 4h10l1.5 2.5H21a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1h2.5L7 4z"
+      d="M2 12 C6 4 18 4 22 12 C18 20 6 20 2 12 Z"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="square"
-      strokeLinejoin="round"
+      fill="none"
     />
-    {/* Center Lens */}
+    {/* Iris circle: center (12,12) radius 3, bounding (9,9) → (15,15) */}
     <circle
       cx="12"
       cy="12"
       r="3"
       stroke="currentColor"
       strokeWidth="2"
+      fill="none"
     />
   </svg>
 );
 
-const ScanIcon: React.FC<{ className?: string }> = ({ className }) => (
+/**
+ * Scan = 4-square QR grid icon
+ * Figma: Frame 16:1844 — 24x24
+ * 4 Vectors: 7x7 squares at (3,3), (14,3), (3,14), (14,14)
+ * 2 extension Vectors: vertical 0x3 at (14,18), horizontal 3x0 at (18,14)
+ */
+const ScanIcon: React.FC = () => (
   <svg
-    className={`uedp-nav-icon ${className || ''}`.trim()}
+    className="uedp-nav-icon"
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -70,18 +80,29 @@ const ScanIcon: React.FC<{ className?: string }> = ({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    {/* 4 Viewfinder Corner Brackets + Center Scan Line */}
-    <path d="M3 10V3h7" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
-    <path d="M14 3h7v7" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
-    <path d="M3 14v7h7" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
-    <path d="M14 21h7v-7" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
-    <path d="M7 12h10" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
+    {/* Top-left square: (3,3) 7x7 */}
+    <rect x="3" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
+    {/* Top-right square: (14,3) 7x7 */}
+    <rect x="14" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
+    {/* Bottom-left square: (3,14) 7x7 */}
+    <rect x="3" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
+    {/* Bottom-right square: (14,14) 7x7 */}
+    <rect x="14" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
+    {/* Vertical extension line from bottom-right: (14,18) → (14,21) */}
+    <line x1="14" y1="21" x2="14" y2="24" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
+    {/* Horizontal extension line from bottom-right: (18,14) → (21,14) */}
+    <line x1="21" y1="14" x2="24" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
   </svg>
 );
 
-const JobsIcon: React.FC<{ className?: string }> = ({ className }) => (
+/**
+ * Jobs = 5-pointed Star icon
+ * Figma: Frame 16:993 — 24x24
+ * Vector 16:994: rel=(2,2) size=(20×19.02) — single star path
+ */
+const JobsIcon: React.FC = () => (
   <svg
-    className={`uedp-nav-icon ${className || ''}`.trim()}
+    className="uedp-nav-icon"
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -89,84 +110,71 @@ const JobsIcon: React.FC<{ className?: string }> = ({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    {/* Briefcase Bag */}
-    <rect
-      x="2"
-      y="7"
-      width="20"
-      height="14"
-      rx="2"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="square"
-    />
-    {/* Briefcase Handle */}
+    {/* 5-pointed star: bounding (2,2)→(22,21), outer R≈10, inner R≈4, center (12,11.5) */}
     <path
-      d="M16 7V4a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"
+      d="M12 2 L14.47 8.76 L21.51 8.91 L15.8 13.24 L17.88 21 L12 17 L6.12 21 L8.2 13.24 L2.49 8.91 L9.53 8.76 Z"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="square"
+      strokeLinejoin="miter"
+      fill="none"
     />
-    {/* Center Division Line */}
-    <path d="M2 12h20" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
   </svg>
 );
 
-const SupportIcon: React.FC<{ className?: string }> = ({ className }) => (
+/**
+ * Support = 3-person community icon
+ * Figma: Frame 16:1863 — 42x27
+ * Center person: head (16.83,5.97) 8x8, body (12.83,17.97) 16x6
+ * Right person: head (30.33,3.375) 6.33x6.33, body (28,12.875) 11.83x4.75
+ * Left person: head (5.33,3.375) 6.33x6.33, body (2.17,12.875) 11.83x4.75
+ */
+const SupportIcon: React.FC = () => (
   <svg
-    className={`uedp-nav-icon uedp-nav-icon--wide ${className || ''}`.trim()}
+    className="uedp-nav-icon uedp-nav-icon--wide"
     width="32"
-    height="24"
+    height="22"
     viewBox="0 0 42 27"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    {/* Center Primary Person */}
-    <circle cx="21" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
-    <path
-      d="M13 24v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="square"
-    />
-    {/* Left Helper Person */}
-    <circle cx="8" cy="7" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
-    <path
-      d="M2 24v-1.5a3.5 3.5 0 0 1 3.5-3.5h3"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="square"
-    />
-    {/* Right Helper Person */}
-    <circle cx="34" cy="7" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
-    <path
-      d="M33.5 19h3a3.5 3.5 0 0 1 3.5 3.5V24"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="square"
-    />
+    {/* Left person — head: center (8.5, 6.5) r≈3.17 */}
+    <circle cx="8.5" cy="6.5" r="3.2" stroke="currentColor" strokeWidth="2" fill="none" />
+    {/* Left person — shoulder arc: from (2.17,17.5) to (14,17.5) */}
+    <path d="M2 18 C3 13 14 13 15 18" stroke="currentColor" strokeWidth="2" strokeLinecap="square" fill="none" />
+
+    {/* Center person (larger) — head: center (20.83, 9.97) r≈4 */}
+    <circle cx="20.83" cy="9.97" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
+    {/* Center person — shoulder arc: from (12.83,23.5) to (28.83,23.5) */}
+    <path d="M12 25 C13 19 29 19 30 25" stroke="currentColor" strokeWidth="2" strokeLinecap="square" fill="none" />
+
+    {/* Right person — head: center (33.5, 6.5) r≈3.17 */}
+    <circle cx="33.5" cy="6.5" r="3.2" stroke="currentColor" strokeWidth="2" fill="none" />
+    {/* Right person — shoulder arc: from (28,17.5) to (39.83,17.5) */}
+    <path d="M27 18 C28 13 40 13 41 18" stroke="currentColor" strokeWidth="2" strokeLinecap="square" fill="none" />
   </svg>
 );
 
 interface NavItemDef {
   key: NavItemKey;
   label: string;
-  icon: React.FC<{ className?: string }>;
+  Icon: React.FC;
 }
 
 const NAV_ITEMS: NavItemDef[] = [
-  { key: 'assist', label: 'Assist', icon: AssistIcon },
-  { key: 'scan', label: 'Scan', icon: ScanIcon },
-  { key: 'jobs', label: 'Jobs', icon: JobsIcon },
-  { key: 'support', label: 'Support', icon: SupportIcon },
+  { key: 'assist', label: 'Assist', Icon: AssistIcon },
+  { key: 'scan',   label: 'Scan',   Icon: ScanIcon   },
+  { key: 'jobs',   label: 'Jobs',   Icon: JobsIcon   },
+  { key: 'support',label: 'Support',Icon: SupportIcon },
 ];
 
 /**
  * BackgroundHorizontalborder Component
  * Preserved Figma Layer Name: "Background+HorizontalBorder"
  * Node ID: 30:262 (Component Set with 9 variants)
- * Width: 402px | Height: 86px | Background: #111111 | Border: 1px solid #222222
+ * Width: 402px | Height: 86px
+ * Background: #111111 | Border: 1px solid #222222
  */
 export const BackgroundHorizontalborder: React.FC<BackgroundHorizontalborderProps> = ({
   className = '',
@@ -177,7 +185,7 @@ export const BackgroundHorizontalborder: React.FC<BackgroundHorizontalborderProp
   interactive = true,
   ...rest
 }) => {
-  // Parse static Figma variant states if controlled externally
+  // Derive initial state from the Figma "Type" prop
   const isTypeSelected = Type.includes('selected');
   const isTypeHover = Type.includes('hover');
   const typeKey: NavItemKey | null = Type.startsWith('assist')
@@ -194,17 +202,24 @@ export const BackgroundHorizontalborder: React.FC<BackgroundHorizontalborderProp
     isTypeSelected && typeKey ? typeKey : null
   );
   const [internalHovered, setInternalHovered] = useState<NavItemKey | null>(
-    isTypeHover && typeKey ? typeKey : null
+    isTypeHover && !interactive && typeKey ? typeKey : null
   );
 
-  const currentSelected = activeItem !== undefined ? activeItem : (interactive && internalActive ? internalActive : (isTypeSelected ? typeKey : null));
-  const currentHovered = isTypeHover && !interactive ? typeKey : internalHovered;
+  const currentSelected =
+    activeItem !== undefined
+      ? activeItem
+      : interactive && internalActive
+      ? internalActive
+      : isTypeSelected && typeKey
+      ? typeKey
+      : null;
+
+  const currentHovered =
+    !interactive && isTypeHover ? typeKey : interactive ? internalHovered : null;
 
   const handleItemClick = (key: NavItemKey) => {
     if (!interactive) return;
-    if (activeItem === undefined) {
-      setInternalActive(key);
-    }
+    if (activeItem === undefined) setInternalActive(key);
     onItemChange?.(key);
   };
 
@@ -215,41 +230,37 @@ export const BackgroundHorizontalborder: React.FC<BackgroundHorizontalborderProp
       className={`uedp-backgroundhorizontalborder ${variantClass} ${className}`.trim()}
       role="navigation"
       aria-label="Bottom Navigation"
-      {...rest}
+      {...(rest as React.HTMLAttributes<HTMLElement>)}
     >
       {children ? (
         children
       ) : (
         <div className="uedp-backgroundhorizontalborder-dock">
-          {NAV_ITEMS.map((item, index) => {
+          {NAV_ITEMS.map((item) => {
             const isSelected = currentSelected === item.key;
             const isHovered = currentHovered === item.key;
-            const Icon = item.icon;
+            const { Icon } = item;
 
             return (
-              <React.Fragment key={item.key}>
-                <button
-                  type="button"
-                  className={`uedp-nav-item uedp-nav-item--${item.key} ${
-                    isSelected ? 'uedp-nav-item--selected' : ''
-                  } ${isHovered ? 'uedp-nav-item--hover' : ''}`.trim()}
-                  onClick={() => handleItemClick(item.key)}
-                  onMouseEnter={() => interactive && setInternalHovered(item.key)}
-                  onMouseLeave={() => interactive && setInternalHovered(null)}
-                  aria-label={item.label}
-                  aria-current={isSelected ? 'page' : undefined}
-                >
-                  <div className="uedp-nav-icon-wrapper">
-                    <Icon />
-                  </div>
-                  <span className="uedp-nav-text">{item.label}</span>
-                </button>
-
-                {/* Subtle Divider Spacers matching Figma Node 30:195 / 30:198 / 30:208 */}
-                {index < NAV_ITEMS.length - 1 && (
-                  <span className="uedp-nav-divider" aria-hidden="true" />
-                )}
-              </React.Fragment>
+              <button
+                key={item.key}
+                type="button"
+                className={
+                  `uedp-nav-item uedp-nav-item--${item.key}` +
+                  (isSelected ? ' uedp-nav-item--selected' : '') +
+                  (isHovered ? ' uedp-nav-item--hover' : '')
+                }
+                onClick={() => handleItemClick(item.key)}
+                onMouseEnter={() => interactive && setInternalHovered(item.key)}
+                onMouseLeave={() => interactive && setInternalHovered(null)}
+                aria-label={item.label}
+                aria-current={isSelected ? 'page' : undefined}
+              >
+                <div className="uedp-nav-icon-wrapper">
+                  <Icon />
+                </div>
+                <span className="uedp-nav-text">{item.label}</span>
+              </button>
             );
           })}
         </div>
