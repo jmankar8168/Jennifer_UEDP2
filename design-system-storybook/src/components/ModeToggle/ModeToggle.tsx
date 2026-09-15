@@ -29,11 +29,23 @@ export const ModeToggle: React.FC<ModeToggleProps> = ({
   activeTab,
   onTabChange,
 }) => {
-  const [internalActive, setInternalActive] = useState<'left' | 'right'>(
-    State === 'Selected' ? 'right' : 'right'
-  );
-
+  const [internalActive, setInternalActive] = useState<'left' | 'right'>(State === 'Selected' ? 'right' : 'left');
   const currentActive = activeTab !== undefined ? activeTab : internalActive;
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>, tab: 'left' | 'right') => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleTabClick(tab);
+    }
+    if (e.key === 'ArrowLeft' && tab === 'right') {
+      e.preventDefault();
+      handleTabClick('left');
+    }
+    if (e.key === 'ArrowRight' && tab === 'left') {
+      e.preventDefault();
+      handleTabClick('right');
+    }
+  };
 
   const handleTabClick = (tab: 'left' | 'right') => {
     if (activeTab === undefined) {
@@ -59,6 +71,8 @@ export const ModeToggle: React.FC<ModeToggleProps> = ({
         aria-checked={currentActive === 'left'}
         className={`uedp-modetoggle-tab uedp-modetoggle-tab--left ${currentActive === 'left' ? 'uedp-modetoggle-tab--active' : 'uedp-modetoggle-tab--inactive'}`}
         onClick={() => handleTabClick('left')}
+        onKeyDown={(e) => handleKeyDown(e, 'left')}
+        tabIndex={0}
       >
         <span className="uedp-modetoggle-tab-text">{leftText}</span>
       </button>
