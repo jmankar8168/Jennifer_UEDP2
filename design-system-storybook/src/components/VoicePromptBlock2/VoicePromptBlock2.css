@@ -1,67 +1,116 @@
 /**
  * CSS for VoicePromptBlock2
  * Figma Preserved Layer Name: "voice prompt block"
+ * Node ID: 16:2100
  */
 
 .uedp-voicepromptblock2 {
   box-sizing: border-box;
-  padding: 12px 16px;
-  border-radius: var(--uedp-rounded-md, 6px);
-  background-color: var(--uedp-slate-800, #1e293b);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-family: sans-serif;
-  font-size: 14px;
-  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   background-color: #111111;
   border: 1px solid #1E1E1E;
+  
+  min-width: 342px;
+  min-height: 256px;
+  padding: 8px 14px;
+}
+
+.uedp-voicepromptblock2-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.uedp-voicepromptblock2-label {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #b7ff4d;
+}
+
+.uedp-voicepromptblock2-text {
+  display: block;
+}
+
+.uedp-voicepromptblock2-text-0 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19px;
+  
+  
+  color: #F5F2EC;
+  text-align: left;
+}
+
+.uedp-voicepromptblock2-text-1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 1.0800000429153442px;
+  text-transform: uppercase;
+  color: #B5FF47;
+  text-align: center;
+}
+
+/* Variant: Default (Node ID: 16:2101) */
+.uedp-voicepromptblock2--default {
+  background-color: #111111;
+  border-color: #1E1E1E;
+  border-width: 1px;
   min-width: 342px;
   min-height: 256px;
 }
 
-.uedp-component-label {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.uedp-voicepromptblock2--property-1-default {
+/* Variant: Variant2 (Node ID: 16:2109) */
+.uedp-voicepromptblock2--variant2 {
   background-color: #111111;
-  border: 1px solid #1E1E1E;
+  border-color: #1E1E1E;
+  border-width: 1px;
   min-width: 342px;
   min-height: 256px;
 }
 
-.uedp-voicepromptblock2--property-1-variant2 {
+/* Variant: Variant3 (Node ID: 16:2117) */
+.uedp-voicepromptblock2--variant3 {
   background-color: #111111;
-  border: 1px solid #1E1E1E;
+  border-color: #1E1E1E;
+  border-width: 1px;
   min-width: 342px;
   min-height: 256px;
 }
 
-.uedp-voicepromptblock2--property-1-variant3 {
+/* Variant: Variant4 (Node ID: 16:2125) */
+.uedp-voicepromptblock2--variant4 {
   background-color: #111111;
-  border: 1px solid #1E1E1E;
+  border-color: #1E1E1E;
+  border-width: 1px;
   min-width: 342px;
   min-height: 256px;
 }
 
-.uedp-voicepromptblock2--property-1-variant4 {
+/* Variant: Variant5 (Node ID: 16:2133) */
+.uedp-voicepromptblock2--variant5 {
   background-color: #111111;
-  border: 1px solid #1E1E1E;
+  border-color: #1E1E1E;
+  border-width: 1px;
   min-width: 342px;
   min-height: 256px;
 }
 
-.uedp-voicepromptblock2--property-1-variant5 {
+/* Variant: Variant6 (Node ID: 16:2141) */
+.uedp-voicepromptblock2--variant6 {
   background-color: #111111;
-  border: 1px solid #1E1E1E;
+  border-color: #1E1E1E;
+  border-width: 1px;
   min-width: 342px;
   min-height: 256px;
 }
-
-.uedp-voicepromptblock2--property-1-variant6 {
-  background-color: #111111;
-  border: 1px solid #1E1E1E;
-  min-width: 342px;
-  min-height: 256px;
-}
-

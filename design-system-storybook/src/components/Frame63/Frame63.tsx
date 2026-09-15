@@ -1,7 +1,7 @@
 import React from 'react';
 import './Frame63.css';
 
-export interface Frame63Props {
+export interface Frame63Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Frame 63" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface Frame63Props {
 /**
  * Frame63 Component
  * Preserved Figma Layer Name: "Frame 63"
+ * Node ID: 35:483
  */
 export const Frame63: React.FC<Frame63Props> = ({
   className = '',
@@ -18,15 +19,27 @@ export const Frame63: React.FC<Frame63Props> = ({
   Property1 = 'missed call',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-frame63',
-    Property1 ? `uedp-frame63--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-frame63--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Frame 63</span>
+    <div
+      className={`uedp-frame63 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-frame63-content">
+          <span key="0" className="uedp-frame63-text uedp-frame63-text-0">
+            {"Friday"}
+          </span>
+          <span key="1" className="uedp-frame63-text uedp-frame63-text-1">
+            {"11:16 am"}
+          </span>
+        </div>
       )}
     </div>
   );

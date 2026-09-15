@@ -1,34 +1,69 @@
 /**
  * CSS for Background2
  * Figma Preserved Layer Name: "Background"
+ * Node ID: 33:985
  */
 
 .uedp-background2 {
   box-sizing: border-box;
-  padding: 12px 16px;
-  border-radius: var(--uedp-rounded-md, 6px);
-  background-color: var(--uedp-slate-800, #1e293b);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-family: sans-serif;
-  font-size: 14px;
-  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: #171717;
+  border: 1px solid transparent;
+  
+  min-width: 139px;
+  min-height: 39px;
+  padding: 8px 14px;
+}
+
+.uedp-background2-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.uedp-background2-label {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #b7ff4d;
+}
+
+.uedp-background2-text {
+  display: block;
+}
+
+.uedp-background2-text-0 {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1.7599999904632568px;
+  text-transform: uppercase;
+  color: #D06B34;
+  text-align: center;
+}
+
+/* Variant: No (Node ID: 33:984) */
+.uedp-background2--no {
+  
+  
+  
   min-width: 139px;
   min-height: 39px;
 }
 
-.uedp-component-label {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.uedp-background2--property-1-no {
-  min-width: 139px;
-  min-height: 39px;
-}
-
-.uedp-background2--property-1-yes {
+/* Variant: Yes (Node ID: 33:983) */
+.uedp-background2--yes {
   background-color: #FFFFFF;
+  
+  
   min-width: 139px;
   min-height: 39px;
 }
-

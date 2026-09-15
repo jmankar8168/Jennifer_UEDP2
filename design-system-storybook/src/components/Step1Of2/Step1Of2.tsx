@@ -1,7 +1,7 @@
 import React from 'react';
 import './Step1Of2.css';
 
-export interface Step1Of2Props {
+export interface Step1Of2Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Step 1 of 2" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface Step1Of2Props {
 /**
  * Step1Of2 Component
  * Preserved Figma Layer Name: "Step 1 of 2"
+ * Node ID: 16:724
  */
 export const Step1Of2: React.FC<Step1Of2Props> = ({
   className = '',
@@ -18,15 +19,24 @@ export const Step1Of2: React.FC<Step1Of2Props> = ({
   Property1 = 'Default',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-step1of2',
-    Property1 ? `uedp-step1of2--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-step1of2--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Step 1 of 2</span>
+    <div
+      className={`uedp-step1of2 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-step1of2-content">
+          <span key="0" className="uedp-step1of2-text uedp-step1of2-text-0">
+            {"Step 1 of 2"}
+          </span>
+        </div>
       )}
     </div>
   );

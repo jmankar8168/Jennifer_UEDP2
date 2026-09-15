@@ -1,7 +1,7 @@
 import React from 'react';
 import './Group32.css';
 
-export interface Group32Props {
+export interface Group32Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Group 32" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface Group32Props {
 /**
  * Group32 Component
  * Preserved Figma Layer Name: "Group 32"
+ * Node ID: 16:1948
  */
 export const Group32: React.FC<Group32Props> = ({
   className = '',
@@ -18,15 +19,22 @@ export const Group32: React.FC<Group32Props> = ({
   Property1 = 'Default',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-group32',
-    Property1 ? `uedp-group32--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-group32--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Group 32</span>
+    <div
+      className={`uedp-group32 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-group32-content">
+          <span className="uedp-group32-label">Group 32</span>
+        </div>
       )}
     </div>
   );

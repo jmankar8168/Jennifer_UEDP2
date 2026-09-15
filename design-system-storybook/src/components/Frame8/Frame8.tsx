@@ -1,7 +1,7 @@
 import React from 'react';
 import './Frame8.css';
 
-export interface Frame8Props {
+export interface Frame8Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Frame 8" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface Frame8Props {
 /**
  * Frame8 Component
  * Preserved Figma Layer Name: "Frame 8"
+ * Node ID: 16:695
  */
 export const Frame8: React.FC<Frame8Props> = ({
   className = '',
@@ -18,15 +19,22 @@ export const Frame8: React.FC<Frame8Props> = ({
   Property1 = 'Default',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-frame8',
-    Property1 ? `uedp-frame8--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-frame8--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Frame 8</span>
+    <div
+      className={`uedp-frame8 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-frame8-content">
+          <span className="uedp-frame8-label">Frame 8</span>
+        </div>
       )}
     </div>
   );

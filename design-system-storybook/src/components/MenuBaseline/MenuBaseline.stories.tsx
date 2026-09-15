@@ -16,19 +16,51 @@ const meta: Meta<typeof MenuBaseline> = {
 | **Figma Node ID** | \`40:2217\` |
 | **Component Type** | \`COMPONENT\` |
 | **Variants Count** | \`1\` |
-| **Bound Variables** | \`{"fills":[{"type":"VARIABLE_ALIAS","id":"VariableID:1:3"}]}\` |
+| **Variants** | \`Menu (baseline)\` |
 `,
       },
     },
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'dark', value: '#0d0d0d' },
+        { name: 'surface', value: '#171717' },
+      ],
+    },
   },
-  argTypes: {}
+  argTypes: {
+    "variant": {
+      control: {
+        type: 'select',
+      },
+      options: ["Menu (baseline)"],
+      description: 'Figma variant property "variant"',
+    },
+  },
+  args: {
+    "variant": 'Menu (baseline)',
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof MenuBaseline>;
 
-export const Default: Story = {
+export const Menu__baseline: Story = {
+  name: "Menu (baseline)",
   args: {
-    children: 'Menu (baseline)'
+    variant: 'Menu (baseline)',
   },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '16px' }}>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          Menu (baseline)
+        </p>
+        <MenuBaseline variant="Menu (baseline)" />
+      </div>
+    </div>
+  ),
 };

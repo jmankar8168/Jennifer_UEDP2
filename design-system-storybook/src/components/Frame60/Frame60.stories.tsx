@@ -16,19 +16,51 @@ const meta: Meta<typeof Frame60> = {
 | **Figma Node ID** | \`34:1222\` |
 | **Component Type** | \`COMPONENT\` |
 | **Variants Count** | \`1\` |
-| **Bound Variables** | \`{"fills":[{"type":"VARIABLE_ALIAS","id":"VariableID:1:36"}],"strokes":[{"type":"VARIABLE_ALIAS","id":"VariableID:1:4"}]}\` |
+| **Variants** | \`Frame 60\` |
 `,
       },
     },
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'dark', value: '#0d0d0d' },
+        { name: 'surface', value: '#171717' },
+      ],
+    },
   },
-  argTypes: {}
+  argTypes: {
+    "variant": {
+      control: {
+        type: 'select',
+      },
+      options: ["Frame 60"],
+      description: 'Figma variant property "variant"',
+    },
+  },
+  args: {
+    "variant": 'Frame 60',
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Frame60>;
 
-export const Default: Story = {
+export const Frame_60: Story = {
+  name: "Frame 60",
   args: {
-    children: 'Frame 60'
+    variant: 'Frame 60',
   },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '16px' }}>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          Frame 60
+        </p>
+        <Frame60 variant="Frame 60" />
+      </div>
+    </div>
+  ),
 };

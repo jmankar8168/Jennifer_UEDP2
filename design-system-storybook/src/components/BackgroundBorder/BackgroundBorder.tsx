@@ -1,45 +1,44 @@
 import React from 'react';
 import './BackgroundBorder.css';
 
-export interface BackgroundBorderProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface BackgroundBorderProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Background+Border" */
   className?: string;
   children?: React.ReactNode;
-  /** Label text */
-  text?: string;
-  /** Variant style (light filled vs dark with border) */
-  variant?: 'light' | 'dark';
-  /** Active selected state */
-  active?: boolean;
+  variant?: 'Background+Border';
 }
 
 /**
  * BackgroundBorder Component
- * Preserved Figma Layer Name: "Background+Border" (Node ID: 30:114 / 30:113)
+ * Preserved Figma Layer Name: "Background+Border"
+ * Node ID: 30:114
  */
 export const BackgroundBorder: React.FC<BackgroundBorderProps> = ({
   className = '',
   children,
-  text = 'TEXT',
-  variant = 'light',
-  active = false,
-  onClick,
+  variant = 'Background+Border',
   ...rest
 }) => {
-  const activeClass = active ? 'uedp-bg-border--active' : '';
-  const variantClass = `uedp-bg-border--${variant}`;
+  const currentVariant = variant;
+  const variantClass = currentVariant
+    ? `uedp-backgroundborder--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <button
-      type="button"
-      className={`uedp-bg-border ${variantClass} ${activeClass} ${className}`.trim()}
-      onClick={onClick}
+    <div
+      className={`uedp-backgroundborder ${variantClass} ${className}`.trim()}
       {...rest}
     >
-      <span className="uedp-bg-border-text">
-        {children || text}
-      </span>
-    </button>
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-backgroundborder-content">
+          <span key="0" className="uedp-backgroundborder-text uedp-backgroundborder-text-0">
+            {"Text"}
+          </span>
+        </div>
+      )}
+    </div>
   );
 };
 

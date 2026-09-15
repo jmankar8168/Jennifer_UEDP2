@@ -1,32 +1,40 @@
 import React from 'react';
 import './Stars.css';
 
-export interface StarsProps {
+export interface StarsProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "stars" */
   className?: string;
   children?: React.ReactNode;
-  Property1?: 'Default' | '1' | '2' | '3' | '4' | '5';
+  Property1?: '1' | '2' | '3' | '4' | '5' | 'Default';
 }
 
 /**
  * Stars Component
  * Preserved Figma Layer Name: "stars"
+ * Node ID: 33:1062
  */
 export const Stars: React.FC<StarsProps> = ({
   className = '',
   children,
-  Property1 = 'Default',
+  Property1 = '1',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-stars',
-    Property1 ? `uedp-stars--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-stars--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">stars</span>
+    <div
+      className={`uedp-stars ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-stars-content">
+          <span className="uedp-stars-label">stars</span>
+        </div>
       )}
     </div>
   );

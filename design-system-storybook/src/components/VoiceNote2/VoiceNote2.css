@@ -1,61 +1,87 @@
 /**
  * CSS for VoiceNote2
  * Figma Preserved Layer Name: "voice note"
+ * Node ID: 34:1171
  */
 
 .uedp-voicenote2 {
   box-sizing: border-box;
-  padding: 12px 16px;
-  border-radius: var(--uedp-rounded-md, 6px);
-  background-color: var(--uedp-slate-800, #1e293b);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-family: sans-serif;
-  font-size: 14px;
-  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   background-color: #18181B;
+  border: 1px solid transparent;
+  
   min-width: 277px;
   min-height: 55px;
+  padding: 8px 14px;
 }
 
-.uedp-component-label {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.uedp-voicenote2--state-default {
-  background-color: #18181B;
-  min-width: 277px;
-  min-height: 55px;
-}
-
-.uedp-voicenote2--state-selected {
-  background-color: #B7FF4D;
-  min-width: 277px;
-  min-height: 55px;
-}
-
-.uedp-voicenote2--state-command-selected {
+.uedp-voicenote2-content {
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-  padding: 10px 16px 10px 16px;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.uedp-voicenote2-label {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #b7ff4d;
+}
+
+.uedp-voicenote2-text {
+  display: block;
+}
+
+.uedp-voicenote2-text-0 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19px;
+  
+  
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* Variant: Default (Node ID: 34:1169) */
+.uedp-voicenote2--default {
+  background-color: #18181B;
+  
+  
+  min-width: 277px;
+  min-height: 55px;
+}
+
+/* Variant: selected (Node ID: 34:1172) */
+.uedp-voicenote2--selected {
   background-color: #B7FF4D;
+  
+  
+  min-width: 277px;
+  min-height: 55px;
+}
+
+/* Variant: Command selected (Node ID: 34:1178) */
+.uedp-voicenote2--command-selected {
+  background-color: #B7FF4D;
+  
+  
   min-width: 168px;
   min-height: 53px;
 }
 
-.uedp-voicenote2--state-default {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  padding: 10px 16px 10px 16px;
-  justify-content: space-between;
-  align-items: center;
+/* Variant: default (Node ID: 34:1183) */
+.uedp-voicenote2--default {
   background-color: #18181B;
-  border: 1px solid #FFFFFF;
+  border-color: #FFFFFF;
+  border-width: 1px;
   min-width: 168px;
   min-height: 55px;
 }
-

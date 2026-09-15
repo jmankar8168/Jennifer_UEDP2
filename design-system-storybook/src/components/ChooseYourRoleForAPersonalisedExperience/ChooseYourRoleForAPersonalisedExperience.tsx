@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChooseYourRoleForAPersonalisedExperience.css';
 
-export interface ChooseYourRoleForAPersonalisedExperienceProps {
+export interface ChooseYourRoleForAPersonalisedExperienceProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Choose your role for a personalised experience." */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface ChooseYourRoleForAPersonalisedExperienceProps {
 /**
  * ChooseYourRoleForAPersonalisedExperience Component
  * Preserved Figma Layer Name: "Choose your role for a personalised experience."
+ * Node ID: 16:685
  */
 export const ChooseYourRoleForAPersonalisedExperience: React.FC<ChooseYourRoleForAPersonalisedExperienceProps> = ({
   className = '',
@@ -18,15 +19,24 @@ export const ChooseYourRoleForAPersonalisedExperience: React.FC<ChooseYourRoleFo
   Property1 = 'Default',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-chooseyourroleforapersonalisedexperience',
-    Property1 ? `uedp-chooseyourroleforapersonalisedexperience--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-chooseyourroleforapersonalisedexperience--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Choose your role for a personalised experience.</span>
+    <div
+      className={`uedp-chooseyourroleforapersonalisedexperience ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-chooseyourroleforapersonalisedexperience-content">
+          <span key="0" className="uedp-chooseyourroleforapersonalisedexperience-text uedp-chooseyourroleforapersonalisedexperience-text-0">
+            {"Choose your role for a personalised experience."}
+          </span>
+        </div>
       )}
     </div>
   );

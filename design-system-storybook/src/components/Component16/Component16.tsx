@@ -1,7 +1,7 @@
 import React from 'react';
 import './Component16.css';
 
-export interface Component16Props {
+export interface Component16Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Component 16" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface Component16Props {
 /**
  * Component16 Component
  * Preserved Figma Layer Name: "Component 16"
+ * Node ID: 33:850
  */
 export const Component16: React.FC<Component16Props> = ({
   className = '',
@@ -18,15 +19,24 @@ export const Component16: React.FC<Component16Props> = ({
   Property1 = 'selected',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-component16',
-    Property1 ? `uedp-component16--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-component16--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Component 16</span>
+    <div
+      className={`uedp-component16 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-component16-content">
+          <span key="0" className="uedp-component16-text uedp-component16-text-0">
+            {"LABLE"}
+          </span>
+        </div>
       )}
     </div>
   );

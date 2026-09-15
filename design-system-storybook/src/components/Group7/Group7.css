@@ -1,34 +1,69 @@
 /**
  * CSS for Group7
  * Figma Preserved Layer Name: "Group 7"
+ * Node ID: 16:796
  */
 
 .uedp-group7 {
   box-sizing: border-box;
-  padding: 12px 16px;
-  border-radius: var(--uedp-rounded-md, 6px);
-  background-color: var(--uedp-slate-800, #1e293b);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-family: sans-serif;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: #171717;
+  border: 1px solid transparent;
+  
+  min-width: 334px;
+  min-height: 138px;
+  padding: 8px 14px;
+}
+
+.uedp-group7-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.uedp-group7-label {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #b7ff4d;
+}
+
+.uedp-group7-text {
+  display: block;
+}
+
+.uedp-group7-text-0 {
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 14px;
-  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+  line-height: 35px;
+  
+  
+  color: #F5F2EC;
+  text-align: center;
+}
+
+/* Variant: Default (Node ID: 16:797) */
+.uedp-group7--default {
+  
+  
+  
   min-width: 334px;
   min-height: 138px;
 }
 
-.uedp-component-label {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.uedp-group7--property-1-default {
+/* Variant: Variant2 (Node ID: 16:802) */
+.uedp-group7--variant2 {
+  
+  border-color: #F5F2EC;
+  border-width: 1px;
   min-width: 334px;
   min-height: 138px;
 }
-
-.uedp-group7--property-1-variant2 {
-  border: 1px solid #F5F2EC;
-  min-width: 334px;
-  min-height: 138px;
-}
-

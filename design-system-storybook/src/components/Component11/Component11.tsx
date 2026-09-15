@@ -1,35 +1,42 @@
 import React from 'react';
 import './Component11.css';
 
-export interface Component11Props {
+export interface Component11Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Component 11" */
   className?: string;
   children?: React.ReactNode;
-  Type?: 'Sca' | 'Scan';
-  State?: 'Default' | 'Hover' | 'Selected';
+  Type?: 'Scan, State' | 'Sca, State';
 }
 
 /**
  * Component11 Component
  * Preserved Figma Layer Name: "Component 11"
+ * Node ID: 30:181
  */
 export const Component11: React.FC<Component11Props> = ({
   className = '',
   children,
-  Type = 'Scan',
-  State = 'Default',
+  Type = 'Scan, State',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-component11',
-    Type ? `uedp-component11--${String(Type).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : '',
-    State ? `uedp-component11--${String(State).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Type;
+  const variantClass = currentVariant
+    ? `uedp-component11--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Component 11</span>
+    <div
+      className={`uedp-component11 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-component11-content">
+          <span key="0" className="uedp-component11-text uedp-component11-text-0">
+            {"Scan"}
+          </span>
+        </div>
       )}
     </div>
   );

@@ -16,31 +16,77 @@ const meta: Meta<typeof Component16> = {
 | **Figma Node ID** | \`33:850\` |
 | **Component Type** | \`COMPONENT_SET\` |
 | **Variants Count** | \`3\` |
-| **Bound Variables** | \`{}\` |
+| **Variants** | \`selected\`, \`default\`, \`Hover\` |
 `,
       },
+    },
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'dark', value: '#0d0d0d' },
+        { name: 'surface', value: '#171717' },
+      ],
     },
   },
   argTypes: {
     "Property1": {
-        "control": {
-            "type": "select"
-        },
-        "options": [
-            "selected",
-            "default",
-            "Hover"
-        ],
-        "description": "Figma variant property \"Property 1\""
-    }
-}
+      control: {
+        type: 'select',
+      },
+      options: ["selected","default","Hover"],
+      description: 'Figma variant property "Property 1"',
+    },
+  },
+  args: {
+    "Property1": 'selected',
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Component16>;
 
-export const Default: Story = {
+export const selected: Story = {
+  name: "selected",
   args: {
-    children: 'Component 16'
+    Property1: 'selected',
   },
+};
+
+export const Story_default: Story = {
+  name: "default",
+  args: {
+    Property1: 'default',
+  },
+};
+
+export const Hover: Story = {
+  name: "Hover",
+  args: {
+    Property1: 'Hover',
+  },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '16px' }}>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          selected
+        </p>
+        <Component16 Property1="selected" />
+      </div>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          default
+        </p>
+        <Component16 Property1="default" />
+      </div>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          Hover
+        </p>
+        <Component16 Property1="Hover" />
+      </div>
+    </div>
+  ),
 };

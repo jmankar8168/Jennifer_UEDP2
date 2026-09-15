@@ -16,31 +16,77 @@ const meta: Meta<typeof Camera> = {
 | **Figma Node ID** | \`16:1926\` |
 | **Component Type** | \`COMPONENT_SET\` |
 | **Variants Count** | \`3\` |
-| **Bound Variables** | \`{}\` |
+| **Variants** | \`Default\`, \`End Hover\`, \`Flip Hover\` |
 `,
       },
+    },
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'dark', value: '#0d0d0d' },
+        { name: 'surface', value: '#171717' },
+      ],
     },
   },
   argTypes: {
     "Type": {
-        "control": {
-            "type": "select"
-        },
-        "options": [
-            "Default",
-            "Flip Hover",
-            "End Hover"
-        ],
-        "description": "Figma variant property \"Type\""
-    }
-}
+      control: {
+        type: 'select',
+      },
+      options: ["Default","End Hover","Flip Hover"],
+      description: 'Figma variant property "Type"',
+    },
+  },
+  args: {
+    "Type": 'Default',
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Camera>;
 
-export const Default: Story = {
+export const Story_Default: Story = {
+  name: "Default",
   args: {
-    children: 'Camera'
+    Type: 'Default',
   },
+};
+
+export const End_Hover: Story = {
+  name: "End Hover",
+  args: {
+    Type: 'End Hover',
+  },
+};
+
+export const Flip_Hover: Story = {
+  name: "Flip Hover",
+  args: {
+    Type: 'Flip Hover',
+  },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '16px' }}>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          Default
+        </p>
+        <Camera Type="Default" />
+      </div>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          End Hover
+        </p>
+        <Camera Type="End Hover" />
+      </div>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          Flip Hover
+        </p>
+        <Camera Type="Flip Hover" />
+      </div>
+    </div>
+  ),
 };

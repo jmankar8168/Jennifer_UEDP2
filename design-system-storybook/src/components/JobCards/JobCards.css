@@ -1,51 +1,113 @@
 /**
  * CSS for JobCards
  * Figma Preserved Layer Name: "job cards"
+ * Node ID: 16:1981
  */
 
 .uedp-jobcards {
   box-sizing: border-box;
-  padding: 12px 16px;
-  border-radius: var(--uedp-rounded-md, 6px);
-  background-color: var(--uedp-slate-800, #1e293b);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-family: sans-serif;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  
+  min-width: 350px;
+  min-height: 118px;
+  padding: 8px 14px;
+}
+
+.uedp-jobcards-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.uedp-jobcards-label {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #b7ff4d;
+}
+
+.uedp-jobcards-text {
+  display: block;
+}
+
+.uedp-jobcards-text-0 {
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 14px;
-  transition: all 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 16px 17px 16px 17px;
+  font-weight: 400;
+  line-height: 19px;
+  
+  
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.uedp-jobcards-text-1 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.8999999761581421px;
+  
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.uedp-jobcards-text-2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0.8999999761581421px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.uedp-jobcards-text-3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0.8999999761581421px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.uedp-jobcards-text-4 {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.800000011920929px;
+  
+  color: #000000;
+  text-align: left;
+}
+
+/* Variant: Default (Node ID: 16:1982) */
+.uedp-jobcards--default {
   background-color: #000000;
-  border: 1px solid #FFFFFF;
+  border-color: #FFFFFF;
+  border-width: 1px;
   min-width: 350px;
   min-height: 118px;
 }
 
-.uedp-component-label {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.uedp-jobcards--property-1-default {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 16px 17px 16px 17px;
+/* Variant: hover (Node ID: 32:798) */
+.uedp-jobcards--hover {
   background-color: #000000;
-  border: 1px solid #FFFFFF;
+  border-color: #B7FF4D;
+  border-width: 1px;
   min-width: 350px;
   min-height: 118px;
 }
-
-.uedp-jobcards--property-1-hover {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 16px 17px 16px 17px;
-  background-color: #000000;
-  border: 1px solid #B7FF4D;
-  min-width: 350px;
-  min-height: 118px;
-}
-

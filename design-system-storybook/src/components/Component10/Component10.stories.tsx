@@ -15,41 +15,52 @@ const meta: Meta<typeof Component10> = {
 | **Exact Layer Name** | \`Component 10\` |
 | **Figma Node ID** | \`30:180\` |
 | **Component Type** | \`COMPONENT_SET\` |
-| **Variants Count** | \`3\` |
-| **Bound Variables** | \`{}\` |
+| **Variants Count** | \`1\` |
+| **Variants** | \`Assist, State\` |
 `,
       },
+    },
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'dark', value: '#0d0d0d' },
+        { name: 'surface', value: '#171717' },
+      ],
     },
   },
   argTypes: {
     "Type": {
-        "control": {
-            "type": "select"
-        },
-        "options": [
-            "Assist"
-        ],
-        "description": "Figma variant property \"Type\""
+      control: {
+        type: 'select',
+      },
+      options: ["Assist, State"],
+      description: 'Figma variant property "Type"',
     },
-    "State": {
-        "control": {
-            "type": "select"
-        },
-        "options": [
-            "Default",
-            "Selected",
-            "Hover"
-        ],
-        "description": "Figma variant property \"State\""
-    }
-}
+  },
+  args: {
+    "Type": 'Assist, State',
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Component10>;
 
-export const Default: Story = {
+export const Assist__State: Story = {
+  name: "Assist, State",
   args: {
-    children: 'Component 10'
+    Type: 'Assist, State',
   },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '16px' }}>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          Assist, State
+        </p>
+        <Component10 Type="Assist, State" />
+      </div>
+    </div>
+  ),
 };

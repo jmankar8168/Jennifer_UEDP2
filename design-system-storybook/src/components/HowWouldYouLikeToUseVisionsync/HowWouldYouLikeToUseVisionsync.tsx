@@ -1,7 +1,7 @@
 import React from 'react';
 import './HowWouldYouLikeToUseVisionsync.css';
 
-export interface HowWouldYouLikeToUseVisionsyncProps {
+export interface HowWouldYouLikeToUseVisionsyncProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "How would you like to use VisionSync?" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface HowWouldYouLikeToUseVisionsyncProps {
 /**
  * HowWouldYouLikeToUseVisionsync Component
  * Preserved Figma Layer Name: "How would you like to use VisionSync?"
+ * Node ID: 16:709
  */
 export const HowWouldYouLikeToUseVisionsync: React.FC<HowWouldYouLikeToUseVisionsyncProps> = ({
   className = '',
@@ -18,15 +19,24 @@ export const HowWouldYouLikeToUseVisionsync: React.FC<HowWouldYouLikeToUseVision
   Property1 = 'Default',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-howwouldyouliketousevisionsync',
-    Property1 ? `uedp-howwouldyouliketousevisionsync--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-howwouldyouliketousevisionsync--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">How would you like to use VisionSync?</span>
+    <div
+      className={`uedp-howwouldyouliketousevisionsync ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-howwouldyouliketousevisionsync-content">
+          <span key="0" className="uedp-howwouldyouliketousevisionsync-text uedp-howwouldyouliketousevisionsync-text-0">
+            {"How would you like to use VisionSync?"}
+          </span>
+        </div>
       )}
     </div>
   );

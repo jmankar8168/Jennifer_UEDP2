@@ -1,7 +1,7 @@
 import React from 'react';
 import './Frame39.css';
 
-export interface Frame39Props {
+export interface Frame39Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Frame 39" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface Frame39Props {
 /**
  * Frame39 Component
  * Preserved Figma Layer Name: "Frame 39"
+ * Node ID: 16:1813
  */
 export const Frame39: React.FC<Frame39Props> = ({
   className = '',
@@ -18,15 +19,30 @@ export const Frame39: React.FC<Frame39Props> = ({
   Property1 = 'Default',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-frame39',
-    Property1 ? `uedp-frame39--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-frame39--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Frame 39</span>
+    <div
+      className={`uedp-frame39 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-frame39-content">
+          <span key="0" className="uedp-frame39-text uedp-frame39-text-0">
+            {"Help request incoming – tap to join."}
+          </span>
+          <span key="1" className="uedp-frame39-text uedp-frame39-text-1">
+            {"Description"}
+          </span>
+          <span key="2" className="uedp-frame39-text uedp-frame39-text-2">
+            {"9:41 AM"}
+          </span>
+        </div>
       )}
     </div>
   );

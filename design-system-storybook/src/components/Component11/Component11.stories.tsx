@@ -15,42 +15,65 @@ const meta: Meta<typeof Component11> = {
 | **Exact Layer Name** | \`Component 11\` |
 | **Figma Node ID** | \`30:181\` |
 | **Component Type** | \`COMPONENT_SET\` |
-| **Variants Count** | \`3\` |
-| **Bound Variables** | \`{}\` |
+| **Variants Count** | \`2\` |
+| **Variants** | \`Scan, State\`, \`Sca, State\` |
 `,
       },
+    },
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'dark', value: '#0d0d0d' },
+        { name: 'surface', value: '#171717' },
+      ],
     },
   },
   argTypes: {
     "Type": {
-        "control": {
-            "type": "select"
-        },
-        "options": [
-            "Sca",
-            "Scan"
-        ],
-        "description": "Figma variant property \"Type\""
+      control: {
+        type: 'select',
+      },
+      options: ["Scan, State","Sca, State"],
+      description: 'Figma variant property "Type"',
     },
-    "State": {
-        "control": {
-            "type": "select"
-        },
-        "options": [
-            "Default",
-            "Hover",
-            "Selected"
-        ],
-        "description": "Figma variant property \"State\""
-    }
-}
+  },
+  args: {
+    "Type": 'Scan, State',
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Component11>;
 
-export const Default: Story = {
+export const Scan__State: Story = {
+  name: "Scan, State",
   args: {
-    children: 'Component 11'
+    Type: 'Scan, State',
   },
+};
+
+export const Sca__State: Story = {
+  name: "Sca, State",
+  args: {
+    Type: 'Sca, State',
+  },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '16px' }}>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          Scan, State
+        </p>
+        <Component11 Type="Scan, State" />
+      </div>
+      <div>
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          Sca, State
+        </p>
+        <Component11 Type="Sca, State" />
+      </div>
+    </div>
+  ),
 };

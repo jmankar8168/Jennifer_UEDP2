@@ -1,16 +1,17 @@
 import React from 'react';
 import './Background2.css';
 
-export interface Background2Props {
+export interface Background2Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Background" */
   className?: string;
   children?: React.ReactNode;
-  Property1?: 'Yes' | 'No';
+  Property1?: 'No' | 'Yes';
 }
 
 /**
  * Background2 Component
  * Preserved Figma Layer Name: "Background"
+ * Node ID: 33:985
  */
 export const Background2: React.FC<Background2Props> = ({
   className = '',
@@ -18,15 +19,24 @@ export const Background2: React.FC<Background2Props> = ({
   Property1 = 'No',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-background2',
-    Property1 ? `uedp-background2--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-background2--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Background</span>
+    <div
+      className={`uedp-background2 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-background2-content">
+          <span key="0" className="uedp-background2-text uedp-background2-text-0">
+            {"no"}
+          </span>
+        </div>
       )}
     </div>
   );

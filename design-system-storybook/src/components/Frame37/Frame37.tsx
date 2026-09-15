@@ -1,7 +1,7 @@
 import React from 'react';
 import './Frame37.css';
 
-export interface Frame37Props {
+export interface Frame37Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "Frame 37" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface Frame37Props {
 /**
  * Frame37 Component
  * Preserved Figma Layer Name: "Frame 37"
+ * Node ID: 16:690
  */
 export const Frame37: React.FC<Frame37Props> = ({
   className = '',
@@ -18,15 +19,22 @@ export const Frame37: React.FC<Frame37Props> = ({
   Property1 = 'Default',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-frame37',
-    Property1 ? `uedp-frame37--${String(Property1).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = Property1;
+  const variantClass = currentVariant
+    ? `uedp-frame37--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">Frame 37</span>
+    <div
+      className={`uedp-frame37 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-frame37-content">
+          <span className="uedp-frame37-label">Frame 37</span>
+        </div>
       )}
     </div>
   );

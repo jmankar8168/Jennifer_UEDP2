@@ -1,7 +1,7 @@
 import React from 'react';
 import './VoiceNote2.css';
 
-export interface VoiceNote2Props {
+export interface VoiceNote2Props extends React.HTMLAttributes<HTMLDivElement> {
   /** Literal Figma Layer Name: "voice note" */
   className?: string;
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ export interface VoiceNote2Props {
 /**
  * VoiceNote2 Component
  * Preserved Figma Layer Name: "voice note"
+ * Node ID: 34:1171
  */
 export const VoiceNote2: React.FC<VoiceNote2Props> = ({
   className = '',
@@ -18,15 +19,24 @@ export const VoiceNote2: React.FC<VoiceNote2Props> = ({
   State = 'Default',
   ...rest
 }) => {
-  const variantClasses = [
-    'uedp-voicenote2',
-    State ? `uedp-voicenote2--${String(State).toLowerCase().replace(/[^a-z0-9]/g, '-')}` : ''
-  ].filter(Boolean).join(' ');
+  const currentVariant = State;
+  const variantClass = currentVariant
+    ? `uedp-voicenote2--${String(currentVariant).toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+    : '';
 
   return (
-    <div className={`${variantClasses} ${className}`.trim()} {...rest}>
-      {children || (
-        <span className="uedp-component-label">voice note</span>
+    <div
+      className={`uedp-voicenote2 ${variantClass} ${className}`.trim()}
+      {...rest}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className="uedp-voicenote2-content">
+          <span key="0" className="uedp-voicenote2-text uedp-voicenote2-text-0">
+            {"Voice note"}
+          </span>
+        </div>
       )}
     </div>
   );
