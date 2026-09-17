@@ -62,6 +62,21 @@ export const PAGES: PageItem[] = [
   { id: 'builds', label: 'Builds', x: 3870, y: 2150 },
 ];
 
+export const TOOLS: string[] = [
+  'Figma',
+  'Framer',
+  'Antigravity',
+  'ReactJS',
+  'Vite',
+  'Claude AI',
+  'Chat GPT',
+  'Gemini',
+  'Adobe Suite',
+  'Canva',
+  'Miro',
+  'Procreate',
+];
+
 export const TAG_STYLES: Record<string, { color: string; bg: string }> = {
   'Branding': { color: '#009EFF', bg: 'rgba(0, 158, 255, 0.10)' },
   'Brand Design': { color: '#009EFF', bg: 'rgba(0, 158, 255, 0.10)' },
