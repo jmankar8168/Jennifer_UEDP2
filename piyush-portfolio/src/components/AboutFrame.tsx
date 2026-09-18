@@ -218,7 +218,7 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
           onClick={() => setIsLongBio(!isLongBio)}
           className="mt-3 text-[14px] font-semibold text-[var(--figma-blue)] hover:underline inline-flex items-center gap-1"
         >
-          <span>{isLongBio ? 'tldr' : 'More'}</span>
+          <span>{isLongBio ? 'Less' : 'More'}</span>
           <span>{isLongBio ? '↑' : '→'}</span>
         </button>
       </div>

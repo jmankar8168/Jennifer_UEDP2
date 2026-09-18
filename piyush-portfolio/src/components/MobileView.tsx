@@ -96,7 +96,7 @@ export default function MobileView({ onOpenProject, onSelectTool }: MobileViewPr
                 onClick={() => setIsLongBio(!isLongBio)}
                 className="mt-3 text-[13px] font-semibold text-[var(--figma-blue)] underline inline-flex items-center gap-1"
               >
-                <span>{isLongBio ? 'tldr' : 'More'}</span>
+                <span>{isLongBio ? 'Less' : 'More'}</span>
                 <span>{isLongBio ? '↑' : '→'}</span>
               </button>
             </div>
