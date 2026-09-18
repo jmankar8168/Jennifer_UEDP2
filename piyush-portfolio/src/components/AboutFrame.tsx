@@ -108,15 +108,15 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
       <button
         type="button"
         onClick={handleTakeCloserLook}
-        className="absolute group flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        className="absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
         style={{ left: 45, top: 42 }}
-        title="Take a closer look at the photo collage"
+        title="Move things around on the canvas"
       >
-        <span className="w-1.5 h-1.5 rounded-full bg-[var(--figma-blue)]/60 group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0" />
-        <span className="text-[13px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
-          Take a closer look
+        <span className="w-2 h-2 rounded-full bg-[var(--figma-blue)]/70 group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0" />
+        <span className="text-[16px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+          Move things around
         </span>
-        <span className="text-[13px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
+        <span className="text-[16px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
           →
         </span>
       </button>
@@ -125,16 +125,16 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
       <button
         type="button"
         onClick={handleToggleMusic}
-        className="absolute group flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
-        style={{ left: 55, top: 760 }}
+        className="absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        style={{ left: 55, top: 835 }}
         title="Press play to listen to Billy Joel - Vienna"
       >
-        <span className={`w-1.5 h-1.5 rounded-full ${isPlayingAudio ? 'bg-emerald-500 animate-pulse' : 'bg-[var(--figma-blue)]/60 group-hover:bg-[var(--figma-blue)]'} group-hover:scale-125 transition-all duration-200 shrink-0`} />
-        <span className="text-[13px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+        <span className={`w-2 h-2 rounded-full ${isPlayingAudio ? 'bg-emerald-500 animate-pulse' : 'bg-[var(--figma-blue)]/70 group-hover:bg-[var(--figma-blue)]'} group-hover:scale-125 transition-all duration-200 shrink-0`} />
+        <span className="text-[16px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
           {isPlayingAudio ? 'Playing Vienna ♫' : 'Press play & listen'}
         </span>
-        <span className="text-[13px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
-          {isPlayingAudio ? '⏸' : '→'}
+        <span className={`text-[16px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] ${isPlayingAudio ? 'group-hover:scale-110' : 'group-hover:-translate-y-1'} transition-all duration-200`}>
+          {isPlayingAudio ? '⏸' : '↑'}
         </span>
       </button>
 
@@ -142,15 +142,15 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
       <button
         type="button"
         onClick={handleDiscoverMore}
-        className="absolute group flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        className="absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
         style={{ left: 1070, top: 240 }}
         title="Discover more details and interactive elements"
       >
-        <span className="w-1.5 h-1.5 rounded-full bg-[var(--figma-blue)]/60 group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0" />
-        <span className="text-[13px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+        <span className="w-2 h-2 rounded-full bg-[var(--figma-blue)]/70 group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0" />
+        <span className="text-[16px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
           Discover more
         </span>
-        <span className="text-[13px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
+        <span className="text-[16px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
           →
         </span>
       </button>
