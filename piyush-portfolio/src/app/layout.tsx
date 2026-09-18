@@ -21,15 +21,17 @@ export const metadata: Metadata = {
   description: "Designer who loves to build & explore new things. Currently exploring communication and product design.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon.webp", type: "image/webp" },
-      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon-32x32.png?v=3", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.svg?v=3", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=3", sizes: "any" },
+      { url: "/favicon.png?v=3", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.webp?v=3", type: "image/webp" },
+      { url: "/icon-192.png?v=3", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png?v=3", type: "image/png", sizes: "512x512" },
     ],
+    shortcut: "/favicon.ico?v=3",
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png?v=3", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
@@ -77,6 +79,13 @@ export default function RootLayout({
       lang="en"
       className={`${figtree.variable} ${caveat.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+        <link rel="shortcut icon" href="/favicon.ico?v=3" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+      </head>
       <body className="h-full w-full overflow-hidden select-none bg-[var(--figma-bg)] text-[var(--figma-text)] font-sans">
         {children}
       </body>
