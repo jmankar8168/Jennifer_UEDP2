@@ -6,13 +6,18 @@ import { BUILDS_PROJECTS, BuildProject, TAG_STYLES } from '@/data/portfolioData'
 interface BuildsFrameProps {
   selectedCard: string | null;
   onSelectCard: (id: string) => void;
+  isLightCanvas?: boolean;
 }
 
-export default function BuildsFrame({ selectedCard, onSelectCard }: BuildsFrameProps) {
+export default function BuildsFrame({
+  selectedCard,
+  onSelectCard,
+  isLightCanvas = false,
+}: BuildsFrameProps) {
   return (
     <div className="absolute pointer-events-auto" style={{ left: 3500, top: 1950, width: 1100, height: 1600 }}>
       {/* Frame Label */}
-      <div className="absolute -top-7 left-24 text-[11px] font-semibold text-[var(--figma-text-secondary)] flex items-center gap-1.5">
+      <div className={`absolute -top-7 left-24 text-[11px] font-semibold ${isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'} flex items-center gap-1.5`}>
         <span className="w-2 h-2 rounded-full bg-[#00B25D] inline-block"/>
         <span>Builds & Small Apps</span>
       </div>
@@ -32,7 +37,7 @@ export default function BuildsFrame({ selectedCard, onSelectCard }: BuildsFrameP
             }}
             className={`absolute group cursor-pointer transition-all duration-200 rounded-xl p-2 block ${
               isSelected
-                ? 'ring-2 ring-[var(--figma-blue)] bg-white/40 dark:bg-white/5'
+                ? 'ring-2 ring-[var(--figma-blue)] bg-black/5 dark:bg-white/5'
                 : 'hover:-translate-y-1'
             }`}
             style={{
@@ -42,7 +47,7 @@ export default function BuildsFrame({ selectedCard, onSelectCard }: BuildsFrameP
             }}
           >
             {/* Card Thumbnail Frame */}
-            <div className="w-full aspect-[488/382] overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-[var(--figma-border)] shadow-sm group-hover:shadow-xl transition-shadow relative">
+            <div className={`w-full aspect-[488/382] overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800 border ${isLightCanvas ? 'border-black/10' : 'border-[var(--figma-border)]'} shadow-sm group-hover:shadow-xl transition-shadow relative`}>
               <img
                 src={build.image}
                 alt={build.title}
@@ -53,14 +58,14 @@ export default function BuildsFrame({ selectedCard, onSelectCard }: BuildsFrameP
 
             {/* Title & Description */}
             <div className="mt-3.5 flex items-center justify-between">
-              <h3 className="text-[20px] font-bold text-[var(--figma-text)] tracking-tight leading-snug group-hover:text-[var(--figma-blue)] transition-colors">
+              <h3 className={`text-[20px] font-bold ${isLightCanvas ? 'text-black' : 'text-[var(--figma-text)]'} tracking-tight leading-snug group-hover:text-[var(--figma-blue)] transition-colors`}>
                 {build.title}
               </h3>
               <span className="text-[14px] text-[var(--figma-blue)] opacity-0 group-hover:opacity-100 transition-opacity">
                 ↗
               </span>
             </div>
-            <p className="mt-1 text-[14px] text-[var(--figma-text-secondary)] leading-normal line-clamp-2">
+            <p className={`mt-1 text-[14px] ${isLightCanvas ? 'text-neutral-700' : 'text-[var(--figma-text-secondary)]'} leading-normal line-clamp-2`}>
               {build.description}
             </p>
 

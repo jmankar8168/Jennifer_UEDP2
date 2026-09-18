@@ -1,3 +1,23 @@
+export function isLightBg(color?: string): boolean {
+  if (!color) return true;
+  const c = color.toLowerCase();
+  if (c === '#1e1e1e' || c === '#121212' || c === '#000000' || c === '#18181b' || c === '#171717' || c === '#202020') {
+    return false;
+  }
+  if (c === '#ffffff' || c === '#f5f5f5' || c === '#e6f4ff' || c === '#fafafa' || c === '#f0f0f0') {
+    return true;
+  }
+  const hex = c.replace('#', '');
+  if (hex.length === 6) {
+    const r = parseInt(hex.substring(0, 2), 16);
+    const g = parseInt(hex.substring(2, 4), 16);
+    const b = parseInt(hex.substring(4, 6), 16);
+    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    return luminance > 0.5;
+  }
+  return true;
+}
+
 export interface PageItem {
   id: string;
   label: string;

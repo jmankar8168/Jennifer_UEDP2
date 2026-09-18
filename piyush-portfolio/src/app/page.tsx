@@ -9,7 +9,7 @@ import CaseStudyModal from '@/components/CaseStudyModal';
 import MobileView from '@/components/MobileView';
 import HeroIntroSwipe from '@/components/HeroIntroSwipe';
 import ToolWorkspaceModal from '@/components/tools/ToolWorkspaceModal';
-import { WorkProject, PageItem, PAGES } from '@/data/portfolioData';
+import { WorkProject, PageItem, PAGES, isLightBg } from '@/data/portfolioData';
 
 export default function Home() {
   const [heroOpen, setHeroOpen] = useState(true);
@@ -169,10 +169,14 @@ export default function Home() {
         />
 
         {/* Bottom Status Tip */}
-        <div className="fixed bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md border border-[var(--figma-border)] text-[11px] text-[var(--figma-text-secondary)] shadow-sm pointer-events-none z-20 flex items-center gap-2">
-          <span>Hold <kbd className="px-1 py-0.5 rounded bg-neutral-200 dark:bg-neutral-800 text-[10px] font-mono">Space</kbd> or click Hand to Pan</span>
+        <div className={`fixed bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full backdrop-blur-md shadow-sm pointer-events-none z-20 flex items-center gap-2 text-[11px] ${
+          isLightBg(canvasBg)
+            ? 'bg-white/95 text-neutral-900 border border-black/15 shadow-md'
+            : 'bg-white/80 dark:bg-black/60 border border-[var(--figma-border)] text-[var(--figma-text-secondary)]'
+        }`}>
+          <span>Hold <kbd className={`px-1 py-0.5 rounded text-[10px] font-mono ${isLightBg(canvasBg) ? 'bg-neutral-200 text-neutral-900 font-semibold' : 'bg-neutral-200 dark:bg-neutral-800'}`}>Space</kbd> or click Hand to Pan</span>
           <span>•</span>
-          <span><kbd className="px-1 py-0.5 rounded bg-neutral-200 dark:bg-neutral-800 text-[10px] font-mono">Ctrl</kbd> + Scroll to Zoom</span>
+          <span><kbd className={`px-1 py-0.5 rounded text-[10px] font-mono ${isLightBg(canvasBg) ? 'bg-neutral-200 text-neutral-900 font-semibold' : 'bg-neutral-200 dark:bg-neutral-800'}`}>Ctrl</kbd> + Scroll to Zoom</span>
         </div>
       </div>
 

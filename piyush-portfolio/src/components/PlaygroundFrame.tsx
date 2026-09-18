@@ -3,23 +3,27 @@
 import React from 'react';
 import BlockBlastGame from './BlockBlastGame';
 
-export default function PlaygroundFrame() {
+interface PlaygroundFrameProps {
+  isLightCanvas?: boolean;
+}
+
+export default function PlaygroundFrame({ isLightCanvas = false }: PlaygroundFrameProps) {
   return (
     <div className="absolute pointer-events-auto" style={{ left: 900, top: 3450, width: 1400, height: 900 }}>
       {/* Frame Label */}
-      <div className="absolute -top-7 left-10 text-[11px] font-semibold text-[var(--figma-text-secondary)] flex items-center gap-1.5">
+      <div className={`absolute -top-7 left-10 text-[11px] font-semibold ${isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'} flex items-center gap-1.5`}>
         <span className="w-2 h-2 rounded-full bg-[#8253FF] inline-block"/>
         <span>Playground (Block Blast Puzzle)</span>
       </div>
 
-      <div className="p-8 rounded-2xl bg-white/60 dark:bg-[#202020]/60 border border-[var(--figma-border)] backdrop-blur-md shadow-xl w-full h-full flex flex-col items-center justify-between">
+      <div className={`p-8 rounded-2xl ${isLightCanvas ? 'bg-white/90 border-black/15' : 'bg-white/60 dark:bg-[#202020]/60 border-[var(--figma-border)]'} border backdrop-blur-md shadow-xl w-full h-full flex flex-col items-center justify-between`}>
         {/* Header Section */}
         <div className="w-full flex items-center justify-between mb-2">
           <div>
-            <h2 className="text-[24px] font-bold text-[var(--figma-text)] tracking-tight">
+            <h2 className={`text-[24px] font-bold ${isLightCanvas ? 'text-black' : 'text-[var(--figma-text)]'} tracking-tight`}>
               Playground Puzzle
             </h2>
-            <p className="text-[14px] text-[var(--figma-text-secondary)]">
+            <p className={`text-[14px] ${isLightCanvas ? 'text-neutral-700' : 'text-[var(--figma-text-secondary)]'}`}>
               Drag & drop blocks onto the 8×8 board to clear full rows and columns.
             </p>
           </div>
@@ -39,7 +43,7 @@ export default function PlaygroundFrame() {
         </div>
 
         {/* Bottom Tip */}
-        <div className="text-[12px] text-[var(--figma-text-secondary)] flex items-center gap-4">
+        <div className={`text-[12px] ${isLightCanvas ? 'text-neutral-700' : 'text-[var(--figma-text-secondary)]'} flex items-center gap-4`}>
           <span>Tip: Complete multiple rows or columns simultaneously for massive combo multipliers!</span>
           <span>•</span>
           <span>Game over occurs when no pieces in your tray can fit anywhere on the board.</span>

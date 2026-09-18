@@ -7,9 +7,10 @@ import MusicPlayerSticker from './MusicPlayerSticker';
 
 interface AboutFrameProps {
   scale: number;
+  isLightCanvas?: boolean;
 }
 
-export default function AboutFrame({ scale }: AboutFrameProps) {
+export default function AboutFrame({ scale, isLightCanvas = false }: AboutFrameProps) {
   const [items, setItems] = useState<CollageItem[]>(ABOUT_COLLAGE);
   const [isLongBio, setIsLongBio] = useState(false);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
@@ -99,7 +100,7 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
       style={{ left: 0, top: 0, width: 1300, height: 900 }}
     >
       {/* Frame Label */}
-      <div className="absolute -top-7 left-0 text-[11px] font-semibold text-[var(--figma-text-secondary)] flex items-center gap-1.5">
+      <div className={`absolute -top-7 left-0 text-[11px] font-semibold ${isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'} flex items-center gap-1.5`}>
         <span className="w-2 h-2 rounded-full bg-[var(--figma-blue)] inline-block"/>
         <span>About Collage</span>
       </div>
@@ -108,15 +109,23 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
       <button
         type="button"
         onClick={handleTakeCloserLook}
-        className="absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        className={`absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent ${
+          isLightCanvas ? 'hover:bg-black/10' : 'hover:bg-black/5 dark:hover:bg-white/5'
+        } z-10`}
         style={{ left: 45, top: 42 }}
         title="Move things around on the canvas"
       >
-        <span className="w-2 h-2 rounded-full bg-[var(--figma-blue)]/70 group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0" />
-        <span className="text-[16px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+        <span className={`w-2 h-2 rounded-full ${
+          isLightCanvas ? 'bg-black' : 'bg-[var(--figma-blue)]/70'
+        } group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0`} />
+        <span className={`text-[16px] font-medium tracking-tight ${
+          isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'
+        } group-hover:text-[var(--figma-blue)] transition-colors`}>
           Move things around
         </span>
-        <span className="text-[16px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
+        <span className={`text-[16px] ${
+          isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'
+        } group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200`}>
           →
         </span>
       </button>
@@ -125,15 +134,27 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
       <button
         type="button"
         onClick={handleToggleMusic}
-        className="absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        className={`absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent ${
+          isLightCanvas ? 'hover:bg-black/10' : 'hover:bg-black/5 dark:hover:bg-white/5'
+        } z-10`}
         style={{ left: 55, top: 835 }}
         title="Press play to listen to Billy Joel - Vienna"
       >
-        <span className={`w-2 h-2 rounded-full ${isPlayingAudio ? 'bg-emerald-500 animate-pulse' : 'bg-[var(--figma-blue)]/70 group-hover:bg-[var(--figma-blue)]'} group-hover:scale-125 transition-all duration-200 shrink-0`} />
-        <span className="text-[16px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+        <span className={`w-2 h-2 rounded-full ${
+          isPlayingAudio
+            ? 'bg-emerald-600 animate-pulse'
+            : isLightCanvas
+            ? 'bg-black'
+            : 'bg-[var(--figma-blue)]/70'
+        } group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0`} />
+        <span className={`text-[16px] font-medium tracking-tight ${
+          isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'
+        } group-hover:text-[var(--figma-blue)] transition-colors`}>
           {isPlayingAudio ? 'Playing Vienna ♫' : 'Press play & listen'}
         </span>
-        <span className={`text-[16px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] ${isPlayingAudio ? 'group-hover:scale-110' : 'group-hover:-translate-y-1'} transition-all duration-200`}>
+        <span className={`text-[16px] ${
+          isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'
+        } group-hover:text-[var(--figma-blue)] ${isPlayingAudio ? 'group-hover:scale-110' : 'group-hover:-translate-y-1'} transition-all duration-200`}>
           {isPlayingAudio ? '⏸' : '↑'}
         </span>
       </button>
@@ -142,15 +163,23 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
       <button
         type="button"
         onClick={handleDiscoverMore}
-        className="absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        className={`absolute group flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent ${
+          isLightCanvas ? 'hover:bg-black/10' : 'hover:bg-black/5 dark:hover:bg-white/5'
+        } z-10`}
         style={{ left: 1070, top: 240 }}
         title="Discover more details and interactive elements"
       >
-        <span className="w-2 h-2 rounded-full bg-[var(--figma-blue)]/70 group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0" />
-        <span className="text-[16px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+        <span className={`w-2 h-2 rounded-full ${
+          isLightCanvas ? 'bg-black' : 'bg-[var(--figma-blue)]/70'
+        } group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0`} />
+        <span className={`text-[16px] font-medium tracking-tight ${
+          isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'
+        } group-hover:text-[var(--figma-blue)] transition-colors`}>
           Discover more
         </span>
-        <span className="text-[16px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
+        <span className={`text-[16px] ${
+          isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'
+        } group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200`}>
           →
         </span>
       </button>
@@ -201,7 +230,11 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
 
       {/* Bio Text Card in Center */}
       <div
-        className="absolute p-7 rounded-2xl bg-white/90 dark:bg-[#202020]/95 backdrop-blur-md shadow-2xl border border-[var(--figma-border)] z-20"
+        className={`absolute p-7 rounded-2xl backdrop-blur-md shadow-2xl transition-colors duration-200 z-20 ${
+          isLightCanvas
+            ? 'bg-white/95 text-neutral-900 border border-black/15 shadow-xl'
+            : 'bg-white/90 dark:bg-[#202020]/95 text-[var(--figma-text)] border border-[var(--figma-border)]'
+        }`}
         style={{
           left: 410,
           top: 395,
@@ -209,7 +242,9 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
         }}
         onClick={e => e.stopPropagation()}
       >
-        <p className="text-[18px] leading-relaxed text-[var(--figma-text)] font-sans tracking-tight">
+        <p className={`text-[18px] leading-relaxed font-sans tracking-tight ${
+          isLightCanvas ? 'text-neutral-900' : 'text-[var(--figma-text)]'
+        }`}>
           {isLongBio ? BIO_LONG : BIO_SHORT}
         </p>
 

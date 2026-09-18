@@ -5,7 +5,7 @@ import AboutFrame from './AboutFrame';
 import WorkFrame from './WorkFrame';
 import BuildsFrame from './BuildsFrame';
 import PlaygroundFrame from './PlaygroundFrame';
-import { WorkProject, PageItem } from '@/data/portfolioData';
+import { WorkProject, PageItem, isLightBg } from '@/data/portfolioData';
 
 interface FigmaCanvasProps {
   scale: number;
@@ -40,6 +40,8 @@ export default function FigmaCanvas({
   const [isSmoothPanning, setIsSmoothPanning] = useState(false);
   const dragStart = useRef<{ mouseX: number; mouseY: number; panX: number; panY: number } | null>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
+
+  const isLightCanvas = isLightBg(canvasBg);
 
   // Pan to target coordinates
   const panTo = useCallback((targetX: number, targetY: number, targetScale: number = scale) => {
@@ -178,9 +180,11 @@ export default function FigmaCanvas({
     >
       {/* Background Dot Grid */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-40 dark:opacity-20"
+        className={`absolute inset-0 pointer-events-none ${
+          isLightCanvas ? 'opacity-40' : (isDark ? 'opacity-20' : 'opacity-40')
+        }`}
         style={{
-          backgroundImage: `radial-gradient(${isDark ? '#555' : '#888'} 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(${isLightCanvas ? '#777' : (isDark ? '#555' : '#888')} 1px, transparent 1px)`,
           backgroundSize: `${24 * scale}px ${24 * scale}px`,
           backgroundPosition: `${pan.x}px ${pan.y}px`,
         }}
@@ -197,7 +201,7 @@ export default function FigmaCanvas({
       >
         {/* Frame 1: About Collage & Bio */}
         <div style={{ position: 'absolute', left: 0, top: 0 }}>
-          <AboutFrame scale={scale} />
+          <AboutFrame scale={scale} isLightCanvas={isLightCanvas} />
         </div>
 
         {/* Frame 2: Selected Work (5 Projects) */}
@@ -209,6 +213,7 @@ export default function FigmaCanvas({
               setSelectedCard(id);
               setActivePage('work');
             }}
+            isLightCanvas={isLightCanvas}
           />
         </div>
 
@@ -220,12 +225,13 @@ export default function FigmaCanvas({
               setSelectedCard(id);
               setActivePage('builds');
             }}
+            isLightCanvas={isLightCanvas}
           />
         </div>
 
         {/* Frame 4: Design Playground */}
         <div style={{ position: 'absolute', left: 0, top: 0 }}>
-          <PlaygroundFrame />
+          <PlaygroundFrame isLightCanvas={isLightCanvas} />
         </div>
       </div>
     </div>

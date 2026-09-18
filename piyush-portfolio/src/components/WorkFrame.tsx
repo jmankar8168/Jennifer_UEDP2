@@ -7,17 +7,19 @@ interface WorkFrameProps {
   onOpenProject: (project: WorkProject) => void;
   selectedCard: string | null;
   onSelectCard: (id: string) => void;
+  isLightCanvas?: boolean;
 }
 
 export default function WorkFrame({
   onOpenProject,
   selectedCard,
   onSelectCard,
+  isLightCanvas = false,
 }: WorkFrameProps) {
   return (
     <div className="absolute pointer-events-auto" style={{ left: 2150, top: 0, width: 1500, height: 1100 }}>
       {/* Frame Label */}
-      <div className="absolute -top-7 left-12 text-[11px] font-semibold text-[var(--figma-text-secondary)] flex items-center gap-1.5">
+      <div className={`absolute -top-7 left-12 text-[11px] font-semibold ${isLightCanvas ? 'text-black' : 'text-[var(--figma-text-secondary)]'} flex items-center gap-1.5`}>
         <span className="w-2 h-2 rounded-full bg-[#FF5100] inline-block"/>
         <span>Selected Work (5 Projects)</span>
       </div>
@@ -35,7 +37,7 @@ export default function WorkFrame({
             }}
             className={`absolute group cursor-pointer transition-all duration-200 rounded-xl p-2 ${
               isSelected
-                ? 'ring-2 ring-[var(--figma-blue)] bg-white/40 dark:bg-white/5'
+                ? 'ring-2 ring-[var(--figma-blue)] bg-black/5 dark:bg-white/5'
                 : 'hover:-translate-y-1'
             }`}
             style={{
@@ -45,7 +47,7 @@ export default function WorkFrame({
             }}
           >
             {/* Card Thumbnail Frame */}
-            <div className="w-full aspect-[488/382] overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-[var(--figma-border)] shadow-sm group-hover:shadow-xl transition-shadow relative">
+            <div className={`w-full aspect-[488/382] overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800 border ${isLightCanvas ? 'border-black/10' : 'border-[var(--figma-border)]'} shadow-sm group-hover:shadow-xl transition-shadow relative`}>
               <img
                 src={project.image}
                 alt={project.title}
@@ -56,10 +58,10 @@ export default function WorkFrame({
 
             {/* Title & Description */}
             <div className="mt-3.5">
-              <h3 className="text-[20px] font-bold text-[var(--figma-text)] tracking-tight leading-snug group-hover:text-[var(--figma-blue)] transition-colors">
+              <h3 className={`text-[20px] font-bold ${isLightCanvas ? 'text-black' : 'text-[var(--figma-text)]'} tracking-tight leading-snug group-hover:text-[var(--figma-blue)] transition-colors`}>
                 {project.title}
               </h3>
-              <p className="mt-1 text-[14px] text-[var(--figma-text-secondary)] leading-normal line-clamp-2">
+              <p className={`mt-1 text-[14px] ${isLightCanvas ? 'text-neutral-700' : 'text-[var(--figma-text-secondary)]'} leading-normal line-clamp-2`}>
                 {project.description}
               </p>
             </div>
