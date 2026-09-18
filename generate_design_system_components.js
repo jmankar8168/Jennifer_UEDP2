@@ -22,7 +22,8 @@ const PROTECTED = new Set([
   'HelpTypeOptionsLargeTouchTargets',
   'BackgroundHorizontalborder',
   'Radio',
-  'Component15'
+  'Component15',
+  'JobCards'
 ]);
 
 
