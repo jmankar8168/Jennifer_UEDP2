@@ -64,3 +64,4 @@ export { VoicePromptBlock4 } from './components/VoicePromptBlock4/VoicePromptBlo
 export { Listening } from './components/Listening/Listening';
 export { Component23 } from './components/Component23/Component23';
 export { MenuBaseline } from './components/MenuBaseline/MenuBaseline';
+export { Radio } from './components/Radio/Radio';

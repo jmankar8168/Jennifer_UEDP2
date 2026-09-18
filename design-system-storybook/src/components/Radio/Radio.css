@@ -1,0 +1,117 @@
+/**
+ * CSS for Radio Component
+ * Preserved Figma Layer: "Radio"
+ * Node ID: 52:5949 / 32:741
+ *
+ * Specs from Figma:
+ * - Outer circle: 18px × 18px, cornerRadius: 9px, strokeWeight: 1px
+ * - Inner dot (selected): 8px × 8px, cornerRadius: 4px, fill: #B7FF4D
+ * - Colors:
+ *     Selected: Stroke #B7FF4D (Variable 17:2340), Dot #B7FF4D
+ *     Hover: Stroke #FFFFFF (Variable 1:4)
+ *     Disabled / Default: Stroke #525252 (Variable 1:44)
+ */
+
+.uedp-radio-wrapper {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  font-family: 'Space Mono', monospace, sans-serif;
+  vertical-align: middle;
+}
+
+.uedp-radio-wrapper:focus-visible .uedp-radio-circle {
+  box-shadow: 0 0 0 2px rgba(183, 255, 77, 0.4);
+}
+
+.uedp-radio-wrapper--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.uedp-radio {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.uedp-radio-circle {
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  background-color: transparent;
+  border: 1px solid #525252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+}
+
+/* Default state: border #525252 */
+.uedp-radio--default .uedp-radio-circle {
+  border-color: #525252;
+}
+
+/* Hover state: border #FFFFFF */
+.uedp-radio--hover .uedp-radio-circle,
+.uedp-radio-wrapper:not(.uedp-radio-wrapper--disabled):hover .uedp-radio-circle {
+  border-color: #ffffff;
+}
+
+/* Selected state: border #B7FF4D with 8x8 dot */
+.uedp-radio--selected .uedp-radio-circle,
+.uedp-radio-wrapper:not(.uedp-radio-wrapper--disabled):hover .uedp-radio--selected .uedp-radio-circle {
+  border-color: #b7ff4d;
+}
+
+/* Disabled state */
+.uedp-radio--disabled .uedp-radio-circle {
+  border-color: #525252;
+}
+
+/* Inner dot (8px x 8px, cornerRadius: 4px, background: #B7FF4D) */
+.uedp-radio-dot {
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #b7ff4d;
+  display: block;
+  animation: uedp-radio-pop 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes uedp-radio-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.uedp-radio-label {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  line-height: 18px;
+}
+
+.uedp-radio-wrapper--disabled .uedp-radio-label {
+  color: #737373;
+}
