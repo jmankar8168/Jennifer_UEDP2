@@ -1,13 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
-import { PAGES, PageItem, TOOLS } from '@/data/portfolioData';
+import { PAGES, PageItem, TOOLS, TOOL_ITEMS } from '@/data/portfolioData';
 
 interface FigmaLeftSidebarProps {
   activePage: string;
   onSelectPage: (page: PageItem) => void;
   selectedCard: string | null;
   onSelectCard: (cardId: string) => void;
+  onSelectTool?: (toolId: string) => void;
 }
 
 function getToolIcon(name: string) {
@@ -111,6 +112,7 @@ export default function FigmaLeftSidebar({
   onSelectPage,
   selectedCard,
   onSelectCard,
+  onSelectTool,
 }: FigmaLeftSidebarProps) {
   const [search, setSearch] = useState('');
   const [pagesOpen, setPagesOpen] = useState(true);
@@ -282,17 +284,32 @@ export default function FigmaLeftSidebar({
 
         {toolsOpen && (
           <div className="flex flex-col gap-0.5 px-1.5 mt-1">
-            {filteredTools.map(tool => (
-              <div
-                key={tool}
-                className="flex items-center gap-2 px-2.5 py-1.5 rounded text-[12px] font-medium text-[var(--figma-text)] hover:bg-[var(--figma-hover)] transition-colors group cursor-default"
-              >
-                <span className="opacity-70 group-hover:opacity-100 transition-opacity shrink-0 text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)]">
-                  {getToolIcon(tool)}
-                </span>
-                <span className="truncate">{tool}</span>
-              </div>
-            ))}
+            {filteredTools.map(tool => {
+              const matchedItem = TOOL_ITEMS.find(
+                t => t.name.toLowerCase() === tool.toLowerCase() || t.id.toLowerCase() === tool.toLowerCase()
+              );
+              const toolId = matchedItem?.id || tool.toLowerCase().replace(/[^a-z]/g, '');
+
+              return (
+                <button
+                  key={tool}
+                  type="button"
+                  onClick={() => onSelectTool?.(toolId)}
+                  className="w-full flex items-center justify-between px-2.5 py-1.5 rounded text-[12px] font-medium text-[var(--figma-text)] hover:bg-[var(--figma-hover)] active:scale-[0.99] transition-all group cursor-pointer text-left"
+                  title={`Launch interactive ${tool} workspace`}
+                >
+                  <div className="flex items-center gap-2 truncate">
+                    <span className="opacity-70 group-hover:opacity-100 transition-opacity shrink-0 text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)]">
+                      {getToolIcon(tool)}
+                    </span>
+                    <span className="truncate">{tool}</span>
+                  </div>
+                  <span className="text-[10px] font-mono text-[var(--figma-blue)] opacity-0 group-hover:opacity-100 transition-opacity pl-1 shrink-0">
+                    Open ↗
+                  </span>
+                </button>
+              );
+            })}
           </div>
         )}
       </div>

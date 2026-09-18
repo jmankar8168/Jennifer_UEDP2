@@ -10,15 +10,17 @@ import {
   SOCIAL_LINKS,
   TAG_STYLES,
   WorkProject,
+  TOOL_ITEMS,
 } from '@/data/portfolioData';
 import BlockBlastGame from './BlockBlastGame';
 
 interface MobileViewProps {
   onOpenProject: (p: WorkProject) => void;
+  onSelectTool?: (toolId: string) => void;
 }
 
-export default function MobileView({ onOpenProject }: MobileViewProps) {
-  const [activeTab, setActiveTab] = useState<'about' | 'work' | 'builds' | 'playground'>('about');
+export default function MobileView({ onOpenProject, onSelectTool }: MobileViewProps) {
+  const [activeTab, setActiveTab] = useState<'about' | 'work' | 'builds' | 'playground' | 'tools'>('about');
   const [isLongBio, setIsLongBio] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
@@ -43,13 +45,13 @@ export default function MobileView({ onOpenProject }: MobileViewProps) {
         </div>
 
         {/* Tab Selector */}
-        <div className="flex items-center gap-1 border-t border-[var(--figma-border)]">
-          {(['about', 'work', 'builds', 'playground'] as const).map(tab => (
+        <div className="flex items-center gap-1 border-t border-[var(--figma-border)] overflow-x-auto no-scrollbar">
+          {(['about', 'work', 'builds', 'playground', 'tools'] as const).map(tab => (
             <button
               key={tab}
               type="button"
               onClick={() => setActiveTab(tab)}
-              className={`flex-1 py-2.5 text-center text-[13px] font-semibold capitalize border-b-2 transition-colors ${
+              className={`flex-1 min-w-[65px] py-2.5 text-center text-[12px] font-semibold capitalize border-b-2 transition-colors whitespace-nowrap ${
                 activeTab === tab
                   ? 'border-[var(--figma-blue)] text-[var(--figma-text)]'
                   : 'border-transparent text-[var(--figma-text-secondary)] hover:text-[var(--figma-text)]'
@@ -188,6 +190,51 @@ export default function MobileView({ onOpenProject }: MobileViewProps) {
               </p>
             </div>
             <BlockBlastGame isMobile={true} />
+          </div>
+        )}
+
+        {/* TOOLS TAB */}
+        {activeTab === 'tools' && (
+          <div className="flex flex-col gap-3 animate-fade-in-up pb-16">
+            <div className="p-4 rounded-xl bg-white dark:bg-[#252525] border border-[var(--figma-border)] shadow-sm">
+              <div className="flex items-center justify-between">
+                <h3 className="text-[17px] font-bold text-[var(--figma-text)] tracking-tight">Interactive Tools</h3>
+                <span className="px-2.5 py-0.5 rounded-full bg-[#009EFF]/10 text-[#009EFF] text-[11px] font-semibold border border-[#009EFF]/20">
+                  {TOOL_ITEMS.length} Workspaces
+                </span>
+              </div>
+              <p className="text-[13px] text-[var(--figma-text-secondary)] mt-1">
+                Tap any tool to launch Jennifer&apos;s interactive mini-experience inside the portfolio!
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-2.5">
+              {TOOL_ITEMS.map(tool => (
+                <button
+                  key={tool.id}
+                  type="button"
+                  onClick={() => onSelectTool?.(tool.id)}
+                  className="w-full p-3.5 rounded-xl bg-white dark:bg-[#252525] border border-[var(--figma-border)] shadow-sm text-left flex items-center justify-between hover:border-[var(--figma-blue)] active:scale-[0.99] transition-all group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-[var(--figma-hover)] flex items-center justify-center text-base font-bold text-[var(--figma-blue)]">
+                      {tool.name[0]}
+                    </div>
+                    <div>
+                      <div className="text-[14px] font-bold text-[var(--figma-text)] group-hover:text-[var(--figma-blue)] transition-colors">
+                        {tool.name}
+                      </div>
+                      <div className="text-[11px] text-[var(--figma-text-secondary)] line-clamp-1">
+                        {tool.tagline}
+                      </div>
+                    </div>
+                  </div>
+                  <span className="text-[11px] font-semibold text-[var(--figma-blue)] bg-[var(--figma-blue)]/10 px-2.5 py-1 rounded-lg shrink-0 ml-2">
+                    Open ↗
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </main>

@@ -8,6 +8,7 @@ import FigmaCanvas from '@/components/FigmaCanvas';
 import CaseStudyModal from '@/components/CaseStudyModal';
 import MobileView from '@/components/MobileView';
 import HeroIntroSwipe from '@/components/HeroIntroSwipe';
+import ToolWorkspaceModal from '@/components/tools/ToolWorkspaceModal';
 import { WorkProject, PageItem, PAGES } from '@/data/portfolioData';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
   const [activePage, setActivePage] = useState<string>('about');
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
   const [selectedProject, setSelectedProject] = useState<WorkProject | null>(null);
+  const [activeToolWorkspace, setActiveToolWorkspace] = useState<string | null>(null);
   const [canvasBg, setCanvasBg] = useState<string>('#f5f5f5');
   const [isDark, setIsDark] = useState<boolean>(false);
   const [targetCoords, setTargetCoords] = useState<{ x: number; y: number } | null>(null);
@@ -61,6 +63,8 @@ export default function Home() {
         setScale(prev => Math.min(prev * 1.15, 2.5));
       } else if (e.key === '-') {
         setScale(prev => Math.max(prev * 0.85, 0.25));
+      } else if (e.key === 'Escape') {
+        setActiveToolWorkspace(null);
       }
     };
 
@@ -152,6 +156,7 @@ export default function Home() {
           onSelectPage={handleSelectPage}
           selectedCard={selectedCard}
           onSelectCard={cardId => setSelectedCard(cardId)}
+          onSelectTool={toolId => setActiveToolWorkspace(toolId)}
         />
 
         {/* Right Floating Properties & Inspector Sidebar */}
@@ -173,13 +178,23 @@ export default function Home() {
 
       {/* 3. Mobile Feed Experience (Rendered on mobile screens < 768px) */}
       <div className="block md:hidden">
-        <MobileView onOpenProject={proj => setSelectedProject(proj)} />
+        <MobileView
+          onOpenProject={proj => setSelectedProject(proj)}
+          onSelectTool={toolId => setActiveToolWorkspace(toolId)}
+        />
       </div>
 
       {/* 4. Deep-dive Case Study Modal Drawer */}
       <CaseStudyModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
+      />
+
+      {/* 5. Interactive Tool Workspace Modal */}
+      <ToolWorkspaceModal
+        toolId={activeToolWorkspace}
+        onClose={() => setActiveToolWorkspace(null)}
+        onSelectTool={toolId => setActiveToolWorkspace(toolId)}
       />
     </div>
   );

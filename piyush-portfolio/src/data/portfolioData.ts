@@ -62,20 +62,29 @@ export const PAGES: PageItem[] = [
   { id: 'builds', label: 'Builds', x: 3870, y: 2150 },
 ];
 
-export const TOOLS: string[] = [
-  'Figma',
-  'Framer',
-  'Antigravity',
-  'ReactJS',
-  'Vite',
-  'Claude AI',
-  'Chat GPT',
-  'Gemini',
-  'Adobe Suite',
-  'Canva',
-  'Miro',
-  'Procreate',
+export interface ToolItem {
+  id: string;
+  name: string;
+  category: string;
+  tagline: string;
+}
+
+export const TOOL_ITEMS: ToolItem[] = [
+  { id: 'figma', name: 'Figma', category: 'Design', tagline: 'Mini design workspace with layers & inspector' },
+  { id: 'framer', name: 'Framer', category: 'Build', tagline: 'Interactive responsive website builder' },
+  { id: 'antigravity', name: 'Antigravity', category: 'Code with AI', tagline: 'Autonomous AI coding agent environment' },
+  { id: 'react', name: 'React.JS', category: 'Components', tagline: 'UI component playground & JSX generator' },
+  { id: 'vite', name: 'Vite', category: 'Speed', tagline: 'Lightning fast dev server & speed benchmark' },
+  { id: 'claude', name: 'Claude AI', category: 'Think', tagline: 'Thoughtful design partner & UX reasoning' },
+  { id: 'chatgpt', name: 'ChatGPT', category: 'Ideate', tagline: 'Creative design copilot with quick brainstorm actions' },
+  { id: 'gemini', name: 'Gemini', category: 'Multimodal', tagline: 'Multimodal design critic & UI image analyzer' },
+  { id: 'adobe', name: 'Adobe Suite', category: 'Create', tagline: 'Photoshop filters + Illustrator vectors + AE timeline' },
+  { id: 'canva', name: 'Canva', category: 'Quick Design', tagline: 'Card & poster maker with templates & export' },
+  { id: 'miro', name: 'Miro', category: 'Collaborate', tagline: 'Infinite whiteboard with sticky notes & UX research board' },
+  { id: 'procreate', name: 'Procreate', category: 'Draw', tagline: 'Digital sketchbook with brush presets & layers' },
 ];
+
+export const TOOLS: string[] = TOOL_ITEMS.map(t => t.name);
 
 export const TAG_STYLES: Record<string, { color: string; bg: string }> = {
   'Branding': { color: '#009EFF', bg: 'rgba(0, 158, 255, 0.10)' },
