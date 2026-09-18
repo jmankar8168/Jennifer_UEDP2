@@ -186,7 +186,7 @@ export default function FigmaRightSidebar({
 
       {/* Copy Toast Indicator */}
       {copiedEmail && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-[#1e1e1e] text-white text-[11px] font-medium rounded-full shadow-lg pointer-events-none animate-fade-in-up">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-[#1e1e1e] text-white text-[11px] font-medium rounded-full shadow-lg pointer-events-none animate-fade-in-up-centered">
           Email copied ✓
         </div>
       )}

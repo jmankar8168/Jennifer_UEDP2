@@ -82,7 +82,18 @@ body {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate(-50%, 10px);
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpCentered {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 12px);
   }
   100% {
     opacity: 1;
@@ -91,7 +102,11 @@ body {
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeInUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-up-centered {
+  animation: fadeInUpCentered 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Hide Next.js devtools indicator badge */

@@ -93,10 +93,10 @@ export default function HeroIntroSwipe({ onDismiss, isOpen }: HeroIntroSwipeProp
       </header>
 
       {/* 2. Main Central Hero Section: Dead-center of the entire viewport */}
-      <main className="w-full max-w-2xl px-6 flex flex-col items-center justify-center text-center">
-        <div className="flex flex-col items-center text-center max-w-2xl w-full gap-6 animate-fade-in-up">
+      <main className="w-full max-w-2xl px-6 flex flex-col items-center justify-center text-center mx-auto">
+        <div className="flex flex-col items-center justify-center text-center max-w-2xl w-full gap-6 animate-fade-in-up mx-auto">
           {/* Floating Avatar & Badge */}
-          <div className="relative group cursor-pointer" onClick={triggerDismiss}>
+          <div className="relative group cursor-pointer flex flex-col items-center" onClick={triggerDismiss}>
             <div className="w-28 h-28 md:w-36 md:h-36 rounded-3xl overflow-hidden border-2 border-neutral-300 dark:border-neutral-700 shadow-2xl p-1 bg-white dark:bg-neutral-800">
               <Image
                 src="/jenni-avatar.webp"
@@ -113,17 +113,17 @@ export default function HeroIntroSwipe({ onDismiss, isOpen }: HeroIntroSwipeProp
           </div>
 
           {/* Headline & Description */}
-          <div className="flex flex-col gap-2.5">
-            <h1 className="text-3xl md:text-5xl font-black tracking-tight text-[var(--figma-text)] leading-tight">
+          <div className="flex flex-col items-center text-center gap-2.5 w-full">
+            <h1 className="text-3xl md:text-5xl font-black tracking-tight text-[var(--figma-text)] leading-tight text-center">
               Hi, I’m Jenni.
             </h1>
-            <p className="text-base md:text-xl text-[var(--figma-text-secondary)] font-medium max-w-lg mx-auto leading-relaxed">
+            <p className="text-base md:text-xl text-[var(--figma-text-secondary)] font-medium max-w-lg mx-auto leading-relaxed text-center">
               Product & Brand Designer building interfaces, generative tools, and tactile web experiences.
             </p>
           </div>
 
           {/* Interactive Enter Trigger */}
-          <div className="flex flex-col items-center gap-3 mt-3">
+          <div className="flex flex-col items-center justify-center gap-3 mt-3 w-full">
             <button
               type="button"
               onClick={triggerDismiss}
@@ -145,7 +145,7 @@ export default function HeroIntroSwipe({ onDismiss, isOpen }: HeroIntroSwipeProp
                 <polyline points="19 12 12 19 5 12" />
               </svg>
             </button>
-            <span className="text-[12px] text-[var(--figma-text-tertiary)] flex items-center gap-1">
+            <span className="text-[12px] text-[var(--figma-text-tertiary)] flex items-center justify-center gap-1">
               <span>Scroll or swipe up to reveal canvas</span>
               <span className="animate-bounce inline-block">↑</span>
             </span>
