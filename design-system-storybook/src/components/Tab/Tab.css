@@ -1,165 +1,113 @@
 /**
  * CSS for Tab
- * Figma Preserved Layer Name: "Tab"
- * Node ID: 33:861
+ * Preserved Figma Layer Name: "Tab"
+ * Node ID: 33:861 / 53:6113
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+/* Container flex */
 .uedp-tab {
   box-sizing: border-box;
   display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  background-color: #171717;
-  border: 1px solid transparent;
-  
-  min-width: 245px;
-  min-height: 28px;
-  padding: 8px 14px;
-}
-
-.uedp-tab-content {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 4px;
-  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
 }
 
-.uedp-tab-label {
-  font-family: 'Space Mono', monospace, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: #b7ff4d;
+/* Individual Tab Button */
+.uedp-tab-item {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 8px 9px;
+  border-radius: 0px;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  outline: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
-.uedp-tab-text {
-  display: block;
-}
-
-.uedp-tab-text-0 {
+/* Typography */
+.uedp-tab-item-text {
   font-family: 'Space Mono', monospace;
   font-size: 8px;
   font-weight: 700;
   line-height: 12px;
-  letter-spacing: 0.800000011920929px;
-  
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ==========================================================================
+   DARK THEME (Default)
+   ========================================================================== */
+.uedp-tab--dark .uedp-tab-item {
+  background-color: #18181B;
+  border: 1px solid #FFFFFF;
   color: #FFFFFF;
-  text-align: left;
 }
 
-.uedp-tab-text-1 {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  font-weight: 700;
-  line-height: 12px;
-  letter-spacing: 0.800000011920929px;
-  
+/* Dark: Hovered state */
+.uedp-tab--dark .uedp-tab-item:hover,
+.uedp-tab--dark .uedp-tab-item.is-hovered {
+  background-color: #3F3F46;
+  border: 1px solid #FFFFFF;
   color: #FFFFFF;
-  text-align: left;
 }
 
-.uedp-tab-text-2 {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  font-weight: 700;
-  line-height: 12px;
-  letter-spacing: 0.800000011920929px;
-  
+/* Dark: Selected state */
+.uedp-tab--dark .uedp-tab-item.is-selected {
+  background-color: #B7FF4D;
+  border: 1px solid #B7FF4D;
+  color: #000000;
+}
+
+.uedp-tab--dark .uedp-tab-item.is-selected:hover {
+  background-color: #B7FF4D;
+  border: 1px solid #B7FF4D;
+  color: #000000;
+}
+
+/* ==========================================================================
+   LIGHT THEME
+   ========================================================================== */
+.uedp-tab--light .uedp-tab-item {
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+/* Light: Hovered state */
+.uedp-tab--light .uedp-tab-item:hover,
+.uedp-tab--light .uedp-tab-item.is-hovered {
+  background-color: #3F3F46;
+  border: 1px solid #000000;
   color: #FFFFFF;
-  text-align: left;
 }
 
-.uedp-tab-text-3 {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  font-weight: 700;
-  line-height: 12px;
-  letter-spacing: 0.800000011920929px;
-  
-  color: #FFFFFF;
-  text-align: left;
+/* Light: Selected state */
+.uedp-tab--light .uedp-tab-item.is-selected {
+  background-color: #B7FF4D;
+  border: 1px solid #B7FF4D;
+  color: #000000;
 }
 
-/* Variant: Default (Node ID: 33:860) */
-.uedp-tab--default {
-  
-  
-  
-  min-width: 245px;
-  min-height: 28px;
+.uedp-tab--light .uedp-tab-item.is-selected:hover {
+  background-color: #B7FF4D;
+  border: 1px solid #B7FF4D;
+  color: #000000;
 }
 
-/* Variant: Variant9 (Node ID: 33:958) */
-.uedp-tab--variant9 {
-  
-  
-  
-  min-width: 245px;
-  min-height: 28px;
-}
-
-/* Variant: Variant8 (Node ID: 33:948) */
-.uedp-tab--variant8 {
-  
-  
-  
-  min-width: 245px;
-  min-height: 28px;
-}
-
-/* Variant: Variant7 (Node ID: 33:938) */
-.uedp-tab--variant7 {
-  
-  
-  
-  min-width: 245px;
-  min-height: 28px;
-}
-
-/* Variant: Variant6 (Node ID: 33:928) */
-.uedp-tab--variant6 {
-  
-  
-  
-  min-width: 245px;
-  min-height: 28px;
-}
-
-/* Variant: Variant5 (Node ID: 33:892) */
-.uedp-tab--variant5 {
-  
-  
-  
-  min-width: 243px;
-  min-height: 28px;
-}
-
-/* Variant: Variant4 (Node ID: 33:882) */
-.uedp-tab--variant4 {
-  
-  
-  
-  min-width: 243px;
-  min-height: 28px;
-}
-
-/* Variant: Variant3 (Node ID: 33:872) */
-.uedp-tab--variant3 {
-  
-  
-  
-  min-width: 243px;
-  min-height: 28px;
-}
-
-/* Variant: Variant2 (Node ID: 33:862) */
-.uedp-tab--variant2 {
-  
-  
-  
-  min-width: 243px;
-  min-height: 28px;
+/* Focus outline for accessibility */
+.uedp-tab-item:focus-visible {
+  outline: 2px solid #B7FF4D;
+  outline-offset: 1px;
 }

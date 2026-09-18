@@ -23,7 +23,8 @@ const PROTECTED = new Set([
   'BackgroundHorizontalborder',
   'Radio',
   'Component15',
-  'JobCards'
+  'JobCards',
+  'Tab'
 ]);
 
 
