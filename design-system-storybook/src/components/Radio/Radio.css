@@ -1,44 +1,260 @@
 /**
  * CSS for Radio Component
  * Preserved Figma Layer: "Radio"
- * Node ID: 52:5949 / 32:741
+ * Node ID: 52:5949 (Component 9: 31:653 + Component 14: 31:730 + Component 15: 32:741)
  *
- * Specs from Figma:
- * - Outer circle: 18px × 18px, cornerRadius: 9px, strokeWeight: 1px
- * - Inner dot (selected): 8px × 8px, cornerRadius: 4px, fill: #B7FF4D
- * - Colors:
- *     Selected: Stroke #B7FF4D (Variable 17:2340), Dot #B7FF4D
- *     Hover: Stroke #FFFFFF (Variable 1:4)
- *     Disabled / Default: Stroke #525252 (Variable 1:44)
+ * Dimensions: 342px × 98px
+ * Left Icon Circle: 52px × 52px
+ * Right Radio Circle: 18px × 18px (8px center dot)
  */
 
-.uedp-radio-wrapper {
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Space+Mono:wght@400;700&display=swap');
+
+.uedp-radio-card {
   box-sizing: border-box;
-  display: inline-flex;
+  width: 342px;
+  height: 98px;
+  min-width: 342px;
+  min-height: 98px;
+  display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  padding: 0 24px;
   cursor: pointer;
   user-select: none;
   outline: none;
+  transition: border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.uedp-radio-card:focus-visible {
+  box-shadow: 0 0 0 2px #b7ff4d;
+}
+
+/* ==========================================================================
+   Dark Theme (Default Figma States 1, 2, 3)
+   ========================================================================== */
+
+/* State 1: Default (Unselected) */
+.uedp-radio-card--dark.uedp-radio-card--default {
+  background-color: #171717;
+  border: 1px solid #525252;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--default .uedp-radio-icon-circle {
+  background-color: #171717;
+  border: 1px solid #525252;
+  color: #525252;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--default .uedp-radio-title,
+.uedp-radio-card--dark.uedp-radio-card--default .uedp-radio-subtitle {
+  color: #525252;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--default .uedp-radio-circle {
+  border: 1px solid #525252;
+  background-color: transparent;
+}
+
+/* State 2: Hover */
+.uedp-radio-card--dark.uedp-radio-card--hover,
+.uedp-radio-card--dark:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) {
+  background-color: #171717;
+  border: 1px solid #ffffff;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--hover .uedp-radio-icon-circle,
+.uedp-radio-card--dark:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) .uedp-radio-icon-circle {
+  background-color: #171717;
+  border: 1px solid #525252;
+  color: #525252;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--hover .uedp-radio-title,
+.uedp-radio-card--dark:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) .uedp-radio-title {
+  color: #888888;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--hover .uedp-radio-subtitle,
+.uedp-radio-card--dark:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) .uedp-radio-subtitle {
+  color: #888888;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--hover .uedp-radio-circle,
+.uedp-radio-card--dark:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) .uedp-radio-circle {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+}
+
+/* State 3: Selected */
+.uedp-radio-card--dark.uedp-radio-card--selected {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--selected .uedp-radio-icon-circle {
+  background-color: #ffffff;
+  border: none;
+  color: #000000;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--selected .uedp-radio-title {
+  color: #ffffff;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--selected .uedp-radio-subtitle {
+  color: #ffffff;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--selected .uedp-radio-circle {
+  border: 1px solid #b7ff4d;
+  background-color: transparent;
+}
+
+.uedp-radio-card--dark.uedp-radio-card--selected .uedp-radio-dot {
+  background-color: #b7ff4d;
+}
+
+/* ==========================================================================
+   Light Theme (Figma States 4, 5, 6 from bottom of screenshot)
+   ========================================================================== */
+
+/* State 4: Default (Light) */
+.uedp-radio-card--light.uedp-radio-card--default {
+  background-color: #2b2828;
+  border: 1px solid #525252;
+}
+
+.uedp-radio-card--light.uedp-radio-card--default .uedp-radio-icon-circle {
+  background-color: #222020;
+  border: 1px solid #525252;
+  color: #525252;
+}
+
+.uedp-radio-card--light.uedp-radio-card--default .uedp-radio-title,
+.uedp-radio-card--light.uedp-radio-card--default .uedp-radio-subtitle {
+  color: #525252;
+}
+
+.uedp-radio-card--light.uedp-radio-card--default .uedp-radio-circle {
+  border: 1px solid #525252;
+}
+
+/* State 5: Hover (Light) */
+.uedp-radio-card--light.uedp-radio-card--hover,
+.uedp-radio-card--light:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) {
+  background-color: #2b2828;
+  border: 1px solid #000000;
+}
+
+.uedp-radio-card--light.uedp-radio-card--hover .uedp-radio-icon-circle,
+.uedp-radio-card--light:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) .uedp-radio-icon-circle {
+  background-color: #222020;
+  border: 1px solid #525252;
+  color: #525252;
+}
+
+.uedp-radio-card--light.uedp-radio-card--hover .uedp-radio-title,
+.uedp-radio-card--light.uedp-radio-card--hover .uedp-radio-subtitle,
+.uedp-radio-card--light:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) .uedp-radio-title,
+.uedp-radio-card--light:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) .uedp-radio-subtitle {
+  color: #737373;
+}
+
+.uedp-radio-card--light.uedp-radio-card--hover .uedp-radio-circle,
+.uedp-radio-card--light:hover:not(.uedp-radio-card--selected):not(.uedp-radio-card--disabled) .uedp-radio-circle {
+  border: 1px solid #000000;
+}
+
+/* State 6: Selected (Light) */
+.uedp-radio-card--light.uedp-radio-card--selected {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.uedp-radio-card--light.uedp-radio-card--selected .uedp-radio-icon-circle {
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+}
+
+.uedp-radio-card--light.uedp-radio-card--selected .uedp-radio-title,
+.uedp-radio-card--light.uedp-radio-card--selected .uedp-radio-subtitle {
+  color: #000000;
+}
+
+.uedp-radio-card--light.uedp-radio-card--selected .uedp-radio-circle {
+  border: 1px solid #4d8014;
+  background-color: transparent;
+}
+
+.uedp-radio-card--light.uedp-radio-card--selected .uedp-radio-dot {
+  background-color: #4d8014;
+}
+
+/* ==========================================================================
+   Internal Layout Components
+   ========================================================================== */
+
+.uedp-radio-card-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.uedp-radio-icon-circle {
+  box-sizing: border-box;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  min-height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uedp-radio-eye-svg {
+  display: block;
+}
+
+.uedp-radio-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.uedp-radio-title {
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  transition: color 0.15s ease;
+}
+
+.uedp-radio-subtitle {
   font-family: 'Space Mono', monospace, sans-serif;
-  vertical-align: middle;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.15s ease;
 }
 
-.uedp-radio-wrapper:focus-visible .uedp-radio-circle {
-  box-shadow: 0 0 0 2px rgba(183, 255, 77, 0.4);
-}
+/* ==========================================================================
+   Right Radio Circle Indicator (Component 15)
+   ========================================================================== */
 
-.uedp-radio-wrapper--disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.uedp-radio {
+.uedp-radio-indicator,
+.uedp-radio-standalone {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 18px;
   height: 18px;
   min-width: 18px;
@@ -50,44 +266,18 @@
   width: 18px;
   height: 18px;
   border-radius: 9px;
-  background-color: transparent;
-  border: 1px solid #525252;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
   position: relative;
+  transition: border-color 0.15s ease;
 }
 
-/* Default state: border #525252 */
-.uedp-radio--default .uedp-radio-circle {
-  border-color: #525252;
-}
-
-/* Hover state: border #FFFFFF */
-.uedp-radio--hover .uedp-radio-circle,
-.uedp-radio-wrapper:not(.uedp-radio-wrapper--disabled):hover .uedp-radio-circle {
-  border-color: #ffffff;
-}
-
-/* Selected state: border #B7FF4D with 8x8 dot */
-.uedp-radio--selected .uedp-radio-circle,
-.uedp-radio-wrapper:not(.uedp-radio-wrapper--disabled):hover .uedp-radio--selected .uedp-radio-circle {
-  border-color: #b7ff4d;
-}
-
-/* Disabled state */
-.uedp-radio--disabled .uedp-radio-circle {
-  border-color: #525252;
-}
-
-/* Inner dot (8px x 8px, cornerRadius: 4px, background: #B7FF4D) */
 .uedp-radio-dot {
   box-sizing: border-box;
   width: 8px;
   height: 8px;
   border-radius: 4px;
-  background-color: #b7ff4d;
   display: block;
   animation: uedp-radio-pop 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -101,17 +291,4 @@
     transform: scale(1);
     opacity: 1;
   }
-}
-
-.uedp-radio-label {
-  font-family: 'Space Mono', monospace, sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-  color: #ffffff;
-  line-height: 18px;
-}
-
-.uedp-radio-wrapper--disabled .uedp-radio-label {
-  color: #737373;
 }

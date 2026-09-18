@@ -4,16 +4,16 @@ import { Radio } from './Radio';
 
 /**
  * ## Radio
- * Pixel-perfect implementation of Figma Node **52:5949 / 32:741**.
+ * Recreated to pixel perfection from Figma **Node 52:5949** (Component 9: `31:653` + Component 14 + Component 15).
  *
  * ### Design Specifications:
- * - **Outer circle**: 18px × 18px, border-radius: 9px (50%)
- * - **Inner indicator dot**: 8px × 8px, border-radius: 4px (50%), color `#B7FF4D` (Lime)
- * - **Border styles**:
- *   - **Selected**: `1px solid #B7FF4D`
- *   - **Hover**: `1px solid #FFFFFF`
- *   - **Default / Disabled**: `1px solid #525252`
- * - **Typography**: Space Mono for associated labels
+ * - **Card Size**: `342px × 98px`
+ * - **Icon Badge**: `52px × 52px` circle with 28×20px Eye icon
+ * - **Typography**:
+ *   - Title: `Source Sans 3` 16px Regular
+ *   - Subtitle: `Space Mono` 9px Uppercase (`VOLUNTEER · DONOR · EMPLOYER`)
+ * - **Radio Indicator**: `18px × 18px` circle with centered `8px × 8px` dot
+ * - **Accent Color**: `#B7FF4D` (Neon Lime)
  */
 const meta: Meta<typeof Radio> = {
   title: 'Components/Radio',
@@ -22,31 +22,36 @@ const meta: Meta<typeof Radio> = {
   parameters: {
     layout: 'centered',
     backgrounds: {
-      default: 'dark',
+      default: 'gray-canvas',
       values: [
+        { name: 'gray-canvas', value: '#797070' },
         { name: 'dark', value: '#111111' },
         { name: 'pitch-black', value: '#000000' },
-        { name: 'surface', value: '#1a1a1a' },
       ],
     },
   },
   argTypes: {
     Type: {
       control: 'select',
-      options: ['selected', 'hover', 'disabled', 'default'],
-      description: 'Figma variant state (Node ID: 32:741 / 52:5949)',
+      options: ['default', 'hover', 'selected', 'disabled'],
+      description: 'Figma component state',
+    },
+    theme: {
+      control: 'radio',
+      options: ['dark', 'light'],
+      description: 'Color theme (dark or light surface)',
+    },
+    title: {
+      control: 'text',
+      description: 'Main label (default: Sighted)',
+    },
+    subtitle: {
+      control: 'text',
+      description: 'Subtitle metadata (default: VOLUNTEER · DONOR · EMPLOYER)',
     },
     checked: {
       control: 'boolean',
-      description: 'Controlled checked state',
-    },
-    disabled: {
-      control: 'boolean',
-      description: 'Disables interaction and styles as inactive',
-    },
-    label: {
-      control: 'text',
-      description: 'Optional label displayed beside the radio button',
+      description: 'Whether the radio is selected',
     },
   },
 };
@@ -54,65 +59,115 @@ const meta: Meta<typeof Radio> = {
 export default meta;
 type Story = StoryObj<typeof Radio>;
 
+/** State 1: Default (Unselected - Dark) */
 export const Default: Story = {
   args: {
     Type: 'default',
-    label: 'Option Default',
+    theme: 'dark',
+    title: 'Sighted',
+    subtitle: 'VOLUNTEER · DONOR · EMPLOYER',
   },
 };
 
-export const Selected: Story = {
-  args: {
-    Type: 'selected',
-    label: 'Option Selected',
-  },
-};
-
+/** State 2: Hover (Dark) */
 export const Hover: Story = {
   args: {
     Type: 'hover',
-    label: 'Option Hover',
+    theme: 'dark',
+    title: 'Sighted',
+    subtitle: 'VOLUNTEER · DONOR · EMPLOYER',
   },
 };
 
-export const Disabled: Story = {
-  args: {
-    Type: 'disabled',
-    label: 'Option Disabled',
-  },
-};
-
-export const WithoutLabel: Story = {
+/** State 3: Selected (Dark) - White icon badge, black card, neon lime radio dot */
+export const Selected: Story = {
   args: {
     Type: 'selected',
+    theme: 'dark',
+    title: 'Sighted',
+    subtitle: 'VOLUNTEER · DONOR · EMPLOYER',
+  },
+};
+
+/** State 4: Default (Light) */
+export const LightDefault: Story = {
+  args: {
+    Type: 'default',
+    theme: 'light',
+    title: 'Sighted',
+    subtitle: 'VOLUNTEER · DONOR · EMPLOYER',
+  },
+};
+
+/** State 5: Hover (Light) */
+export const LightHover: Story = {
+  args: {
+    Type: 'hover',
+    theme: 'light',
+    title: 'Sighted',
+    subtitle: 'VOLUNTEER · DONOR · EMPLOYER',
+  },
+};
+
+/** State 6: Selected (Light) - Black icon badge, white card, green radio dot */
+export const LightSelected: Story = {
+  args: {
+    Type: 'selected',
+    theme: 'light',
+    title: 'Sighted',
+    subtitle: 'VOLUNTEER · DONOR · EMPLOYER',
   },
 };
 
 /**
- * Interactive Radio Group Demo
- * Shows full real-world interaction where choosing one radio deselects the others.
+ * All Figma Variants Matrix
+ * Pixel-for-pixel recreation of the exact 6 variants from Figma Node 52:5949.
  */
-export const InteractiveGroup: Story = {
-  render: () => {
-    const [selectedOption, setSelectedOption] = useState<string>('option-1');
+export const AllFigmaVariants: Story = {
+  render: () => (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
+        padding: '24px',
+        backgroundColor: '#797070', // matches the Figma canvas gray in the screenshot
+        borderRadius: '8px',
+      }}
+    >
+      {/* Dark Theme Set */}
+      <Radio Type="default" theme="dark" />
+      <Radio Type="hover" theme="dark" />
+      <Radio Type="selected" theme="dark" />
 
-    const options = [
-      { id: 'option-1', label: 'OPTION A — Vision-impaired user' },
-      { id: 'option-2', label: 'OPTION B — Sighted volunteer / assistant' },
-      { id: 'option-3', label: 'OPTION C — Organization / Employer' },
-    ];
+      <div style={{ height: '16px' }} />
+
+      {/* Light Theme Set */}
+      <Radio Type="default" theme="light" />
+      <Radio Type="hover" theme="light" />
+      <Radio Type="selected" theme="light" />
+    </div>
+  ),
+};
+
+/**
+ * Interactive Demo
+ * Click between the radio cards to see live selection switching.
+ */
+export const InteractiveSelector: Story = {
+  render: () => {
+    const [selectedRole, setSelectedRole] = useState<'sighted' | 'blind'>('sighted');
 
     return (
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '16px',
+          gap: '12px',
           padding: '24px',
-          backgroundColor: '#171717',
-          border: '1px solid #262626',
+          backgroundColor: '#111111',
+          border: '1px solid #222222',
           borderRadius: '12px',
-          minWidth: '380px',
         }}
       >
         <span
@@ -126,82 +181,23 @@ export const InteractiveGroup: Story = {
             marginBottom: '4px',
           }}
         >
-          Select Your Role
+          Choose Your Experience
         </span>
 
-        {options.map((opt) => (
-          <Radio
-            key={opt.id}
-            name="role-selection"
-            value={opt.id}
-            label={opt.label}
-            checked={selectedOption === opt.id}
-            onChange={() => setSelectedOption(opt.id)}
-          />
-        ))}
+        <Radio
+          title="Sighted"
+          subtitle="VOLUNTEER · DONOR · EMPLOYER"
+          checked={selectedRole === 'sighted'}
+          onChange={() => setSelectedRole('sighted')}
+        />
 
-        <div
-          style={{
-            marginTop: '8px',
-            paddingTop: '12px',
-            borderTop: '1px solid #262626',
-            fontFamily: 'Space Mono, monospace',
-            fontSize: '11px',
-            color: '#B7FF4D',
-          }}
-        >
-          Current Selection: {options.find((o) => o.id === selectedOption)?.label}
-        </div>
+        <Radio
+          title="Blind or Low Vision"
+          subtitle="COMMUNITY · INDEPENDENCE · AUDIO"
+          checked={selectedRole === 'blind'}
+          onChange={() => setSelectedRole('blind')}
+        />
       </div>
     );
   },
-};
-
-/**
- * Figma All Variants Matrix
- * Visual verification of all 4 states side-by-side.
- */
-export const AllFigmaVariants: Story = {
-  render: () => (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '20px',
-        padding: '24px',
-        backgroundColor: '#111111',
-        border: '1px solid #222222',
-        borderRadius: '8px',
-        minWidth: '320px',
-      }}
-    >
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <span style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '11px' }}>
-          State: Default
-        </span>
-        <Radio Type="default" />
-      </div>
-
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <span style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '11px' }}>
-          State: Hover
-        </span>
-        <Radio Type="hover" />
-      </div>
-
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <span style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '11px' }}>
-          State: Selected (17:2340 Lime)
-        </span>
-        <Radio Type="selected" />
-      </div>
-
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <span style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '11px' }}>
-          State: Disabled (1:44 Muted)
-        </span>
-        <Radio Type="disabled" />
-      </div>
-    </div>
-  ),
 };
