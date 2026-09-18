@@ -97,18 +97,18 @@ export const TAG_STYLES: Record<string, { color: string; bg: string }> = {
 };
 
 export const ABOUT_COLLAGE: CollageItem[] = [
-  { id: 'gilmore', src: '/about/sticker-gilmore.webp', x: 70, y: 130, width: 230, rotate: -4, zIndex: 2 },
-  { id: 'dog', src: '/about/sticker-dog.webp', x: 220, y: -20, width: 170, rotate: -5, zIndex: 3 },
-  { id: 'polaroid-me', src: '/about/polaroid-me.webp', x: 320, y: 60, width: 300, rotate: -6, zIndex: 2 },
-  { id: 'polaroid-mountain', src: '/about/polaroid-mountain.webp', x: 560, y: 40, width: 300, rotate: 4, zIndex: 1 },
-  { id: 'pochacco', src: '/about/sticker-pochacco.webp', x: 700, y: -20, width: 155, rotate: 4, zIndex: 4 },
-  { id: 'postcard', src: '/about/sticker-postcard.webp', x: 800, y: 190, width: 210, rotate: -3, zIndex: 2 },
-  { id: 'vienna-player', src: '/assets/vienna-cover.webp', x: 75, y: 390, width: 240, rotate: -4, zIndex: 3 },
-  { id: 'star-1', src: '/about/sticker-star-1.webp', x: 520, y: 15, width: 76, rotate: -8, zIndex: 4 },
-  { id: 'star-2', src: '/about/sticker-star-2.webp', x: 285, y: 18, width: 55, rotate: 14, zIndex: 4 },
-  { id: 'star-3', src: '/about/sticker-star-3.webp', x: 860, y: 50, width: 90, rotate: 12, zIndex: 3 },
-  { id: 'star-4', src: '/about/sticker-star-4.webp', x: 290, y: 350, width: 68, rotate: -15, zIndex: 4 },
-  { id: 'star-5', src: '/about/sticker-star-5.webp', x: 935, y: 280, width: 84, rotate: 8, zIndex: 3 },
+  { id: 'polaroid-me', src: '/about/polaroid-me.webp', x: 505, y: -20, width: 220, rotate: 6, zIndex: 2 },
+  { id: 'gilmore', src: '/about/sticker-gilmore.webp', x: 160, y: 115, width: 220, rotate: -4, zIndex: 3 },
+  { id: 'vienna-player', src: '/assets/vienna-cover.webp', x: 40, y: 350, width: 250, rotate: -4, zIndex: 3 },
+  { id: 'pochacco', src: '/about/sticker-pochacco.webp', x: 295, y: 705, width: 145, rotate: -3, zIndex: 4 },
+  { id: 'postcard', src: '/about/sticker-postcard.webp', x: 935, y: 55, width: 200, rotate: -4, zIndex: 2 },
+  { id: 'dog', src: '/about/sticker-dog.webp', x: 885, y: 185, width: 175, rotate: -5, zIndex: 3 },
+  { id: 'polaroid-mountain', src: '/about/polaroid-mountain.webp', x: 875, y: 585, width: 245, rotate: -7, zIndex: 2 },
+  { id: 'star-1', src: '/about/sticker-star-1.webp', x: 495, y: 265, width: 70, rotate: -8, zIndex: 4 },
+  { id: 'star-2', src: '/about/sticker-star-2.webp', x: 785, y: 80, width: 52, rotate: 15, zIndex: 4 },
+  { id: 'star-3', src: '/about/sticker-star-3.webp', x: 1135, y: 375, width: 75, rotate: 12, zIndex: 4 },
+  { id: 'star-4', src: '/about/sticker-star-4.webp', x: 5, y: 335, width: 65, rotate: -15, zIndex: 4 },
+  { id: 'star-5', src: '/about/sticker-star-5.webp', x: 845, y: 720, width: 62, rotate: -10, zIndex: 4 },
 ];
 
 export const WORK_PROJECTS: WorkProject[] = [

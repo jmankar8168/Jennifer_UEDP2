@@ -95,11 +95,11 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
 
       {/* Bio Text Card in Center */}
       <div
-        className="absolute p-6 rounded-2xl bg-white/90 dark:bg-[#252525]/90 backdrop-blur-md shadow-2xl border border-[var(--figma-border)] z-20"
+        className="absolute p-7 rounded-2xl bg-white/90 dark:bg-[#202020]/95 backdrop-blur-md shadow-2xl border border-[var(--figma-border)] z-20"
         style={{
-          left: 380,
-          top: 420,
-          width: 520,
+          left: 410,
+          top: 395,
+          width: 495,
         }}
         onClick={e => e.stopPropagation()}
       >
