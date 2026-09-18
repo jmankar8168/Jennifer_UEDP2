@@ -12,7 +12,7 @@ import ToolWorkspaceModal from '@/components/tools/ToolWorkspaceModal';
 import { WorkProject, PageItem, PAGES } from '@/data/portfolioData';
 
 export default function Home() {
-  const [heroOpen, setHeroOpen] = useState(false);
+  const [heroOpen, setHeroOpen] = useState(true);
   const [activeTool, setActiveTool] = useState<'move' | 'hand'>('move');
   const [scale, setScale] = useState<number>(0.75);
   const [activePage, setActivePage] = useState<string>('about');
