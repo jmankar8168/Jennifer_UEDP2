@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { ABOUT_COLLAGE, BIO_SHORT, BIO_LONG, CollageItem } from '@/data/portfolioData';
 import MusicPlayerSticker from './MusicPlayerSticker';
@@ -12,7 +12,47 @@ interface AboutFrameProps {
 export default function AboutFrame({ scale }: AboutFrameProps) {
   const [items, setItems] = useState<CollageItem[]>(ABOUT_COLLAGE);
   const [isLongBio, setIsLongBio] = useState(false);
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [highlightTarget, setHighlightTarget] = useState<'photos' | 'music' | 'right' | null>(null);
   const dragItem = useRef<{ id: string; startX: number; startY: number; itemX: number; itemY: number } | null>(null);
+
+  // Sync with Vienna music player live playing status
+  useEffect(() => {
+    const handleAudioStatus = (e: Event) => {
+      const customEvent = e as CustomEvent<{ isPlaying: boolean }>;
+      if (customEvent.detail) {
+        setIsPlayingAudio(Boolean(customEvent.detail.isPlaying));
+      }
+    };
+    window.addEventListener('vienna-player-status', handleAudioStatus);
+    return () => {
+      window.removeEventListener('vienna-player-status', handleAudioStatus);
+    };
+  }, []);
+
+  const triggerHighlight = (target: 'photos' | 'music' | 'right') => {
+    setHighlightTarget(target);
+    setTimeout(() => {
+      setHighlightTarget(null);
+    }, 1200);
+  };
+
+  const handleTakeCloserLook = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    triggerHighlight('photos');
+  };
+
+  const handleToggleMusic = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    triggerHighlight('music');
+    window.dispatchEvent(new CustomEvent('toggle-vienna-player'));
+  };
+
+  const handleDiscoverMore = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    triggerHighlight('right');
+    setIsLongBio(prev => !prev);
+  };
 
   const handleMouseDown = (e: React.MouseEvent, item: CollageItem) => {
     // If interacting with player controls, don't initiate card dragging
@@ -64,34 +104,100 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
         <span>About Collage</span>
       </div>
 
+      {/* 1. Contextual Hint Label: Photo / Visual Collage Area (Top-Left) */}
+      <button
+        type="button"
+        onClick={handleTakeCloserLook}
+        className="absolute group flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        style={{ left: 45, top: 42 }}
+        title="Take a closer look at the photo collage"
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-[var(--figma-blue)]/60 group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0" />
+        <span className="text-[13px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+          Take a closer look
+        </span>
+        <span className="text-[13px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
+          →
+        </span>
+      </button>
+
+      {/* 2. Contextual Hint Label: Music Player Area (Bottom-Left) */}
+      <button
+        type="button"
+        onClick={handleToggleMusic}
+        className="absolute group flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        style={{ left: 55, top: 760 }}
+        title="Press play to listen to Billy Joel - Vienna"
+      >
+        <span className={`w-1.5 h-1.5 rounded-full ${isPlayingAudio ? 'bg-emerald-500 animate-pulse' : 'bg-[var(--figma-blue)]/60 group-hover:bg-[var(--figma-blue)]'} group-hover:scale-125 transition-all duration-200 shrink-0`} />
+        <span className="text-[13px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+          {isPlayingAudio ? 'Playing Vienna ♫' : 'Press play & listen'}
+        </span>
+        <span className="text-[13px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
+          {isPlayingAudio ? '⏸' : '→'}
+        </span>
+      </button>
+
+      {/* 3. Contextual Hint Label: Interactive Items Area (Right-Side) */}
+      <button
+        type="button"
+        onClick={handleDiscoverMore}
+        className="absolute group flex items-center gap-2 py-1 px-2 rounded-md cursor-pointer select-none transition-all duration-200 text-left bg-transparent hover:bg-black/5 dark:hover:bg-white/5 z-10"
+        style={{ left: 1070, top: 240 }}
+        title="Discover more details and interactive elements"
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-[var(--figma-blue)]/60 group-hover:bg-[var(--figma-blue)] group-hover:scale-125 transition-all duration-200 shrink-0" />
+        <span className="text-[13px] font-normal tracking-tight text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] transition-colors">
+          Discover more
+        </span>
+        <span className="text-[13px] text-[var(--figma-text-secondary)] group-hover:text-[var(--figma-blue)] group-hover:translate-x-1 transition-all duration-200">
+          →
+        </span>
+      </button>
+
       {/* Draggable Polaroid & Sticker Items */}
-      {items.map(item => (
-        <div
-          key={item.id}
-          onMouseDown={e => handleMouseDown(e, item)}
-          className={`absolute cursor-grab active:cursor-grabbing select-none transition-shadow ${
-            item.sticker ? 'bg-white p-1 rounded-xl shadow-md border border-neutral-200' : 'drop-shadow-xl'
-          }`}
-          style={{
-            left: item.x,
-            top: item.y,
-            width: item.width,
-            transform: `rotate(${item.rotate}deg)`,
-            zIndex: item.zIndex,
-          }}
-        >
-          {item.id === 'vienna-player' ? (
-            <MusicPlayerSticker />
-          ) : (
-            <img
-              src={item.src}
-              alt={item.id}
-              draggable={false}
-              className="w-full h-auto block pointer-events-none rounded-lg"
-            />
-          )}
-        </div>
-      ))}
+      {items.map(item => {
+        const isPhotoItem = item.id === 'polaroid-me' || item.id === 'gilmore' || item.id === 'postcard';
+        const isMusicItem = item.id === 'vienna-player';
+        const isRightItem = item.id === 'dog' || item.id === 'polaroid-mountain';
+
+        const isHighlighted =
+          (highlightTarget === 'photos' && isPhotoItem) ||
+          (highlightTarget === 'music' && isMusicItem) ||
+          (highlightTarget === 'right' && isRightItem);
+
+        return (
+          <div
+            key={item.id}
+            onMouseDown={e => handleMouseDown(e, item)}
+            className={`absolute cursor-grab active:cursor-grabbing select-none transition-all duration-300 ${
+              item.sticker ? 'bg-white p-1 rounded-xl shadow-md border border-neutral-200' : 'drop-shadow-xl'
+            } ${
+              isHighlighted
+                ? 'scale-105 z-30 ring-2 ring-[var(--figma-blue)] shadow-2xl'
+                : ''
+            }`}
+            style={{
+              left: item.x,
+              top: item.y,
+              width: item.width,
+              transform: `rotate(${item.rotate}deg)${isHighlighted ? ' scale(1.04)' : ''}`,
+              zIndex: isHighlighted ? 30 : item.zIndex,
+            }}
+          >
+            {item.id === 'vienna-player' ? (
+              <MusicPlayerSticker />
+            ) : (
+              <img
+                src={item.src}
+                alt={item.id}
+                draggable={false}
+                className="w-full h-auto block pointer-events-none rounded-lg"
+              />
+            )}
+          </div>
+        );
+      })}
 
       {/* Bio Text Card in Center */}
       <div
@@ -119,3 +225,4 @@ export default function AboutFrame({ scale }: AboutFrameProps) {
     </div>
   );
 }
+

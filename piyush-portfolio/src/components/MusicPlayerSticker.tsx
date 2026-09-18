@@ -54,6 +54,27 @@ export default function MusicPlayerSticker({ className = '' }: MusicPlayerSticke
     }
   }, [volume, isMuted]);
 
+  // 3. Listen for remote toggle events from canvas hint labels
+  useEffect(() => {
+    const handleRemoteToggle = () => {
+      if (!audioRef.current) return;
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch(() => {});
+      }
+    };
+    window.addEventListener('toggle-vienna-player', handleRemoteToggle);
+    return () => {
+      window.removeEventListener('toggle-vienna-player', handleRemoteToggle);
+    };
+  }, [isPlaying]);
+
+  // 4. Broadcast live playing status to canvas
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent('vienna-player-status', { detail: { isPlaying } }));
+  }, [isPlaying]);
+
   // Format seconds to M:SS or -M:SS
   const formatTime = (secs: number, isRemaining: boolean = false) => {
     if (isNaN(secs) || secs < 0) secs = 0;
