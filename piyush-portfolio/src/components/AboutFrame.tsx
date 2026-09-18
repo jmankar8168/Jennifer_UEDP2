@@ -230,11 +230,7 @@ export default function AboutFrame({ scale, isLightCanvas = false }: AboutFrameP
 
       {/* Bio Text Card in Center */}
       <div
-        className={`absolute p-7 rounded-2xl backdrop-blur-md shadow-2xl transition-colors duration-200 z-20 ${
-          isLightCanvas
-            ? 'bg-white/95 text-neutral-900 border border-black/15 shadow-xl'
-            : 'bg-white/90 dark:bg-[#202020]/95 text-[var(--figma-text)] border border-[var(--figma-border)]'
-        }`}
+        className="absolute p-7 rounded-2xl bg-[#202020]/95 backdrop-blur-md shadow-2xl border border-white/10 dark:border-[var(--figma-border)] z-20"
         style={{
           left: 410,
           top: 395,
@@ -242,9 +238,7 @@ export default function AboutFrame({ scale, isLightCanvas = false }: AboutFrameP
         }}
         onClick={e => e.stopPropagation()}
       >
-        <p className={`text-[18px] leading-relaxed font-sans tracking-tight ${
-          isLightCanvas ? 'text-neutral-900' : 'text-[var(--figma-text)]'
-        }`}>
+        <p className="text-[18px] leading-relaxed text-white font-sans tracking-tight">
           {isLongBio ? BIO_LONG : BIO_SHORT}
         </p>
 
