@@ -70,10 +70,10 @@ export default function HeroIntroSwipe({ onDismiss, isOpen }: HeroIntroSwipeProp
         transform: `translateY(${dragOffsetY}px)`,
         transition: dragStartY !== null ? 'none' : 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)',
       }}
-      className="fixed inset-0 z-50 bg-[#FBFBFB] dark:bg-[#121212] flex flex-col justify-between select-none overflow-hidden"
+      className="fixed inset-0 z-50 bg-[#FBFBFB] dark:bg-[#121212] flex items-center justify-center select-none overflow-hidden"
     >
-      {/* 1. Top Navigation Bar: Spans full viewport width with consistent horizontal page margins */}
-      <header className="w-full px-6 md:px-10 lg:px-12 pt-6 pb-2 shrink-0 flex items-center justify-between text-[13px] font-medium text-[var(--figma-text-secondary)]">
+      {/* 1. Top Navigation Bar */}
+      <header className="absolute top-0 left-0 right-0 z-10 w-full px-6 md:px-10 lg:px-12 pt-6 pb-2 flex items-center justify-between text-[13px] font-medium text-[var(--figma-text-secondary)]">
         {/* Left Breadcrumb */}
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[var(--figma-blue)]" />
@@ -81,7 +81,7 @@ export default function HeroIntroSwipe({ onDismiss, isOpen }: HeroIntroSwipeProp
           <span className="text-[12px] opacity-60">/ Portfolio</span>
         </div>
 
-        {/* Right Action Button (perfectly vertically aligned with same Y position and same right page margin) */}
+        {/* Right Action Button */}
         <button
           type="button"
           onClick={triggerDismiss}
@@ -92,8 +92,8 @@ export default function HeroIntroSwipe({ onDismiss, isOpen }: HeroIntroSwipeProp
         </button>
       </header>
 
-      {/* 2. Main Central Hero Section: Flexbox centered as a unified group on desktop, laptop, and ultrawide */}
-      <main className="flex-1 flex flex-col items-center justify-center w-full px-6 my-auto">
+      {/* 2. Main Central Hero Section: Dead-center of the entire viewport */}
+      <main className="w-full max-w-2xl px-6 flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center text-center max-w-2xl w-full gap-6 animate-fade-in-up">
           {/* Floating Avatar & Badge */}
           <div className="relative group cursor-pointer" onClick={triggerDismiss}>
@@ -154,7 +154,7 @@ export default function HeroIntroSwipe({ onDismiss, isOpen }: HeroIntroSwipeProp
       </main>
 
       {/* 3. Swipe Indicator Pill at Bottom */}
-      <footer className="w-full pb-6 pt-2 shrink-0 flex flex-col items-center justify-center">
+      <footer className="absolute bottom-4 left-0 right-0 z-10 w-full flex flex-col items-center justify-center">
         <div
           onClick={triggerDismiss}
           className="cursor-pointer flex flex-col items-center gap-1 text-[var(--figma-text-tertiary)] hover:text-[var(--figma-text)] transition-colors"
