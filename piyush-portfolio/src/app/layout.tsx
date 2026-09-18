@@ -20,7 +20,17 @@ export const metadata: Metadata = {
   title: "Jenni | Designer",
   description: "Designer who loves to build & explore new things. Currently exploring communication and product design.",
   icons: {
-    icon: "/favicon.webp",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.webp", type: "image/webp" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     title: "Jenni | Designer",
