@@ -97,18 +97,18 @@ export const TAG_STYLES: Record<string, { color: string; bg: string }> = {
 };
 
 export const ABOUT_COLLAGE: CollageItem[] = [
-  { id: 'polaroid-me', src: '/about/polaroid-me.webp', x: 505, y: -20, width: 220, rotate: 6, zIndex: 2 },
+  { id: 'polaroid-me', src: '/about/polaroid-me.webp', x: 485, y: -45, width: 270, rotate: 6, zIndex: 2 },
   { id: 'gilmore', src: '/about/sticker-gilmore.webp', x: 160, y: 115, width: 220, rotate: -4, zIndex: 3 },
   { id: 'vienna-player', src: '/assets/vienna-cover.webp', x: 40, y: 350, width: 250, rotate: -4, zIndex: 3 },
   { id: 'pochacco', src: '/about/sticker-pochacco.webp', x: 295, y: 705, width: 145, rotate: -3, zIndex: 4 },
   { id: 'postcard', src: '/about/sticker-postcard.webp', x: 935, y: 55, width: 200, rotate: -4, zIndex: 2 },
   { id: 'dog', src: '/about/sticker-dog.webp', x: 885, y: 185, width: 175, rotate: -5, zIndex: 3 },
-  { id: 'polaroid-mountain', src: '/about/polaroid-mountain.webp', x: 875, y: 585, width: 245, rotate: -7, zIndex: 2 },
-  { id: 'star-1', src: '/about/sticker-star-1.webp', x: 495, y: 265, width: 70, rotate: -8, zIndex: 4 },
-  { id: 'star-2', src: '/about/sticker-star-2.webp', x: 785, y: 80, width: 52, rotate: 15, zIndex: 4 },
+  { id: 'polaroid-mountain', src: '/about/polaroid-mountain.webp', x: 860, y: 550, width: 300, rotate: -7, zIndex: 2 },
+  { id: 'star-1', src: '/about/sticker-star-1.webp', x: 475, y: 285, width: 70, rotate: -8, zIndex: 4 },
+  { id: 'star-2', src: '/about/sticker-star-2.webp', x: 805, y: 75, width: 52, rotate: 15, zIndex: 4 },
   { id: 'star-3', src: '/about/sticker-star-3.webp', x: 1135, y: 375, width: 75, rotate: 12, zIndex: 4 },
   { id: 'star-4', src: '/about/sticker-star-4.webp', x: 5, y: 335, width: 65, rotate: -15, zIndex: 4 },
-  { id: 'star-5', src: '/about/sticker-star-5.webp', x: 845, y: 720, width: 62, rotate: -10, zIndex: 4 },
+  { id: 'star-5', src: '/about/sticker-star-5.webp', x: 825, y: 710, width: 62, rotate: -10, zIndex: 4 },
 ];
 
 export const WORK_PROJECTS: WorkProject[] = [
