@@ -1,0 +1,146 @@
+/**
+ * CSS for AvailibilityToggle & ToggleSwitch
+ * Figma Nodes: 52:5793 (Component 24) & 34:1156 (ion:toggle)
+ */
+
+/* ==========================================================================
+   Standalone Toggle Switch (ion:toggle - Node 34:1156)
+   ========================================================================== */
+
+.uedp-toggle-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.uedp-toggle-switch:focus-visible .uedp-toggle-switch__track {
+  outline: 2px solid #b7ff4d;
+  outline-offset: 2px;
+}
+
+.uedp-toggle-switch__track {
+  position: relative;
+  width: 35px;
+  height: 22px;
+  border-radius: 9999px;
+  transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.uedp-toggle-switch__thumb {
+  position: absolute;
+  top: 3.5px;
+  left: 3.5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Toggle Colors - Dark Mode (Figma Mode: Default) */
+.uedp-toggle-switch--mode-default.uedp-toggle-switch--on .uedp-toggle-switch__track,
+.uedp-toggle-switch--mode-dark.uedp-toggle-switch--on .uedp-toggle-switch__track {
+  background-color: #b7ff4d;
+}
+
+.uedp-toggle-switch--mode-default.uedp-toggle-switch--on .uedp-toggle-switch__thumb,
+.uedp-toggle-switch--mode-dark.uedp-toggle-switch--on .uedp-toggle-switch__thumb {
+  background-color: #171717;
+  transform: translateX(13px);
+}
+
+.uedp-toggle-switch--mode-default.uedp-toggle-switch--off .uedp-toggle-switch__track,
+.uedp-toggle-switch--mode-dark.uedp-toggle-switch--off .uedp-toggle-switch__track {
+  background-color: #894520;
+}
+
+.uedp-toggle-switch--mode-default.uedp-toggle-switch--off .uedp-toggle-switch__thumb,
+.uedp-toggle-switch--mode-dark.uedp-toggle-switch--off .uedp-toggle-switch__thumb {
+  background-color: #171717;
+  transform: translateX(0);
+}
+
+/* Toggle Colors - Light Mode (Figma Mode: Light) */
+.uedp-toggle-switch--mode-light.uedp-toggle-switch--on .uedp-toggle-switch__track {
+  background-color: #497b00;
+}
+
+.uedp-toggle-switch--mode-light.uedp-toggle-switch--on .uedp-toggle-switch__thumb {
+  background-color: #ffffff;
+  transform: translateX(13px);
+}
+
+.uedp-toggle-switch--mode-light.uedp-toggle-switch--off .uedp-toggle-switch__track {
+  background-color: #894520;
+}
+
+.uedp-toggle-switch--mode-light.uedp-toggle-switch--off .uedp-toggle-switch__thumb {
+  background-color: #ffffff;
+  transform: translateX(0);
+}
+
+/* ==========================================================================
+   Full Row Availability Toggle (Component 24 - Node 52:5793)
+   ========================================================================== */
+
+.uedp-availibility-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 342px;
+  height: 35px;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.uedp-availibility-toggle__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+/* Label Mode: Default (Dark Canvas) */
+.uedp-availibility-toggle--mode-default,
+.uedp-availibility-toggle--mode-dark {
+  color: #ffffff;
+}
+
+.uedp-availibility-toggle--mode-default .uedp-availibility-toggle__status--on,
+.uedp-availibility-toggle--mode-dark .uedp-availibility-toggle__status--on {
+  color: #b7ff4d;
+}
+
+.uedp-availibility-toggle--mode-default .uedp-availibility-toggle__status--off,
+.uedp-availibility-toggle--mode-dark .uedp-availibility-toggle__status--off {
+  color: #d06b34;
+}
+
+/* Label Mode: Light (Light Canvas) */
+.uedp-availibility-toggle--mode-light {
+  color: #000000;
+}
+
+.uedp-availibility-toggle--mode-light .uedp-availibility-toggle__status--on {
+  color: #497b00;
+}
+
+.uedp-availibility-toggle--mode-light .uedp-availibility-toggle__status--off {
+  color: #d06b34;
+}
