@@ -1,0 +1,185 @@
+/**
+ * CSS for AlertBox (Figma: Toast / alert box)
+ * Node ID: 54:6652
+ */
+
+.uedp-alertbox {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 384px;
+  max-width: 100%;
+  height: 60px;
+  min-height: 60px;
+  padding: 8px 8px 8px 24px;
+  border-radius: 0px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Has Prefix icon padding & gap */
+.uedp-alertbox--has-prefix {
+  padding-left: 20px;
+}
+
+/* No Close padding */
+.uedp-alertbox--state-no-close {
+  padding-right: 20px;
+}
+
+/* ==========================================================================
+   Themes (Figma Modes: Default = Light, light = Dark / Inverted)
+   ========================================================================== */
+
+/* Mode: Light (Figma: mode=Default) */
+.uedp-alertbox--mode-default,
+.uedp-alertbox--mode-light-theme {
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  color: #000000;
+}
+
+.uedp-alertbox--mode-default .uedp-alertbox__prefix,
+.uedp-alertbox--mode-light-theme .uedp-alertbox__prefix {
+  color: #000000;
+}
+
+.uedp-alertbox--mode-default .uedp-alertbox__action,
+.uedp-alertbox--mode-light-theme .uedp-alertbox__action {
+  color: #424343;
+}
+
+.uedp-alertbox--mode-default .uedp-alertbox__action:hover,
+.uedp-alertbox--mode-light-theme .uedp-alertbox__action:hover {
+  color: #000000;
+}
+
+.uedp-alertbox--mode-default .uedp-alertbox__close,
+.uedp-alertbox--mode-light-theme .uedp-alertbox__close {
+  color: #131414;
+}
+
+.uedp-alertbox--mode-default .uedp-alertbox__close:hover,
+.uedp-alertbox--mode-light-theme .uedp-alertbox__close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Mode: Dark (Figma: mode=light) */
+.uedp-alertbox--mode-light,
+.uedp-alertbox--mode-dark,
+.uedp-alertbox--mode-dark-theme {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.uedp-alertbox--mode-light .uedp-alertbox__prefix,
+.uedp-alertbox--mode-dark .uedp-alertbox__prefix,
+.uedp-alertbox--mode-dark-theme .uedp-alertbox__prefix {
+  color: #b7ff4d;
+}
+
+.uedp-alertbox--mode-light .uedp-alertbox__action,
+.uedp-alertbox--mode-dark .uedp-alertbox__action,
+.uedp-alertbox--mode-dark-theme .uedp-alertbox__action {
+  color: #b7ff4d;
+}
+
+.uedp-alertbox--mode-light .uedp-alertbox__action:hover,
+.uedp-alertbox--mode-dark .uedp-alertbox__action:hover,
+.uedp-alertbox--mode-dark-theme .uedp-alertbox__action:hover {
+  color: #e5ffbd;
+  text-decoration: underline;
+}
+
+.uedp-alertbox--mode-light .uedp-alertbox__close,
+.uedp-alertbox--mode-dark .uedp-alertbox__close,
+.uedp-alertbox--mode-dark-theme .uedp-alertbox__close {
+  color: #e5ffbd;
+}
+
+.uedp-alertbox--mode-light .uedp-alertbox__close:hover,
+.uedp-alertbox--mode-dark .uedp-alertbox__close:hover,
+.uedp-alertbox--mode-dark-theme .uedp-alertbox__close:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   Internal Layout
+   ========================================================================== */
+
+/* Prefix Alert Icon */
+.uedp-alertbox__prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Message Text */
+.uedp-alertbox__text {
+  flex: 1;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+/* Action Button / Link */
+.uedp-alertbox__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 4px 0 12px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.15s ease;
+}
+
+.uedp-alertbox__action:focus-visible {
+  outline: 2px solid #b7ff4d;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Close Icon Button */
+.uedp-alertbox__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  margin-left: 4px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.uedp-alertbox__close:focus-visible {
+  outline: 2px solid #b7ff4d;
+  outline-offset: 2px;
+}
