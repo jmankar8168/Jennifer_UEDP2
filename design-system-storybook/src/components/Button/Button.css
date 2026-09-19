@@ -1,0 +1,130 @@
+/**
+ * CSS for Button Component
+ * Preserved Figma Layer Name: "Button"
+ * Node ID: 54:6477
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600;700&display=swap');
+
+/* Base Button (Pill Shape) */
+.uedp-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+/* Right-pointing triangle arrow icon */
+.uedp-button-icon {
+  display: inline-block;
+  width: 7px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   PRIMARY VARIANT (Solid White -> Inverted Dark)
+   ========================================================================== */
+.uedp-button--primary {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  color: #000000;
+}
+
+.uedp-button--primary:hover:not(:disabled),
+.uedp-button--primary.uedp-button--state-hover {
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.uedp-button--primary.is-disabled,
+.uedp-button--primary:disabled,
+.uedp-button--primary.uedp-button--state-disabled {
+  background-color: #5C5C5C;
+  border: 1px solid transparent;
+  color: #2E2E2E;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   ACCENT VARIANT (Dark Outline -> Neon Lime Accent)
+   ========================================================================== */
+.uedp-button--accent {
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  color: #B7FF4D;
+}
+
+.uedp-button--accent:hover:not(:disabled),
+.uedp-button--accent.uedp-button--state-hover {
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.uedp-button--accent.uedp-button--state-default {
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.uedp-button--accent.uedp-button--state-active {
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  color: #B7FF4D;
+}
+
+.uedp-button--accent.is-disabled,
+.uedp-button--accent:disabled,
+.uedp-button--accent.uedp-button--state-disabled {
+  background-color: #1C1C1C;
+  border: 1px solid #333333;
+  color: #4A5C2F;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   SECONDARY VARIANT (Dark Outline White)
+   ========================================================================== */
+.uedp-button--secondary {
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.uedp-button--secondary:hover:not(:disabled),
+.uedp-button--secondary.uedp-button--state-hover {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  color: #000000;
+}
+
+.uedp-button--secondary.is-disabled,
+.uedp-button--secondary:disabled,
+.uedp-button--secondary.uedp-button--state-disabled {
+  background-color: #1C1C1C;
+  border: 1px solid #333333;
+  color: #555555;
+  cursor: not-allowed;
+}
+
+/* Focus Visible */
+.uedp-button:focus-visible {
+  outline: 2px solid #B7FF4D;
+  outline-offset: 2px;
+}
