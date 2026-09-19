@@ -1,0 +1,209 @@
+/**
+ * CSS for ConfirmationBox (Figma: voice prompt block / confirmation box)
+ * Node ID: 53:6305
+ */
+
+.uedp-confirmation-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 342px;
+  height: 205px;
+  padding: 16px 21px;
+  border-radius: 0px;
+  user-select: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+
+/* ==========================================================================
+   Modes (Dark / Light)
+   ========================================================================== */
+
+/* Dark Mode (Figma: mode=dark / dar) */
+.uedp-confirmation-box--mode-dark,
+.uedp-confirmation-box--mode-dar {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+.uedp-confirmation-box--mode-dark .uedp-confirmation-box__spark,
+.uedp-confirmation-box--mode-dar .uedp-confirmation-box__spark {
+  color: #b7ff4d;
+}
+
+.uedp-confirmation-box--mode-dark .uedp-confirmation-box__title,
+.uedp-confirmation-box--mode-dar .uedp-confirmation-box__title {
+  color: #b7ff4d;
+}
+
+.uedp-confirmation-box--mode-dark .uedp-confirmation-box__subtitle,
+.uedp-confirmation-box--mode-dar .uedp-confirmation-box__subtitle {
+  color: #b7ff4d;
+}
+
+.uedp-confirmation-box--mode-dark .uedp-confirmation-box__btn-no,
+.uedp-confirmation-box--mode-dar .uedp-confirmation-box__btn-no {
+  color: #d06b34;
+}
+
+.uedp-confirmation-box--mode-dark .uedp-confirmation-box__btn-yes,
+.uedp-confirmation-box--mode-dar .uedp-confirmation-box__btn-yes {
+  background-color: #ffffff;
+  color: #18181b;
+}
+
+.uedp-confirmation-box--mode-dark .uedp-confirmation-box__btn-yes:hover,
+.uedp-confirmation-box--mode-dar .uedp-confirmation-box__btn-yes:hover {
+  background-color: #e5ffbd;
+}
+
+/* Light Mode (Figma: mode=light) */
+.uedp-confirmation-box--mode-light {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.uedp-confirmation-box--mode-light .uedp-confirmation-box__spark {
+  color: #497b00;
+}
+
+.uedp-confirmation-box--mode-light .uedp-confirmation-box__title {
+  color: #497b00;
+}
+
+.uedp-confirmation-box--mode-light .uedp-confirmation-box__subtitle {
+  color: #497b00;
+}
+
+.uedp-confirmation-box--mode-light .uedp-confirmation-box__btn-no {
+  color: #c4622d;
+}
+
+.uedp-confirmation-box--mode-light .uedp-confirmation-box__btn-yes {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.uedp-confirmation-box--mode-light .uedp-confirmation-box__btn-yes:hover {
+  background-color: #222222;
+}
+
+/* ==========================================================================
+   Internal Elements
+   ========================================================================== */
+
+.uedp-confirmation-box__spark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.uedp-confirmation-box__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 254px;
+  max-width: 100%;
+}
+
+.uedp-confirmation-box__title {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.uedp-confirmation-box__subtitle {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* Cancel Session Button Row */
+.uedp-confirmation-box__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  max-width: 100%;
+  height: 39px;
+  margin-top: 14px;
+}
+
+.uedp-confirmation-box__btn-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 8px 16px;
+  width: 139px;
+  height: 39px;
+  transition: opacity 0.15s ease;
+}
+
+.uedp-confirmation-box__btn-no:hover {
+  opacity: 0.8;
+}
+
+.uedp-confirmation-box__btn-no:focus-visible {
+  outline: 2px solid #b7ff4d;
+  outline-offset: 2px;
+}
+
+.uedp-confirmation-box__btn-yes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 139px;
+  height: 39px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.uedp-confirmation-box__btn-yes:active {
+  transform: scale(0.98);
+}
+
+.uedp-confirmation-box__btn-yes:focus-visible {
+  outline: 2px solid #b7ff4d;
+  outline-offset: 2px;
+}
+
+/* Rate State Stars Container */
+.uedp-confirmation-box__stars-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 18px;
+}
