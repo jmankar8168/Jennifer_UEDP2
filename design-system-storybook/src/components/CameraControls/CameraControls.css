@@ -1,0 +1,257 @@
+/**
+ * CSS for CameraControls Component
+ * Preserved Figma Layer: "Camera" (Node ID: 16:1926)
+ * Design Tokens: VisionSync High-Contrast & Assistive UI
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+.uedp-camera-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  user-select: none;
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Simulated Video Viewport (Assistive Call Feed)
+   ========================================================================== */
+
+.uedp-camera-viewport {
+  position: relative;
+  width: 360px;
+  height: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  box-sizing: border-box;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  perspective: 1000px;
+}
+
+.uedp-camera-viewport--dark {
+  background: radial-gradient(circle at 50% 40%, #1e293b 0%, #0f172a 70%, #050b14 100%);
+  border: 1px solid #334155;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.uedp-camera-viewport--light {
+  background: radial-gradient(circle at 50% 40%, #f1f5f9 0%, #e2e8f0 70%, #cbd5e1 100%);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* 3D Flip State for Camera View */
+.uedp-camera-feed {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.uedp-camera-feed--flipped {
+  transform: rotateY(180deg);
+}
+
+/* Viewfinder corner grid overlays */
+.uedp-camera-corners {
+  position: absolute;
+  inset: 20px;
+  pointer-events: none;
+  border: 1px dashed rgba(183, 255, 77, 0.25);
+  border-radius: 4px;
+}
+
+.uedp-camera-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Header HUD Elements */
+.uedp-camera-hud-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.uedp-camera-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+
+.uedp-camera-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #EF4444;
+  animation: uedp-pulse-red 1.5s infinite;
+}
+
+@keyframes uedp-pulse-red {
+  0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1.1); opacity: 0.9; box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+  100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.uedp-camera-timer {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #B7FF4D;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Torch Beam Glow Simulation */
+.uedp-camera-torch-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 65%);
+  pointer-events: none;
+  animation: uedp-torch-pulse 2s infinite ease-in-out;
+}
+
+@keyframes uedp-torch-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* ==========================================================================
+   Figma Control Bar (Node 16:1926 Exact Dimensions)
+   50px × 79px Pills, Corner Radius 999
+   ========================================================================== */
+
+.uedp-camera-control-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-sizing: border-box;
+  background: #171717;
+  border: 1px solid #262626;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.uedp-camera-control-bar--light {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Individual Pill Button (Exact Figma 16:1931 / 16:1928: 50px × 79px) */
+.uedp-camera-pill {
+  width: 50px;
+  height: 79px;
+  min-width: 50px;
+  min-height: 79px;
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uedp-camera-pill:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.uedp-camera-pill:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+/* Flip Pill Button (Figma 16:1931: Background #525252) */
+.uedp-camera-pill--flip {
+  background-color: #525252;
+  color: #FFFFFF;
+}
+
+.uedp-camera-pill--flip:hover,
+.uedp-camera-pill--flip-hover {
+  background-color: #666666;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.25);
+}
+
+/* End / Decline Pill Button (Figma 16:1928: Background #D06B34 / #C4622D) */
+.uedp-camera-pill--decline {
+  background-color: #D06B34;
+  color: #FFFFFF;
+}
+
+.uedp-camera-pill--decline:hover,
+.uedp-camera-pill--end-hover {
+  background-color: #DC2626;
+  box-shadow: 0 0 18px rgba(220, 38, 38, 0.5);
+}
+
+/* Secondary Compact Pills (Mute, Torch) */
+.uedp-camera-pill--secondary {
+  background-color: #27272A;
+  color: #D4D4D8;
+  height: 64px;
+  width: 44px;
+}
+
+.uedp-camera-pill--secondary:hover {
+  background-color: #3F3F46;
+  color: #FFFFFF;
+}
+
+.uedp-camera-pill--active {
+  background-color: #B7FF4D !important;
+  color: #000000 !important;
+  box-shadow: 0 0 16px rgba(183, 255, 77, 0.5);
+}
+
+.uedp-camera-pill-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.11px;
+  line-height: 1;
+}
+
+.uedp-camera-pill--active .uedp-camera-pill-label {
+  font-weight: 700;
+  color: #000000;
+}

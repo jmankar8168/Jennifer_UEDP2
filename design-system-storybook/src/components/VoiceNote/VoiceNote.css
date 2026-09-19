@@ -1,0 +1,215 @@
+/**
+ * CSS for VoiceNote Component
+ * Preserved Figma Layer: "voice note" (Node ID: 34:1171)
+ * Variants: State=Default, State=selected, State=Command selected, State=default
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+.uedp-voice-note-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  user-select: none;
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Figma Base Container (Node 34:1171: 277px × 55px)
+   ========================================================================== */
+
+.uedp-voice-note {
+  box-sizing: border-box;
+  width: 277px;
+  height: 55px;
+  min-width: 277px;
+  min-height: 55px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 999px;
+  background-color: #171717;
+  border: 1px solid #262626;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.uedp-voice-note:hover {
+  border-color: #B7FF4D;
+  background-color: #1f2a14;
+  box-shadow: 0 4px 18px rgba(183, 255, 77, 0.2);
+}
+
+.uedp-voice-note--selected {
+  border-color: #B7FF4D;
+  background-color: #1a2412;
+  box-shadow: 0 0 20px -4px rgba(183, 255, 77, 0.3);
+}
+
+/* Compact Variant (State=Command selected / State=default: 168px × 53px) */
+.uedp-voice-note--compact {
+  width: 168px;
+  height: 53px;
+  min-width: 168px;
+  min-height: 53px;
+  padding: 8px 14px;
+}
+
+/* Light Theme */
+.uedp-voice-note--light {
+  background-color: #FFFFFF;
+  border-color: #E5E7EB;
+}
+
+.uedp-voice-note--light:hover {
+  border-color: #4D8014;
+  background-color: #F7FEE7;
+  box-shadow: 0 4px 18px rgba(77, 128, 20, 0.15);
+}
+
+.uedp-voice-note--light.uedp-voice-note--selected {
+  border-color: #4D8014;
+  background-color: #ECFCCB;
+}
+
+/* Left Group (Soft Star + Divider + Label) */
+.uedp-voice-note-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Figma 34:1168: Soft Star in #B7FF4D */
+.uedp-voice-note-star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B7FF4D;
+  transition: transform 0.3s ease;
+}
+
+.uedp-voice-note:hover .uedp-voice-note-star {
+  transform: rotate(45deg) scale(1.1);
+}
+
+.uedp-voice-note--light .uedp-voice-note-star {
+  color: #4D8014;
+}
+
+/* Figma 34:1176: Vertical Divider */
+.uedp-voice-note-divider {
+  width: 1.5px;
+  height: 24px;
+  background-color: #334155;
+}
+
+.uedp-voice-note--light .uedp-voice-note-divider {
+  background-color: #E2E8F0;
+}
+
+/* Figma 34:1167: Text */
+.uedp-voice-note-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.uedp-voice-note--light .uedp-voice-note-label {
+  color: #111827;
+}
+
+/* ==========================================================================
+   Waveform & Controls Area
+   ========================================================================== */
+
+.uedp-voice-note-wave-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 24px;
+  padding: 0 4px;
+}
+
+.uedp-voice-note-bar {
+  width: 3px;
+  border-radius: 999px;
+  background-color: #525252;
+  transition: height 0.15s ease, background-color 0.2s ease;
+}
+
+.uedp-voice-note--playing .uedp-voice-note-bar {
+  background-color: #B7FF4D;
+  animation: uedp-wave-dance 1s infinite ease-in-out alternate;
+}
+
+.uedp-voice-note--light.uedp-voice-note--playing .uedp-voice-note-bar {
+  background-color: #4D8014;
+}
+
+@keyframes uedp-wave-dance {
+  0% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0.6); }
+}
+
+/* Play/Pause Button */
+.uedp-voice-note-play-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #262626;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.uedp-voice-note-play-btn:hover {
+  background-color: #B7FF4D;
+  color: #000000;
+  transform: scale(1.08);
+}
+
+.uedp-voice-note--light .uedp-voice-note-play-btn {
+  background-color: #F1F5F9;
+  color: #111827;
+}
+
+.uedp-voice-note--light .uedp-voice-note-play-btn:hover {
+  background-color: #4D8014;
+  color: #FFFFFF;
+}
+
+/* Timestamp readout in Space Mono */
+.uedp-voice-note-time {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #A1A1AA;
+}
+
+.uedp-voice-note--light .uedp-voice-note-time {
+  color: #64748B;
+}
+
+/* Recording Pulse Indicator */
+.uedp-voice-note--recording {
+  border-color: #DC2626 !important;
+  background-color: #2a1414 !important;
+}
+
+.uedp-voice-note-rec-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #DC2626;
+  animation: uedp-pulse-red 1.2s infinite;
+}

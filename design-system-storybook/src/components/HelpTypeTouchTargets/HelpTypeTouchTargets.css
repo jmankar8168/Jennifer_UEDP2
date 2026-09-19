@@ -1,0 +1,189 @@
+/**
+ * CSS for HelpTypeTouchTargets Component
+ * Preserved Figma Layer: "help type options — large touch targets" (Node ID: 16:841)
+ * Companion Nodes: Component 10 (Assist), Component 11 (Scan), Group 11 (Jobs), Component 12 (Support)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+.uedp-help-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 342px;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+}
+
+/* Individual Large Touch Target Card (Exact Figma: 342px × 82px) */
+.uedp-touch-target {
+  box-sizing: border-box;
+  width: 342px;
+  min-height: 82px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background-color: #171717;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+  transition: border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.15s ease;
+  position: relative;
+}
+
+.uedp-touch-target:hover {
+  border-color: #B7FF4D;
+  background-color: #1c2214;
+  transform: translateY(-1px);
+}
+
+.uedp-touch-target:focus-visible {
+  border-color: #B7FF4D;
+  box-shadow: 0 0 0 2px rgba(183, 255, 77, 0.4);
+}
+
+.uedp-touch-target:active {
+  transform: translateY(1px);
+}
+
+/* Selected State */
+.uedp-touch-target--selected {
+  border-color: #B7FF4D;
+  background-color: #1f2a14;
+  box-shadow: 0 0 20px -5px rgba(183, 255, 77, 0.35);
+}
+
+/* Disabled State */
+.uedp-touch-target--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+  border-color: #262626;
+}
+
+/* Light Theme */
+.uedp-touch-target--light {
+  background-color: #FFFFFF;
+  border-color: #E5E7EB;
+}
+
+.uedp-touch-target--light:hover {
+  border-color: #4D8014;
+  background-color: #F7FEE7;
+}
+
+.uedp-touch-target--light.uedp-touch-target--selected {
+  border-color: #4D8014;
+  background-color: #ECFCCB;
+  box-shadow: 0 0 16px -4px rgba(77, 128, 20, 0.25);
+}
+
+/* Content Layout */
+.uedp-touch-target-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.uedp-touch-target-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 38px;
+  min-width: 44px;
+  color: #FFFFFF;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.uedp-touch-target:hover .uedp-touch-target-icon,
+.uedp-touch-target--selected .uedp-touch-target-icon {
+  color: #B7FF4D;
+  transform: scale(1.05);
+}
+
+.uedp-touch-target--light .uedp-touch-target-icon {
+  color: #111827;
+}
+
+.uedp-touch-target--light:hover .uedp-touch-target-icon,
+.uedp-touch-target--light.uedp-touch-target--selected .uedp-touch-target-icon {
+  color: #4D8014;
+}
+
+.uedp-touch-target-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Space Mono Tag (Figma Node 16:843) */
+.uedp-touch-target-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #B7FF4D;
+  line-height: 1;
+}
+
+.uedp-touch-target--light .uedp-touch-target-tag {
+  color: #4D8014;
+}
+
+/* Title & Description */
+.uedp-touch-target-title {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.uedp-touch-target--light .uedp-touch-target-title {
+  color: #111827;
+}
+
+.uedp-touch-target-desc {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #737373;
+  line-height: 1.3;
+}
+
+.uedp-touch-target--light .uedp-touch-target-desc {
+  color: #6B7280;
+}
+
+/* Figma 45-degree angled chevron border indicator (Node 16:845) */
+.uedp-touch-target-chevron {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #525252;
+  border-right: 2px solid #525252;
+  transform: rotate(45deg);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.uedp-touch-target:hover .uedp-touch-target-chevron,
+.uedp-touch-target--selected .uedp-touch-target-chevron {
+  border-color: #B7FF4D;
+  transform: rotate(45deg) translate(2px, -2px);
+}
+
+.uedp-touch-target--light:hover .uedp-touch-target-chevron,
+.uedp-touch-target--light.uedp-touch-target--selected .uedp-touch-target-chevron {
+  border-color: #4D8014;
+}

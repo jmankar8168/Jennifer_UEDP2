@@ -57,3 +57,29 @@ export {
   InfoOutlineIcon,
   DEFAULT_LOG_ENTRIES,
 } from './components/Logs/Logs';
+export {
+  CameraControls,
+  CameraControls as Camera,
+} from './components/CameraControls/CameraControls';
+export {
+  HelpTypeTouchTargets,
+  HelpTypeTouchTargets as TouchTargets,
+  TouchTargetCard,
+  DEFAULT_HELP_OPTIONS,
+} from './components/HelpTypeTouchTargets/HelpTypeTouchTargets';
+export {
+  VoiceNote,
+  VoiceNote as VoiceMemo,
+} from './components/VoiceNote/VoiceNote';
+export {
+  RoleSelector,
+  RoleSelector as RoleCard,
+  BlindRoleIcon,
+  SightedRoleIcon,
+} from './components/RoleSelector/RoleSelector';
+export {
+  StepWizard,
+  StepSegments,
+  StepSegments as Component23,
+} from './components/StepWizard/StepWizard';
+

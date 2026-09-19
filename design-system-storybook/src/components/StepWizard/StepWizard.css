@@ -1,0 +1,204 @@
+/**
+ * CSS for StepWizard Component
+ * Preserved Figma Layers:
+ * - "Component 23" (Node ID: 35:629 - Property 1=1, 2, 3)
+ * - "Step 1 of 3" (Node ID: 16:729) & "Step 1 of 2" (Node ID: 16:724)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+.uedp-step-wizard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 342px;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+  background-color: #171717;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  padding: 20px 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uedp-step-wizard--light {
+  background-color: #FFFFFF;
+  border-color: #E5E7EB;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   Header & Segment Indicator (Figma Component 23: 48px × 6px)
+   ========================================================================== */
+
+.uedp-step-wizard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.uedp-step-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #B7FF4D;
+}
+
+.uedp-step-wizard--light .uedp-step-label {
+  color: #4D8014;
+}
+
+/* Exact Figma Component 23 Segmented Bar */
+.uedp-step-segments {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 6px;
+}
+
+.uedp-step-segment-bar {
+  width: 14px;
+  height: 6px;
+  border-radius: 999px;
+  background-color: #404040;
+  transition: background-color 0.25s ease, width 0.25s ease;
+  cursor: pointer;
+}
+
+.uedp-step-segment-bar--active {
+  background-color: #B7FF4D;
+  box-shadow: 0 0 8px rgba(183, 255, 77, 0.5);
+}
+
+.uedp-step-wizard--light .uedp-step-segment-bar {
+  background-color: #E5E7EB;
+}
+
+.uedp-step-wizard--light .uedp-step-segment-bar--active {
+  background-color: #4D8014;
+  box-shadow: 0 0 6px rgba(77, 128, 20, 0.3);
+}
+
+/* Progress Bar Percentage */
+.uedp-step-progress-track {
+  width: 100%;
+  height: 3px;
+  background-color: #262626;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.uedp-step-wizard--light .uedp-step-progress-track {
+  background-color: #F1F5F9;
+}
+
+.uedp-step-progress-fill {
+  height: 100%;
+  background-color: #B7FF4D;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uedp-step-wizard--light .uedp-step-progress-fill {
+  background-color: #4D8014;
+}
+
+/* Step Body & Content */
+.uedp-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.uedp-step-title {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.uedp-step-wizard--light .uedp-step-title {
+  color: #111827;
+}
+
+.uedp-step-desc {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #737373;
+  line-height: 1.4;
+}
+
+.uedp-step-wizard--light .uedp-step-desc {
+  color: #6B7280;
+}
+
+/* Step Content Container */
+.uedp-step-content {
+  padding: 8px 0;
+}
+
+/* Footer Navigation Buttons */
+.uedp-step-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.uedp-step-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.uedp-step-btn--back {
+  background-color: transparent;
+  color: #737373;
+  border: 1px solid #404040;
+}
+
+.uedp-step-btn--back:hover:not(:disabled) {
+  color: #FFFFFF;
+  border-color: #737373;
+}
+
+.uedp-step-btn--back:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.uedp-step-btn--next {
+  background-color: #B7FF4D;
+  color: #000000;
+  border: 1px solid #B7FF4D;
+}
+
+.uedp-step-btn--next:hover {
+  background-color: #c9ff7a;
+  box-shadow: 0 0 12px rgba(183, 255, 77, 0.4);
+  transform: translateY(-1px);
+}
+
+.uedp-step-wizard--light .uedp-step-btn--next {
+  background-color: #4D8014;
+  color: #FFFFFF;
+  border-color: #4D8014;
+}
+
+.uedp-step-wizard--light .uedp-step-btn--next:hover {
+  background-color: #3b630f;
+}
