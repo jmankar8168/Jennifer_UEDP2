@@ -1,0 +1,138 @@
+{
+  "$meta": {
+    "product": "Fintech app for Enterprise users (assumed — no selection was made when generated)",
+    "brand_personality": "Bold & energetic, minimal & clean, accessibility-first (dark-theme, single neon accent against near-black)",
+    "assumptions": [
+      "No base-palette file was actually attached, so the ramps in `base` below were reconstructed from the spec: ink #0A0A0A, acid/500 #B5FF47 (exact, unmodified), cream #F5F2EC, and a true-achromatic neutral ramp. Olive, rust, and info only had anchor intent described (not exact hexes), so their full 50–900 ramps are original generations consistent with 'muted olive' / 'muted rust' — treat as a first draft, not final brand hex values, until checked against the real base file.",
+      "App type/audience were left as an unresolved option list in the brief; Fintech + Enterprise was chosen as the default. Only the `semantic` layer would change for a different app type/audience — `base` ramps are independent of that choice."
+    ],
+    "info_color_decision": "No blue exists in the base palette. Per instructions, `info` was generated as a desaturated, hue-shifted tint of `acid` (hue pushed from 84° to ~100° and desaturated) rather than reusing rust or olive, so it doesn't collide with warning/error or success. FLAGGED RISK: an acid-derived info color is still in the green family, same as olive/success. For deuteranopia/protanopia users this is a real confusability risk between 'informational' and 'success' states. Recommended fix for production: introduce an actual blue into the base palette rather than shipping the acid-tint workaround long-term.",
+    "contrast_note": "text/primary (neutral/50 #F6F6F6) on surface/primary (neutral/900 #0A0A0A) ≈ 19.7:1. interactive/default (acid/500 #B5FF47) on surface/primary ≈ 16.4:1. Both comfortably clear WCAG AAA (7:1) for normal text — consistent with treating contrast as a hard constraint, not a style preference."
+  },
+
+  "base": {
+    "ink": {
+      "900": { "$value": "#0A0A0A", "$type": "color", "$description": "Base dark surface color, brand-fixed." }
+    },
+    "neutral": {
+      "50":  { "$value": "#F6F6F6", "$type": "color" },
+      "100": { "$value": "#E8E8E8", "$type": "color" },
+      "200": { "$value": "#D1D1D1", "$type": "color" },
+      "300": { "$value": "#B0B0B0", "$type": "color" },
+      "400": { "$value": "#8A8A8A", "$type": "color" },
+      "500": { "$value": "#6B6B6B", "$type": "color" },
+      "600": { "$value": "#4D4D4D", "$type": "color" },
+      "700": { "$value": "#333333", "$type": "color" },
+      "800": { "$value": "#1A1A1A", "$type": "color" },
+      "900": { "$value": "#0A0A0A", "$type": "color", "$description": "= ink/900, 0% saturation, true achromatic." }
+    },
+    "cream": {
+      "50":  { "$value": "#FFFEFB", "$type": "color" },
+      "100": { "$value": "#F5F2EC", "$type": "color", "$description": "Brand-fixed base cream, ~40° warm hue. Distinct token, not neutral/50." },
+      "200": { "$value": "#E8E3D8", "$type": "color" },
+      "300": { "$value": "#D9D2C2", "$type": "color" }
+    },
+    "acid": {
+      "50":  { "$value": "#F5FFE4", "$type": "color" },
+      "100": { "$value": "#EAFFC9", "$type": "color" },
+      "200": { "$value": "#DFFFA8", "$type": "color" },
+      "300": { "$value": "#D2FF82", "$type": "color" },
+      "400": { "$value": "#C4FF63", "$type": "color" },
+      "500": { "$value": "#B5FF47", "$type": "color", "$description": "Brand-fixed CTA hex. Exact, near-fluorescent — do not substitute a deeper shade." },
+      "600": { "$value": "#96D93A", "$type": "color", "$description": "Hover state — deepened, not desaturated to gray, to stay visibly 'acid'." },
+      "700": { "$value": "#78AD2E", "$type": "color", "$description": "Pressed state." },
+      "800": { "$value": "#5A8222", "$type": "color" },
+      "900": { "$value": "#3D5717", "$type": "color" }
+    },
+    "olive": {
+      "50":  { "$value": "#EEF1E0", "$type": "color" },
+      "100": { "$value": "#DDE3C2", "$type": "color" },
+      "200": { "$value": "#C3CE96", "$type": "color" },
+      "300": { "$value": "#A8B96E", "$type": "color", "$description": "success/text — light enough for AA+ contrast on olive/900 bg." },
+      "400": { "$value": "#8FA34C", "$type": "color" },
+      "500": { "$value": "#74893A", "$type": "color", "$description": "Muted olive base/reference shade." },
+      "600": { "$value": "#5C6E2E", "$type": "color", "$description": "success/border." },
+      "700": { "$value": "#465424", "$type": "color" },
+      "800": { "$value": "#333D1A", "$type": "color" },
+      "900": { "$value": "#212711", "$type": "color", "$description": "success/bg — deep tint against dark surfaces." }
+    },
+    "rust": {
+      "50":  { "$value": "#FBEAE2", "$type": "color" },
+      "100": { "$value": "#F5D1BF", "$type": "color" },
+      "200": { "$value": "#E8AC8C", "$type": "color", "$description": "error/text — deliberately brighter than warning/text to read as more urgent." },
+      "300": { "$value": "#DA8760", "$type": "color", "$description": "warning/text." },
+      "400": { "$value": "#C96A3F", "$type": "color" },
+      "500": { "$value": "#B5502E", "$type": "color", "$description": "Muted rust base/reference shade. warning/border." },
+      "600": { "$value": "#954025", "$type": "color" },
+      "700": { "$value": "#75331E", "$type": "color", "$description": "error/border. Deliberate brand choice: rust stands in for red, no dedicated red exists." },
+      "800": { "$value": "#542415", "$type": "color" },
+      "900": { "$value": "#33160C", "$type": "color", "$description": "Shared warning/error bg — deep tint against dark surfaces." }
+    },
+    "info": {
+      "50":  { "$value": "#F3F6ED", "$type": "color" },
+      "100": { "$value": "#E3EBD4", "$type": "color" },
+      "200": { "$value": "#CBDBAE", "$type": "color" },
+      "300": { "$value": "#B0C989", "$type": "color", "$description": "info/text." },
+      "400": { "$value": "#9BBB6E", "$type": "color" },
+      "500": { "$value": "#86AC59", "$type": "color", "$description": "Generated: desaturated + hue-shifted tint of acid (H 84°→~100°, S 100%→~45%, L raised). Not a base-palette color — a synthesized stand-in for info. See $meta.info_color_decision." },
+      "600": { "$value": "#6D8F45", "$type": "color", "$description": "info/border." },
+      "700": { "$value": "#557036", "$type": "color" },
+      "800": { "$value": "#3E5227", "$type": "color" },
+      "900": { "$value": "#283518", "$type": "color", "$description": "info/bg — deep tint against dark surfaces." }
+    }
+  },
+
+  "semantic": {
+    "text": {
+      "primary":   { "$value": "{base.neutral.50}",  "$type": "color", "$description": "Default body/UI text. Dark-mode-first: light text on dark surface, NOT neutral/900." },
+      "secondary": { "$value": "{base.neutral.300}", "$type": "color", "$description": "Lower-emphasis text (captions, metadata)." },
+      "muted":     { "$value": "{base.neutral.500}", "$type": "color", "$description": "Placeholder/disabled-adjacent text." },
+      "inverse":   { "$value": "{base.ink.900}",     "$type": "color", "$description": "Text used on light/cream surfaces (surface/inverse), e.g. text sitting on a cream secondary button." },
+      "link":      { "$value": "{base.acid.400}",    "$type": "color", "$description": "Slightly softer than the CTA hex (acid/500) so links read as text-level emphasis, not as a button; ~16:1 contrast on surface/primary." }
+    },
+
+    "surface": {
+      "primary":   { "$value": "{base.neutral.900}", "$type": "color", "$description": "Base app background. = ink." },
+      "secondary": { "$value": "{base.neutral.800}", "$type": "color", "$description": "Cards, panels sitting on the base surface." },
+      "tertiary":  { "$value": "{base.neutral.700}", "$type": "color", "$description": "Nested content areas within secondary surfaces." },
+      "elevated":  { "$value": "{base.neutral.600}", "$type": "color", "$description": "Modals, popovers, tooltips — lifted above flat content, paired with shadow." },
+      "inverse":   { "$value": "{base.cream.100}",   "$type": "color", "$description": "Deliberate warm light surface for inverse contexts (e.g. a light callout block, printed/exported views). Not neutral/50 — uses cream on purpose." }
+    },
+
+    "border": {
+      "default": { "$value": "{base.neutral.700}", "$type": "color", "$description": "Standard dividers, input borders at rest." },
+      "strong":  { "$value": "{base.neutral.500}", "$type": "color", "$description": "Higher-emphasis borders, active/selected input outlines." },
+      "focus":   { "$value": "{base.acid.500}",    "$type": "color", "$description": "Focus ring — uses the exact CTA hex for maximum visibility; accessibility-critical, not a place to soften the brand color." }
+    },
+
+    "interactive": {
+      "default":  { "$value": "{base.acid.500}",    "$type": "color", "$description": "Primary button/CTA fill. Exact brand hex #B5FF47, unmodified." },
+      "hover":    { "$value": "{base.acid.600}",     "$type": "color", "$description": "Deepened (not grayed) on hover to preserve the neon identity." },
+      "pressed":  { "$value": "{base.acid.700}",     "$type": "color" },
+      "disabled": { "$value": "{base.neutral.700}",  "$type": "color", "$description": "Neutral, not a dimmed acid — signals 'inert', pair with text/muted label." }
+    },
+
+    "feedback": {
+      "success": {
+        "bg":     { "$value": "{base.olive.900}", "$type": "color" },
+        "text":   { "$value": "{base.olive.300}", "$type": "color" },
+        "border": { "$value": "{base.olive.600}", "$type": "color" }
+      },
+      "warning": {
+        "bg":     { "$value": "{base.rust.900}", "$type": "color" },
+        "text":   { "$value": "{base.rust.300}", "$type": "color" },
+        "border": { "$value": "{base.rust.500}", "$type": "color" }
+      },
+      "error": {
+        "bg":     { "$value": "{base.rust.900}", "$type": "color", "$description": "Deliberate brand choice: rust stands in for red — there is no dedicated red in this system." },
+        "text":   { "$value": "{base.rust.200}", "$type": "color", "$description": "Brighter than warning/text — signals higher urgency." },
+        "border": { "$value": "{base.rust.700}", "$type": "color" }
+      },
+      "info": {
+        "bg":     { "$value": "{base.info.900}", "$type": "color", "$description": "See $meta.info_color_decision — synthesized from acid, flagged risk vs. success." },
+        "text":   { "$value": "{base.info.300}", "$type": "color" },
+        "border": { "$value": "{base.info.600}", "$type": "color" }
+      }
+    }
+  }
+}

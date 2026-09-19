@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "source": "Figma file J40aJD6CjjvSgAI0qIO4za (UEDP4_A2) — HI Fi Wireframes page",
+    "note": "Values marked confirmed were read directly off selected layers. Values marked system were found elsewhere in the file using the same three typefaces and follow the same sizing/spacing logic."
+  },
+  "fontFamilies": {
+    "display": "'Playfair Display', Georgia, 'Times New Roman', serif",
+    "body": "'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "mono": "'Space Mono', 'SF Mono', 'Courier New', monospace"
+  },
+  "fontWeights": {
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+    "extrabold": 800,
+    "black": 900
+  },
+  "colors": {
+    "cream": "#F5F2EC",
+    "ink": "#0A0A0A",
+    "deep": "#1A1A1A",
+    "graphite": "#2A2A2A",
+    "acid": "#B5FF47",
+    "olive": "#5C6641",
+    "rust": "#C4622D",
+    "muted": "#888888"
+  },
+  "typeScale": {
+    "display": {
+      "status": "system (Style Guide type scale)",
+      "fontFamily": "display",
+      "fontWeight": "black",
+      "fontSize": "64px",
+      "lineHeight": "60.8px",
+      "letterSpacing": "-0.5px",
+      "note": "Labelled '96px' in the Style Guide but the actual node is set to 64px — flag with your designer"
+    },
+    "h1": {
+      "status": "confirmed",
+      "fontFamily": "display",
+      "fontWeight": "bold",
+      "fontSize": "36px",
+      "lineHeight": "39.6px",
+      "letterSpacing": "0",
+      "color": "cream",
+      "example": "How would you like to use VisionSync?"
+    },
+    "h1Accent": {
+      "status": "confirmed",
+      "fontFamily": "display",
+      "fontWeight": 800,
+      "fontStyle": "italic",
+      "color": "acid",
+      "example": "Sync (highlighted word within h1)"
+    },
+    "h2": {
+      "status": "system (Style Guide type scale)",
+      "fontFamily": "display",
+      "fontWeight": "bold",
+      "fontSize": "36px",
+      "lineHeight": "39.6px",
+      "letterSpacing": "0"
+    },
+    "bodyLarge": {
+      "status": "confirmed",
+      "fontFamily": "body",
+      "fontWeight": "regular",
+      "fontSize": "16px",
+      "lineHeight": "19.2px",
+      "letterSpacing": "0",
+      "example": "Blind / Visually Impaired"
+    },
+    "body": {
+      "status": "confirmed",
+      "fontFamily": "body",
+      "fontWeight": "regular",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "letterSpacing": "0",
+      "example": "Choose your role for a personalised experience."
+    },
+    "bodySmall": {
+      "status": "confirmed",
+      "fontFamily": "body",
+      "fontWeight": "regular",
+      "fontSize": "12px",
+      "lineHeight": "14.2px",
+      "letterSpacing": "0",
+      "example": "Pick a scheduled session to volunteer at a later time."
+    },
+    "helper": {
+      "status": "confirmed",
+      "fontFamily": "body",
+      "fontWeight": "regular",
+      "fontSize": "11px",
+      "lineHeight": "19.2px",
+      "letterSpacing": "0",
+      "color": "acid",
+      "example": "You can change your role anytime later from Settings."
+    },
+    "eyebrow": {
+      "status": "confirmed",
+      "fontFamily": "body",
+      "fontWeight": "bold",
+      "fontSize": "12px",
+      "lineHeight": "normal",
+      "letterSpacing": "1.2px",
+      "textTransform": "uppercase",
+      "color": "acid",
+      "example": "SCHEDULEd HELP"
+    },
+    "tag": {
+      "status": "system",
+      "fontFamily": "body",
+      "fontWeight": "bold",
+      "fontSize": "10px",
+      "lineHeight": "normal",
+      "letterSpacing": "1.2px",
+      "textTransform": "uppercase",
+      "example": "Donation Hub"
+    },
+    "section": {
+      "status": "confirmed",
+      "fontFamily": "mono",
+      "fontWeight": "regular",
+      "fontSize": "14px",
+      "lineHeight": "normal",
+      "letterSpacing": "1.2px",
+      "textTransform": "uppercase",
+      "example": "HELP REQUESTS"
+    },
+    "button": {
+      "status": "confirmed",
+      "fontFamily": "mono",
+      "fontWeight": "bold",
+      "fontSize": "11px",
+      "lineHeight": "normal",
+      "letterSpacing": "1.76px",
+      "textTransform": "uppercase",
+      "example": "GET STARTED"
+    },
+    "step": {
+      "status": "confirmed",
+      "fontFamily": "mono",
+      "fontWeight": "regular",
+      "fontSize": "10px",
+      "lineHeight": "normal",
+      "letterSpacing": "2.2px",
+      "textTransform": "uppercase",
+      "example": "STEP 1 OF 2"
+    },
+    "micro": {
+      "status": "confirmed",
+      "fontFamily": "mono",
+      "fontWeight": "regular",
+      "fontSize": "9px",
+      "lineHeight": "13.5px",
+      "letterSpacing": "0.9px",
+      "textTransform": "uppercase",
+      "example": "VOICE-FIRST · ACCESSIBILITY OPTIMISED"
+    },
+    "nav": {
+      "status": "system",
+      "fontFamily": "mono",
+      "fontWeight": "regular",
+      "fontSize": "11px",
+      "lineHeight": "normal",
+      "letterSpacing": "0.42px",
+      "textTransform": "uppercase",
+      "example": "Profile / Switch role"
+    },
+    "pill": {
+      "status": "system",
+      "fontFamily": "mono",
+      "fontWeight": "regular",
+      "fontSize": "8px",
+      "lineHeight": "normal",
+      "letterSpacing": "1.12px",
+      "textTransform": "uppercase",
+      "example": "Default / Hover / Disabled"
+    },
+    "meta": {
+      "status": "system",
+      "fontFamily": "body",
+      "fontWeight": "regular",
+      "fontSize": "14px",
+      "lineHeight": "14.2px",
+      "letterSpacing": "0",
+      "color": "muted",
+      "example": "2:41 pm"
+    }
+  }
+}

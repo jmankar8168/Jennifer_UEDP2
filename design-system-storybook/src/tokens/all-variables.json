@@ -1,0 +1,3785 @@
+[
+  {
+    "id": "base/base/black",
+    "name": "base/black",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-base-black",
+    "value": "#000000",
+    "description": "Base color ramp base shade black"
+  },
+  {
+    "id": "base/base/white",
+    "name": "base/white",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-base-white",
+    "value": "#FFFFFF",
+    "description": "Base color ramp base shade white"
+  },
+  {
+    "id": "base/slate/50",
+    "name": "slate/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-50",
+    "value": "#F8FAFC",
+    "description": "Base color ramp slate shade 50"
+  },
+  {
+    "id": "base/slate/100",
+    "name": "slate/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-100",
+    "value": "#F1F5F9",
+    "description": "Base color ramp slate shade 100"
+  },
+  {
+    "id": "base/slate/200",
+    "name": "slate/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-200",
+    "value": "#E2E8F0",
+    "description": "Base color ramp slate shade 200"
+  },
+  {
+    "id": "base/slate/300",
+    "name": "slate/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-300",
+    "value": "#CBD5E1",
+    "description": "Base color ramp slate shade 300"
+  },
+  {
+    "id": "base/slate/400",
+    "name": "slate/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-400",
+    "value": "#94A3B8",
+    "description": "Base color ramp slate shade 400"
+  },
+  {
+    "id": "base/slate/500",
+    "name": "slate/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-500",
+    "value": "#64748B",
+    "description": "Base color ramp slate shade 500"
+  },
+  {
+    "id": "base/slate/600",
+    "name": "slate/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-600",
+    "value": "#475569",
+    "description": "Base color ramp slate shade 600"
+  },
+  {
+    "id": "base/slate/700",
+    "name": "slate/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-700",
+    "value": "#334155",
+    "description": "Base color ramp slate shade 700"
+  },
+  {
+    "id": "base/slate/800",
+    "name": "slate/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-800",
+    "value": "#1E293B",
+    "description": "Base color ramp slate shade 800"
+  },
+  {
+    "id": "base/slate/900",
+    "name": "slate/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-900",
+    "value": "#0F172A",
+    "description": "Base color ramp slate shade 900"
+  },
+  {
+    "id": "base/slate/950",
+    "name": "slate/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-slate-950",
+    "value": "#020617",
+    "description": "Base color ramp slate shade 950"
+  },
+  {
+    "id": "base/gray/50",
+    "name": "gray/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-50",
+    "value": "#F9FAFB",
+    "description": "Base color ramp gray shade 50"
+  },
+  {
+    "id": "base/gray/100",
+    "name": "gray/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-100",
+    "value": "#F3F4F6",
+    "description": "Base color ramp gray shade 100"
+  },
+  {
+    "id": "base/gray/200",
+    "name": "gray/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-200",
+    "value": "#E5E7EB",
+    "description": "Base color ramp gray shade 200"
+  },
+  {
+    "id": "base/gray/300",
+    "name": "gray/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-300",
+    "value": "#D1D5DB",
+    "description": "Base color ramp gray shade 300"
+  },
+  {
+    "id": "base/gray/400",
+    "name": "gray/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-400",
+    "value": "#9CA3AF",
+    "description": "Base color ramp gray shade 400"
+  },
+  {
+    "id": "base/gray/500",
+    "name": "gray/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-500",
+    "value": "#6B7280",
+    "description": "Base color ramp gray shade 500"
+  },
+  {
+    "id": "base/gray/600",
+    "name": "gray/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-600",
+    "value": "#4B5563",
+    "description": "Base color ramp gray shade 600"
+  },
+  {
+    "id": "base/gray/700",
+    "name": "gray/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-700",
+    "value": "#374151",
+    "description": "Base color ramp gray shade 700"
+  },
+  {
+    "id": "base/gray/800",
+    "name": "gray/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-800",
+    "value": "#1F2937",
+    "description": "Base color ramp gray shade 800"
+  },
+  {
+    "id": "base/gray/900",
+    "name": "gray/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-900",
+    "value": "#111827",
+    "description": "Base color ramp gray shade 900"
+  },
+  {
+    "id": "base/gray/950",
+    "name": "gray/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-gray-950",
+    "value": "#030712",
+    "description": "Base color ramp gray shade 950"
+  },
+  {
+    "id": "base/zinc/50",
+    "name": "zinc/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-50",
+    "value": "#FAFAFA",
+    "description": "Base color ramp zinc shade 50"
+  },
+  {
+    "id": "base/zinc/100",
+    "name": "zinc/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-100",
+    "value": "#F4F4F5",
+    "description": "Base color ramp zinc shade 100"
+  },
+  {
+    "id": "base/zinc/200",
+    "name": "zinc/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-200",
+    "value": "#E4E4E7",
+    "description": "Base color ramp zinc shade 200"
+  },
+  {
+    "id": "base/zinc/300",
+    "name": "zinc/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-300",
+    "value": "#D4D4D8",
+    "description": "Base color ramp zinc shade 300"
+  },
+  {
+    "id": "base/zinc/400",
+    "name": "zinc/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-400",
+    "value": "#A1A1AA",
+    "description": "Base color ramp zinc shade 400"
+  },
+  {
+    "id": "base/zinc/500",
+    "name": "zinc/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-500",
+    "value": "#71717A",
+    "description": "Base color ramp zinc shade 500"
+  },
+  {
+    "id": "base/zinc/600",
+    "name": "zinc/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-600",
+    "value": "#52525B",
+    "description": "Base color ramp zinc shade 600"
+  },
+  {
+    "id": "base/zinc/700",
+    "name": "zinc/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-700",
+    "value": "#3F3F46",
+    "description": "Base color ramp zinc shade 700"
+  },
+  {
+    "id": "base/zinc/800",
+    "name": "zinc/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-800",
+    "value": "#27272A",
+    "description": "Base color ramp zinc shade 800"
+  },
+  {
+    "id": "base/zinc/900",
+    "name": "zinc/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-900",
+    "value": "#18181B",
+    "description": "Base color ramp zinc shade 900"
+  },
+  {
+    "id": "base/zinc/950",
+    "name": "zinc/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-zinc-950",
+    "value": "#09090B",
+    "description": "Base color ramp zinc shade 950"
+  },
+  {
+    "id": "base/neutral/50",
+    "name": "neutral/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-50",
+    "value": "#FAFAFA",
+    "description": "Base color ramp neutral shade 50"
+  },
+  {
+    "id": "base/neutral/100",
+    "name": "neutral/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-100",
+    "value": "#F5F5F5",
+    "description": "Base color ramp neutral shade 100"
+  },
+  {
+    "id": "base/neutral/200",
+    "name": "neutral/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-200",
+    "value": "#E5E5E5",
+    "description": "Base color ramp neutral shade 200"
+  },
+  {
+    "id": "base/neutral/300",
+    "name": "neutral/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-300",
+    "value": "#D4D4D4",
+    "description": "Base color ramp neutral shade 300"
+  },
+  {
+    "id": "base/neutral/400",
+    "name": "neutral/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-400",
+    "value": "#A3A3A3",
+    "description": "Base color ramp neutral shade 400"
+  },
+  {
+    "id": "base/neutral/500",
+    "name": "neutral/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-500",
+    "value": "#737373",
+    "description": "Base color ramp neutral shade 500"
+  },
+  {
+    "id": "base/neutral/600",
+    "name": "neutral/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-600",
+    "value": "#525252",
+    "description": "Base color ramp neutral shade 600"
+  },
+  {
+    "id": "base/neutral/700",
+    "name": "neutral/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-700",
+    "value": "#404040",
+    "description": "Base color ramp neutral shade 700"
+  },
+  {
+    "id": "base/neutral/800",
+    "name": "neutral/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-800",
+    "value": "#262626",
+    "description": "Base color ramp neutral shade 800"
+  },
+  {
+    "id": "base/neutral/900",
+    "name": "neutral/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-900",
+    "value": "#171717",
+    "description": "Base color ramp neutral shade 900"
+  },
+  {
+    "id": "base/neutral/950",
+    "name": "neutral/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-neutral-950",
+    "value": "#0A0A0A",
+    "description": "Base color ramp neutral shade 950"
+  },
+  {
+    "id": "base/stone/50",
+    "name": "stone/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-50",
+    "value": "#FAFAF9",
+    "description": "Base color ramp stone shade 50"
+  },
+  {
+    "id": "base/stone/100",
+    "name": "stone/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-100",
+    "value": "#F5F5F4",
+    "description": "Base color ramp stone shade 100"
+  },
+  {
+    "id": "base/stone/200",
+    "name": "stone/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-200",
+    "value": "#E7E5E4",
+    "description": "Base color ramp stone shade 200"
+  },
+  {
+    "id": "base/stone/300",
+    "name": "stone/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-300",
+    "value": "#D6D3D1",
+    "description": "Base color ramp stone shade 300"
+  },
+  {
+    "id": "base/stone/400",
+    "name": "stone/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-400",
+    "value": "#A8A29E",
+    "description": "Base color ramp stone shade 400"
+  },
+  {
+    "id": "base/stone/500",
+    "name": "stone/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-500",
+    "value": "#78716C",
+    "description": "Base color ramp stone shade 500"
+  },
+  {
+    "id": "base/stone/600",
+    "name": "stone/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-600",
+    "value": "#57534E",
+    "description": "Base color ramp stone shade 600"
+  },
+  {
+    "id": "base/stone/700",
+    "name": "stone/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-700",
+    "value": "#44403C",
+    "description": "Base color ramp stone shade 700"
+  },
+  {
+    "id": "base/stone/800",
+    "name": "stone/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-800",
+    "value": "#292524",
+    "description": "Base color ramp stone shade 800"
+  },
+  {
+    "id": "base/stone/900",
+    "name": "stone/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-900",
+    "value": "#1C1917",
+    "description": "Base color ramp stone shade 900"
+  },
+  {
+    "id": "base/stone/950",
+    "name": "stone/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-stone-950",
+    "value": "#0C0A09",
+    "description": "Base color ramp stone shade 950"
+  },
+  {
+    "id": "base/red/50",
+    "name": "red/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-50",
+    "value": "#FEF2F2",
+    "description": "Base color ramp red shade 50"
+  },
+  {
+    "id": "base/red/100",
+    "name": "red/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-100",
+    "value": "#FEE2E2",
+    "description": "Base color ramp red shade 100"
+  },
+  {
+    "id": "base/red/200",
+    "name": "red/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-200",
+    "value": "#FECACA",
+    "description": "Base color ramp red shade 200"
+  },
+  {
+    "id": "base/red/300",
+    "name": "red/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-300",
+    "value": "#FCA5A5",
+    "description": "Base color ramp red shade 300"
+  },
+  {
+    "id": "base/red/400",
+    "name": "red/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-400",
+    "value": "#F87171",
+    "description": "Base color ramp red shade 400"
+  },
+  {
+    "id": "base/red/500",
+    "name": "red/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-500",
+    "value": "#EF4444",
+    "description": "Base color ramp red shade 500"
+  },
+  {
+    "id": "base/red/600",
+    "name": "red/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-600",
+    "value": "#DC2626",
+    "description": "Base color ramp red shade 600"
+  },
+  {
+    "id": "base/red/700",
+    "name": "red/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-700",
+    "value": "#B91C1C",
+    "description": "Base color ramp red shade 700"
+  },
+  {
+    "id": "base/red/800",
+    "name": "red/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-800",
+    "value": "#991B1B",
+    "description": "Base color ramp red shade 800"
+  },
+  {
+    "id": "base/red/900",
+    "name": "red/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-900",
+    "value": "#7F1D1D",
+    "description": "Base color ramp red shade 900"
+  },
+  {
+    "id": "base/red/950",
+    "name": "red/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-red-950",
+    "value": "#450A0A",
+    "description": "Base color ramp red shade 950"
+  },
+  {
+    "id": "base/orange/50",
+    "name": "orange/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-50",
+    "value": "#FFF7ED",
+    "description": "Base color ramp orange shade 50"
+  },
+  {
+    "id": "base/orange/100",
+    "name": "orange/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-100",
+    "value": "#FFEDD5",
+    "description": "Base color ramp orange shade 100"
+  },
+  {
+    "id": "base/orange/200",
+    "name": "orange/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-200",
+    "value": "#FED7AA",
+    "description": "Base color ramp orange shade 200"
+  },
+  {
+    "id": "base/orange/300",
+    "name": "orange/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-300",
+    "value": "#FDBA74",
+    "description": "Base color ramp orange shade 300"
+  },
+  {
+    "id": "base/orange/400",
+    "name": "orange/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-400",
+    "value": "#FB923C",
+    "description": "Base color ramp orange shade 400"
+  },
+  {
+    "id": "base/orange/500",
+    "name": "orange/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-500",
+    "value": "#F97316",
+    "description": "Base color ramp orange shade 500"
+  },
+  {
+    "id": "base/orange/600",
+    "name": "orange/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-600",
+    "value": "#EA580C",
+    "description": "Base color ramp orange shade 600"
+  },
+  {
+    "id": "base/orange/700",
+    "name": "orange/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-700",
+    "value": "#C2410C",
+    "description": "Base color ramp orange shade 700"
+  },
+  {
+    "id": "base/orange/800",
+    "name": "orange/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-800",
+    "value": "#9A3412",
+    "description": "Base color ramp orange shade 800"
+  },
+  {
+    "id": "base/orange/900",
+    "name": "orange/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-900",
+    "value": "#7C2D12",
+    "description": "Base color ramp orange shade 900"
+  },
+  {
+    "id": "base/orange/950",
+    "name": "orange/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-orange-950",
+    "value": "#431407",
+    "description": "Base color ramp orange shade 950"
+  },
+  {
+    "id": "base/amber/50",
+    "name": "amber/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-50",
+    "value": "#FFFBEB",
+    "description": "Base color ramp amber shade 50"
+  },
+  {
+    "id": "base/amber/100",
+    "name": "amber/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-100",
+    "value": "#FEF3C7",
+    "description": "Base color ramp amber shade 100"
+  },
+  {
+    "id": "base/amber/200",
+    "name": "amber/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-200",
+    "value": "#FDE68A",
+    "description": "Base color ramp amber shade 200"
+  },
+  {
+    "id": "base/amber/300",
+    "name": "amber/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-300",
+    "value": "#FCD34D",
+    "description": "Base color ramp amber shade 300"
+  },
+  {
+    "id": "base/amber/400",
+    "name": "amber/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-400",
+    "value": "#FBBF24",
+    "description": "Base color ramp amber shade 400"
+  },
+  {
+    "id": "base/amber/500",
+    "name": "amber/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-500",
+    "value": "#F59E0B",
+    "description": "Base color ramp amber shade 500"
+  },
+  {
+    "id": "base/amber/600",
+    "name": "amber/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-600",
+    "value": "#D97706",
+    "description": "Base color ramp amber shade 600"
+  },
+  {
+    "id": "base/amber/700",
+    "name": "amber/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-700",
+    "value": "#B45309",
+    "description": "Base color ramp amber shade 700"
+  },
+  {
+    "id": "base/amber/800",
+    "name": "amber/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-800",
+    "value": "#92400E",
+    "description": "Base color ramp amber shade 800"
+  },
+  {
+    "id": "base/amber/900",
+    "name": "amber/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-900",
+    "value": "#78350F",
+    "description": "Base color ramp amber shade 900"
+  },
+  {
+    "id": "base/amber/950",
+    "name": "amber/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-amber-950",
+    "value": "#451A03",
+    "description": "Base color ramp amber shade 950"
+  },
+  {
+    "id": "base/yellow/50",
+    "name": "yellow/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-50",
+    "value": "#FEFCE8",
+    "description": "Base color ramp yellow shade 50"
+  },
+  {
+    "id": "base/yellow/100",
+    "name": "yellow/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-100",
+    "value": "#FEF9C3",
+    "description": "Base color ramp yellow shade 100"
+  },
+  {
+    "id": "base/yellow/200",
+    "name": "yellow/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-200",
+    "value": "#FEF08A",
+    "description": "Base color ramp yellow shade 200"
+  },
+  {
+    "id": "base/yellow/300",
+    "name": "yellow/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-300",
+    "value": "#FDE047",
+    "description": "Base color ramp yellow shade 300"
+  },
+  {
+    "id": "base/yellow/400",
+    "name": "yellow/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-400",
+    "value": "#FACC15",
+    "description": "Base color ramp yellow shade 400"
+  },
+  {
+    "id": "base/yellow/500",
+    "name": "yellow/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-500",
+    "value": "#EAB308",
+    "description": "Base color ramp yellow shade 500"
+  },
+  {
+    "id": "base/yellow/600",
+    "name": "yellow/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-600",
+    "value": "#CA8A04",
+    "description": "Base color ramp yellow shade 600"
+  },
+  {
+    "id": "base/yellow/700",
+    "name": "yellow/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-700",
+    "value": "#A16207",
+    "description": "Base color ramp yellow shade 700"
+  },
+  {
+    "id": "base/yellow/800",
+    "name": "yellow/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-800",
+    "value": "#854D0E",
+    "description": "Base color ramp yellow shade 800"
+  },
+  {
+    "id": "base/yellow/900",
+    "name": "yellow/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-900",
+    "value": "#713F12",
+    "description": "Base color ramp yellow shade 900"
+  },
+  {
+    "id": "base/yellow/950",
+    "name": "yellow/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-yellow-950",
+    "value": "#422006",
+    "description": "Base color ramp yellow shade 950"
+  },
+  {
+    "id": "base/lime/50",
+    "name": "lime/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-50",
+    "value": "#F7FEE7",
+    "description": "Base color ramp lime shade 50"
+  },
+  {
+    "id": "base/lime/100",
+    "name": "lime/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-100",
+    "value": "#ECFCCB",
+    "description": "Base color ramp lime shade 100"
+  },
+  {
+    "id": "base/lime/200",
+    "name": "lime/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-200",
+    "value": "#D9F99D",
+    "description": "Base color ramp lime shade 200"
+  },
+  {
+    "id": "base/lime/300",
+    "name": "lime/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-300",
+    "value": "#BEF264",
+    "description": "Base color ramp lime shade 300"
+  },
+  {
+    "id": "base/lime/400",
+    "name": "lime/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-400",
+    "value": "#A3E635",
+    "description": "Base color ramp lime shade 400"
+  },
+  {
+    "id": "base/lime/500",
+    "name": "lime/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-500",
+    "value": "#84CC16",
+    "description": "Base color ramp lime shade 500"
+  },
+  {
+    "id": "base/lime/600",
+    "name": "lime/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-600",
+    "value": "#65A30D",
+    "description": "Base color ramp lime shade 600"
+  },
+  {
+    "id": "base/lime/700",
+    "name": "lime/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-700",
+    "value": "#4D7C0F",
+    "description": "Base color ramp lime shade 700"
+  },
+  {
+    "id": "base/lime/800",
+    "name": "lime/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-800",
+    "value": "#3F6212",
+    "description": "Base color ramp lime shade 800"
+  },
+  {
+    "id": "base/lime/900",
+    "name": "lime/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-900",
+    "value": "#365314",
+    "description": "Base color ramp lime shade 900"
+  },
+  {
+    "id": "base/lime/950",
+    "name": "lime/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-lime-950",
+    "value": "#111111",
+    "description": "Base color ramp lime shade 950"
+  },
+  {
+    "id": "base/green/50",
+    "name": "green/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-50",
+    "value": "#F0FDF4",
+    "description": "Base color ramp green shade 50"
+  },
+  {
+    "id": "base/green/100",
+    "name": "green/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-100",
+    "value": "#DCFCE7",
+    "description": "Base color ramp green shade 100"
+  },
+  {
+    "id": "base/green/200",
+    "name": "green/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-200",
+    "value": "#BBF7D0",
+    "description": "Base color ramp green shade 200"
+  },
+  {
+    "id": "base/green/300",
+    "name": "green/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-300",
+    "value": "#86EFAC",
+    "description": "Base color ramp green shade 300"
+  },
+  {
+    "id": "base/green/400",
+    "name": "green/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-400",
+    "value": "#4ADE80",
+    "description": "Base color ramp green shade 400"
+  },
+  {
+    "id": "base/green/500",
+    "name": "green/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-500",
+    "value": "#22C55E",
+    "description": "Base color ramp green shade 500"
+  },
+  {
+    "id": "base/green/600",
+    "name": "green/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-600",
+    "value": "#16A34A",
+    "description": "Base color ramp green shade 600"
+  },
+  {
+    "id": "base/green/700",
+    "name": "green/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-700",
+    "value": "#15803D",
+    "description": "Base color ramp green shade 700"
+  },
+  {
+    "id": "base/green/800",
+    "name": "green/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-800",
+    "value": "#166534",
+    "description": "Base color ramp green shade 800"
+  },
+  {
+    "id": "base/green/900",
+    "name": "green/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-900",
+    "value": "#14532D",
+    "description": "Base color ramp green shade 900"
+  },
+  {
+    "id": "base/green/950",
+    "name": "green/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-green-950",
+    "value": "#052E16",
+    "description": "Base color ramp green shade 950"
+  },
+  {
+    "id": "base/emerald/50",
+    "name": "emerald/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-50",
+    "value": "#ECFDF5",
+    "description": "Base color ramp emerald shade 50"
+  },
+  {
+    "id": "base/emerald/100",
+    "name": "emerald/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-100",
+    "value": "#D1FAE5",
+    "description": "Base color ramp emerald shade 100"
+  },
+  {
+    "id": "base/emerald/200",
+    "name": "emerald/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-200",
+    "value": "#A7F3D0",
+    "description": "Base color ramp emerald shade 200"
+  },
+  {
+    "id": "base/emerald/300",
+    "name": "emerald/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-300",
+    "value": "#6EE7B7",
+    "description": "Base color ramp emerald shade 300"
+  },
+  {
+    "id": "base/emerald/400",
+    "name": "emerald/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-400",
+    "value": "#34D399",
+    "description": "Base color ramp emerald shade 400"
+  },
+  {
+    "id": "base/emerald/500",
+    "name": "emerald/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-500",
+    "value": "#10B981",
+    "description": "Base color ramp emerald shade 500"
+  },
+  {
+    "id": "base/emerald/600",
+    "name": "emerald/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-600",
+    "value": "#059669",
+    "description": "Base color ramp emerald shade 600"
+  },
+  {
+    "id": "base/emerald/700",
+    "name": "emerald/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-700",
+    "value": "#047857",
+    "description": "Base color ramp emerald shade 700"
+  },
+  {
+    "id": "base/emerald/800",
+    "name": "emerald/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-800",
+    "value": "#065F46",
+    "description": "Base color ramp emerald shade 800"
+  },
+  {
+    "id": "base/emerald/900",
+    "name": "emerald/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-900",
+    "value": "#064E3B",
+    "description": "Base color ramp emerald shade 900"
+  },
+  {
+    "id": "base/emerald/950",
+    "name": "emerald/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-emerald-950",
+    "value": "#022C22",
+    "description": "Base color ramp emerald shade 950"
+  },
+  {
+    "id": "base/teal/50",
+    "name": "teal/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-50",
+    "value": "#F0FDFA",
+    "description": "Base color ramp teal shade 50"
+  },
+  {
+    "id": "base/teal/100",
+    "name": "teal/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-100",
+    "value": "#CCFBF1",
+    "description": "Base color ramp teal shade 100"
+  },
+  {
+    "id": "base/teal/200",
+    "name": "teal/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-200",
+    "value": "#99F6E4",
+    "description": "Base color ramp teal shade 200"
+  },
+  {
+    "id": "base/teal/300",
+    "name": "teal/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-300",
+    "value": "#5EEAD4",
+    "description": "Base color ramp teal shade 300"
+  },
+  {
+    "id": "base/teal/400",
+    "name": "teal/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-400",
+    "value": "#2DD4BF",
+    "description": "Base color ramp teal shade 400"
+  },
+  {
+    "id": "base/teal/500",
+    "name": "teal/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-500",
+    "value": "#14B8A6",
+    "description": "Base color ramp teal shade 500"
+  },
+  {
+    "id": "base/teal/600",
+    "name": "teal/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-600",
+    "value": "#0D9488",
+    "description": "Base color ramp teal shade 600"
+  },
+  {
+    "id": "base/teal/700",
+    "name": "teal/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-700",
+    "value": "#0F766E",
+    "description": "Base color ramp teal shade 700"
+  },
+  {
+    "id": "base/teal/800",
+    "name": "teal/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-800",
+    "value": "#115E59",
+    "description": "Base color ramp teal shade 800"
+  },
+  {
+    "id": "base/teal/900",
+    "name": "teal/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-900",
+    "value": "#134E4A",
+    "description": "Base color ramp teal shade 900"
+  },
+  {
+    "id": "base/teal/950",
+    "name": "teal/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-teal-950",
+    "value": "#042F2E",
+    "description": "Base color ramp teal shade 950"
+  },
+  {
+    "id": "base/cyan/50",
+    "name": "cyan/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-50",
+    "value": "#ECFEFF",
+    "description": "Base color ramp cyan shade 50"
+  },
+  {
+    "id": "base/cyan/100",
+    "name": "cyan/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-100",
+    "value": "#CFFAFE",
+    "description": "Base color ramp cyan shade 100"
+  },
+  {
+    "id": "base/cyan/200",
+    "name": "cyan/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-200",
+    "value": "#A5F3FC",
+    "description": "Base color ramp cyan shade 200"
+  },
+  {
+    "id": "base/cyan/300",
+    "name": "cyan/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-300",
+    "value": "#67E8F9",
+    "description": "Base color ramp cyan shade 300"
+  },
+  {
+    "id": "base/cyan/400",
+    "name": "cyan/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-400",
+    "value": "#22D3EE",
+    "description": "Base color ramp cyan shade 400"
+  },
+  {
+    "id": "base/cyan/500",
+    "name": "cyan/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-500",
+    "value": "#06B6D4",
+    "description": "Base color ramp cyan shade 500"
+  },
+  {
+    "id": "base/cyan/600",
+    "name": "cyan/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-600",
+    "value": "#0891B2",
+    "description": "Base color ramp cyan shade 600"
+  },
+  {
+    "id": "base/cyan/700",
+    "name": "cyan/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-700",
+    "value": "#0E7490",
+    "description": "Base color ramp cyan shade 700"
+  },
+  {
+    "id": "base/cyan/800",
+    "name": "cyan/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-800",
+    "value": "#155E75",
+    "description": "Base color ramp cyan shade 800"
+  },
+  {
+    "id": "base/cyan/900",
+    "name": "cyan/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-900",
+    "value": "#164E63",
+    "description": "Base color ramp cyan shade 900"
+  },
+  {
+    "id": "base/cyan/950",
+    "name": "cyan/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-cyan-950",
+    "value": "#083344",
+    "description": "Base color ramp cyan shade 950"
+  },
+  {
+    "id": "base/sky/50",
+    "name": "sky/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-50",
+    "value": "#F0F9FF",
+    "description": "Base color ramp sky shade 50"
+  },
+  {
+    "id": "base/sky/100",
+    "name": "sky/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-100",
+    "value": "#E0F2FE",
+    "description": "Base color ramp sky shade 100"
+  },
+  {
+    "id": "base/sky/200",
+    "name": "sky/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-200",
+    "value": "#BAE6FD",
+    "description": "Base color ramp sky shade 200"
+  },
+  {
+    "id": "base/sky/300",
+    "name": "sky/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-300",
+    "value": "#7DD3FC",
+    "description": "Base color ramp sky shade 300"
+  },
+  {
+    "id": "base/sky/400",
+    "name": "sky/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-400",
+    "value": "#38BDF8",
+    "description": "Base color ramp sky shade 400"
+  },
+  {
+    "id": "base/sky/500",
+    "name": "sky/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-500",
+    "value": "#0EA5E9",
+    "description": "Base color ramp sky shade 500"
+  },
+  {
+    "id": "base/sky/600",
+    "name": "sky/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-600",
+    "value": "#0284C7",
+    "description": "Base color ramp sky shade 600"
+  },
+  {
+    "id": "base/sky/700",
+    "name": "sky/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-700",
+    "value": "#0369A1",
+    "description": "Base color ramp sky shade 700"
+  },
+  {
+    "id": "base/sky/800",
+    "name": "sky/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-800",
+    "value": "#075985",
+    "description": "Base color ramp sky shade 800"
+  },
+  {
+    "id": "base/sky/900",
+    "name": "sky/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-900",
+    "value": "#0C4A6E",
+    "description": "Base color ramp sky shade 900"
+  },
+  {
+    "id": "base/sky/950",
+    "name": "sky/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-sky-950",
+    "value": "#082F49",
+    "description": "Base color ramp sky shade 950"
+  },
+  {
+    "id": "base/blue/50",
+    "name": "blue/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-50",
+    "value": "#EFF6FF",
+    "description": "Base color ramp blue shade 50"
+  },
+  {
+    "id": "base/blue/100",
+    "name": "blue/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-100",
+    "value": "#DBEAFE",
+    "description": "Base color ramp blue shade 100"
+  },
+  {
+    "id": "base/blue/200",
+    "name": "blue/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-200",
+    "value": "#BFDBFE",
+    "description": "Base color ramp blue shade 200"
+  },
+  {
+    "id": "base/blue/300",
+    "name": "blue/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-300",
+    "value": "#93C5FD",
+    "description": "Base color ramp blue shade 300"
+  },
+  {
+    "id": "base/blue/400",
+    "name": "blue/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-400",
+    "value": "#60A5FA",
+    "description": "Base color ramp blue shade 400"
+  },
+  {
+    "id": "base/blue/500",
+    "name": "blue/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-500",
+    "value": "#3B82F6",
+    "description": "Base color ramp blue shade 500"
+  },
+  {
+    "id": "base/blue/600",
+    "name": "blue/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-600",
+    "value": "#2563EB",
+    "description": "Base color ramp blue shade 600"
+  },
+  {
+    "id": "base/blue/700",
+    "name": "blue/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-700",
+    "value": "#1D4ED8",
+    "description": "Base color ramp blue shade 700"
+  },
+  {
+    "id": "base/blue/800",
+    "name": "blue/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-800",
+    "value": "#1E40AF",
+    "description": "Base color ramp blue shade 800"
+  },
+  {
+    "id": "base/blue/900",
+    "name": "blue/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-900",
+    "value": "#1E3A8A",
+    "description": "Base color ramp blue shade 900"
+  },
+  {
+    "id": "base/blue/950",
+    "name": "blue/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-blue-950",
+    "value": "#172554",
+    "description": "Base color ramp blue shade 950"
+  },
+  {
+    "id": "base/indigo/50",
+    "name": "indigo/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-50",
+    "value": "#EEF2FF",
+    "description": "Base color ramp indigo shade 50"
+  },
+  {
+    "id": "base/indigo/100",
+    "name": "indigo/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-100",
+    "value": "#E0E7FF",
+    "description": "Base color ramp indigo shade 100"
+  },
+  {
+    "id": "base/indigo/200",
+    "name": "indigo/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-200",
+    "value": "#C7D2FE",
+    "description": "Base color ramp indigo shade 200"
+  },
+  {
+    "id": "base/indigo/300",
+    "name": "indigo/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-300",
+    "value": "#A5B4FC",
+    "description": "Base color ramp indigo shade 300"
+  },
+  {
+    "id": "base/indigo/400",
+    "name": "indigo/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-400",
+    "value": "#818CF8",
+    "description": "Base color ramp indigo shade 400"
+  },
+  {
+    "id": "base/indigo/500",
+    "name": "indigo/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-500",
+    "value": "#6366F1",
+    "description": "Base color ramp indigo shade 500"
+  },
+  {
+    "id": "base/indigo/600",
+    "name": "indigo/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-600",
+    "value": "#4F46E5",
+    "description": "Base color ramp indigo shade 600"
+  },
+  {
+    "id": "base/indigo/700",
+    "name": "indigo/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-700",
+    "value": "#4338CA",
+    "description": "Base color ramp indigo shade 700"
+  },
+  {
+    "id": "base/indigo/800",
+    "name": "indigo/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-800",
+    "value": "#3730A3",
+    "description": "Base color ramp indigo shade 800"
+  },
+  {
+    "id": "base/indigo/900",
+    "name": "indigo/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-900",
+    "value": "#312E81",
+    "description": "Base color ramp indigo shade 900"
+  },
+  {
+    "id": "base/indigo/950",
+    "name": "indigo/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-indigo-950",
+    "value": "#1E1B4B",
+    "description": "Base color ramp indigo shade 950"
+  },
+  {
+    "id": "base/violet/50",
+    "name": "violet/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-50",
+    "value": "#F5F3FF",
+    "description": "Base color ramp violet shade 50"
+  },
+  {
+    "id": "base/violet/100",
+    "name": "violet/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-100",
+    "value": "#EDE9FE",
+    "description": "Base color ramp violet shade 100"
+  },
+  {
+    "id": "base/violet/200",
+    "name": "violet/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-200",
+    "value": "#DDD6FE",
+    "description": "Base color ramp violet shade 200"
+  },
+  {
+    "id": "base/violet/300",
+    "name": "violet/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-300",
+    "value": "#C4B5FD",
+    "description": "Base color ramp violet shade 300"
+  },
+  {
+    "id": "base/violet/400",
+    "name": "violet/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-400",
+    "value": "#A78BFA",
+    "description": "Base color ramp violet shade 400"
+  },
+  {
+    "id": "base/violet/500",
+    "name": "violet/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-500",
+    "value": "#8B5CF6",
+    "description": "Base color ramp violet shade 500"
+  },
+  {
+    "id": "base/violet/600",
+    "name": "violet/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-600",
+    "value": "#7C3AED",
+    "description": "Base color ramp violet shade 600"
+  },
+  {
+    "id": "base/violet/700",
+    "name": "violet/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-700",
+    "value": "#6D28D9",
+    "description": "Base color ramp violet shade 700"
+  },
+  {
+    "id": "base/violet/800",
+    "name": "violet/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-800",
+    "value": "#5B21B6",
+    "description": "Base color ramp violet shade 800"
+  },
+  {
+    "id": "base/violet/900",
+    "name": "violet/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-900",
+    "value": "#4C1D95",
+    "description": "Base color ramp violet shade 900"
+  },
+  {
+    "id": "base/violet/950",
+    "name": "violet/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-violet-950",
+    "value": "#2E1065",
+    "description": "Base color ramp violet shade 950"
+  },
+  {
+    "id": "base/purple/50",
+    "name": "purple/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-50",
+    "value": "#FAF5FF",
+    "description": "Base color ramp purple shade 50"
+  },
+  {
+    "id": "base/purple/100",
+    "name": "purple/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-100",
+    "value": "#F3E8FF",
+    "description": "Base color ramp purple shade 100"
+  },
+  {
+    "id": "base/purple/200",
+    "name": "purple/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-200",
+    "value": "#E9D5FF",
+    "description": "Base color ramp purple shade 200"
+  },
+  {
+    "id": "base/purple/300",
+    "name": "purple/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-300",
+    "value": "#D8B4FE",
+    "description": "Base color ramp purple shade 300"
+  },
+  {
+    "id": "base/purple/400",
+    "name": "purple/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-400",
+    "value": "#C084FC",
+    "description": "Base color ramp purple shade 400"
+  },
+  {
+    "id": "base/purple/500",
+    "name": "purple/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-500",
+    "value": "#A855F7",
+    "description": "Base color ramp purple shade 500"
+  },
+  {
+    "id": "base/purple/600",
+    "name": "purple/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-600",
+    "value": "#9333EA",
+    "description": "Base color ramp purple shade 600"
+  },
+  {
+    "id": "base/purple/700",
+    "name": "purple/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-700",
+    "value": "#7E22CE",
+    "description": "Base color ramp purple shade 700"
+  },
+  {
+    "id": "base/purple/800",
+    "name": "purple/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-800",
+    "value": "#6B21A8",
+    "description": "Base color ramp purple shade 800"
+  },
+  {
+    "id": "base/purple/900",
+    "name": "purple/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-900",
+    "value": "#581C87",
+    "description": "Base color ramp purple shade 900"
+  },
+  {
+    "id": "base/purple/950",
+    "name": "purple/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-purple-950",
+    "value": "#3B0764",
+    "description": "Base color ramp purple shade 950"
+  },
+  {
+    "id": "base/fuchsia/50",
+    "name": "fuchsia/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-50",
+    "value": "#FDF4FF",
+    "description": "Base color ramp fuchsia shade 50"
+  },
+  {
+    "id": "base/fuchsia/100",
+    "name": "fuchsia/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-100",
+    "value": "#FAE8FF",
+    "description": "Base color ramp fuchsia shade 100"
+  },
+  {
+    "id": "base/fuchsia/200",
+    "name": "fuchsia/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-200",
+    "value": "#F5D0FE",
+    "description": "Base color ramp fuchsia shade 200"
+  },
+  {
+    "id": "base/fuchsia/300",
+    "name": "fuchsia/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-300",
+    "value": "#F0ABFC",
+    "description": "Base color ramp fuchsia shade 300"
+  },
+  {
+    "id": "base/fuchsia/400",
+    "name": "fuchsia/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-400",
+    "value": "#E879F9",
+    "description": "Base color ramp fuchsia shade 400"
+  },
+  {
+    "id": "base/fuchsia/500",
+    "name": "fuchsia/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-500",
+    "value": "#D946EF",
+    "description": "Base color ramp fuchsia shade 500"
+  },
+  {
+    "id": "base/fuchsia/600",
+    "name": "fuchsia/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-600",
+    "value": "#C026D3",
+    "description": "Base color ramp fuchsia shade 600"
+  },
+  {
+    "id": "base/fuchsia/700",
+    "name": "fuchsia/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-700",
+    "value": "#A21CAF",
+    "description": "Base color ramp fuchsia shade 700"
+  },
+  {
+    "id": "base/fuchsia/800",
+    "name": "fuchsia/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-800",
+    "value": "#86198F",
+    "description": "Base color ramp fuchsia shade 800"
+  },
+  {
+    "id": "base/fuchsia/900",
+    "name": "fuchsia/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-900",
+    "value": "#701A75",
+    "description": "Base color ramp fuchsia shade 900"
+  },
+  {
+    "id": "base/fuchsia/950",
+    "name": "fuchsia/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-fuchsia-950",
+    "value": "#4A044E",
+    "description": "Base color ramp fuchsia shade 950"
+  },
+  {
+    "id": "base/pink/50",
+    "name": "pink/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-50",
+    "value": "#FDF2F8",
+    "description": "Base color ramp pink shade 50"
+  },
+  {
+    "id": "base/pink/100",
+    "name": "pink/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-100",
+    "value": "#FCE7F3",
+    "description": "Base color ramp pink shade 100"
+  },
+  {
+    "id": "base/pink/200",
+    "name": "pink/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-200",
+    "value": "#FBCFE8",
+    "description": "Base color ramp pink shade 200"
+  },
+  {
+    "id": "base/pink/300",
+    "name": "pink/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-300",
+    "value": "#F9A8D4",
+    "description": "Base color ramp pink shade 300"
+  },
+  {
+    "id": "base/pink/400",
+    "name": "pink/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-400",
+    "value": "#F472B6",
+    "description": "Base color ramp pink shade 400"
+  },
+  {
+    "id": "base/pink/500",
+    "name": "pink/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-500",
+    "value": "#EC4899",
+    "description": "Base color ramp pink shade 500"
+  },
+  {
+    "id": "base/pink/600",
+    "name": "pink/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-600",
+    "value": "#DB2777",
+    "description": "Base color ramp pink shade 600"
+  },
+  {
+    "id": "base/pink/700",
+    "name": "pink/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-700",
+    "value": "#BE185D",
+    "description": "Base color ramp pink shade 700"
+  },
+  {
+    "id": "base/pink/800",
+    "name": "pink/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-800",
+    "value": "#9D174D",
+    "description": "Base color ramp pink shade 800"
+  },
+  {
+    "id": "base/pink/900",
+    "name": "pink/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-900",
+    "value": "#831843",
+    "description": "Base color ramp pink shade 900"
+  },
+  {
+    "id": "base/pink/950",
+    "name": "pink/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-pink-950",
+    "value": "#500724",
+    "description": "Base color ramp pink shade 950"
+  },
+  {
+    "id": "base/rose/50",
+    "name": "rose/50",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-50",
+    "value": "#FFF1F2",
+    "description": "Base color ramp rose shade 50"
+  },
+  {
+    "id": "base/rose/100",
+    "name": "rose/100",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-100",
+    "value": "#FFE4E6",
+    "description": "Base color ramp rose shade 100"
+  },
+  {
+    "id": "base/rose/200",
+    "name": "rose/200",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-200",
+    "value": "#FECDD3",
+    "description": "Base color ramp rose shade 200"
+  },
+  {
+    "id": "base/rose/300",
+    "name": "rose/300",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-300",
+    "value": "#FDA4AF",
+    "description": "Base color ramp rose shade 300"
+  },
+  {
+    "id": "base/rose/400",
+    "name": "rose/400",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-400",
+    "value": "#FB7185",
+    "description": "Base color ramp rose shade 400"
+  },
+  {
+    "id": "base/rose/500",
+    "name": "rose/500",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-500",
+    "value": "#F43F5E",
+    "description": "Base color ramp rose shade 500"
+  },
+  {
+    "id": "base/rose/600",
+    "name": "rose/600",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-600",
+    "value": "#E11D48",
+    "description": "Base color ramp rose shade 600"
+  },
+  {
+    "id": "base/rose/700",
+    "name": "rose/700",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-700",
+    "value": "#BE123C",
+    "description": "Base color ramp rose shade 700"
+  },
+  {
+    "id": "base/rose/800",
+    "name": "rose/800",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-800",
+    "value": "#9F1239",
+    "description": "Base color ramp rose shade 800"
+  },
+  {
+    "id": "base/rose/900",
+    "name": "rose/900",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-900",
+    "value": "#881337",
+    "description": "Base color ramp rose shade 900"
+  },
+  {
+    "id": "base/rose/950",
+    "name": "rose/950",
+    "collection": "Base Palette",
+    "type": "color",
+    "cssVariable": "--uedp-rose-950",
+    "value": "#4C0519",
+    "description": "Base color ramp rose shade 950"
+  },
+  {
+    "id": "brand/acid/50",
+    "name": "brand/acid/50",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-50",
+    "value": "#FBFFF5",
+    "description": "VisionSync brand acid ramp shade 50"
+  },
+  {
+    "id": "brand/acid/100",
+    "name": "brand/acid/100",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-100",
+    "value": "#F5FFE6",
+    "description": "VisionSync brand acid ramp shade 100"
+  },
+  {
+    "id": "brand/acid/200",
+    "name": "brand/acid/200",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-200",
+    "value": "#E5FFBD",
+    "description": "VisionSync brand acid ramp shade 200"
+  },
+  {
+    "id": "brand/acid/300",
+    "name": "brand/acid/300",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-300",
+    "value": "#D0FF8A",
+    "description": "VisionSync brand acid ramp shade 300"
+  },
+  {
+    "id": "brand/acid/400",
+    "name": "brand/acid/400",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-400",
+    "value": "#B7FF4D",
+    "description": "VisionSync brand acid ramp shade 400"
+  },
+  {
+    "id": "brand/acid/500",
+    "name": "brand/acid/500",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-500",
+    "value": "#B5FF47",
+    "description": "VisionSync brand acid ramp shade 500"
+  },
+  {
+    "id": "brand/acid/600",
+    "name": "brand/acid/600",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-600",
+    "value": "#80D700",
+    "description": "VisionSync brand acid ramp shade 600"
+  },
+  {
+    "id": "brand/acid/700",
+    "name": "brand/acid/700",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-700",
+    "value": "#68AE00",
+    "description": "VisionSync brand acid ramp shade 700"
+  },
+  {
+    "id": "brand/acid/800",
+    "name": "brand/acid/800",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-800",
+    "value": "#497B00",
+    "description": "VisionSync brand acid ramp shade 800"
+  },
+  {
+    "id": "brand/acid/900",
+    "name": "brand/acid/900",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-acid-900",
+    "value": "#315200",
+    "description": "VisionSync brand acid ramp shade 900"
+  },
+  {
+    "id": "brand/olive/50",
+    "name": "brand/olive/50",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-50",
+    "value": "#F6F7F2",
+    "description": "VisionSync brand olive ramp shade 50"
+  },
+  {
+    "id": "brand/olive/100",
+    "name": "brand/olive/100",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-100",
+    "value": "#ECEFE6",
+    "description": "VisionSync brand olive ramp shade 100"
+  },
+  {
+    "id": "brand/olive/200",
+    "name": "brand/olive/200",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-200",
+    "value": "#DADFCD",
+    "description": "VisionSync brand olive ramp shade 200"
+  },
+  {
+    "id": "brand/olive/300",
+    "name": "brand/olive/300",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-300",
+    "value": "#C3CBAE",
+    "description": "VisionSync brand olive ramp shade 300"
+  },
+  {
+    "id": "brand/olive/400",
+    "name": "brand/olive/400",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-400",
+    "value": "#A8B388",
+    "description": "VisionSync brand olive ramp shade 400"
+  },
+  {
+    "id": "brand/olive/500",
+    "name": "brand/olive/500",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-500",
+    "value": "#899861",
+    "description": "VisionSync brand olive ramp shade 500"
+  },
+  {
+    "id": "brand/olive/600",
+    "name": "brand/olive/600",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-600",
+    "value": "#5C6641",
+    "description": "VisionSync brand olive ramp shade 600"
+  },
+  {
+    "id": "brand/olive/700",
+    "name": "brand/olive/700",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-700",
+    "value": "#57603D",
+    "description": "VisionSync brand olive ramp shade 700"
+  },
+  {
+    "id": "brand/olive/800",
+    "name": "brand/olive/800",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-800",
+    "value": "#3B412A",
+    "description": "VisionSync brand olive ramp shade 800"
+  },
+  {
+    "id": "brand/olive/900",
+    "name": "brand/olive/900",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-olive-900",
+    "value": "#24281A",
+    "description": "VisionSync brand olive ramp shade 900"
+  },
+  {
+    "id": "brand/rust/50",
+    "name": "brand/rust/50",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-50",
+    "value": "#FDF9F7",
+    "description": "VisionSync brand rust ramp shade 50"
+  },
+  {
+    "id": "brand/rust/100",
+    "name": "brand/rust/100",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-100",
+    "value": "#F9EDE6",
+    "description": "VisionSync brand rust ramp shade 100"
+  },
+  {
+    "id": "brand/rust/200",
+    "name": "brand/rust/200",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-200",
+    "value": "#F2D5C5",
+    "description": "VisionSync brand rust ramp shade 200"
+  },
+  {
+    "id": "brand/rust/300",
+    "name": "brand/rust/300",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-300",
+    "value": "#E8B79C",
+    "description": "VisionSync brand rust ramp shade 300"
+  },
+  {
+    "id": "brand/rust/400",
+    "name": "brand/rust/400",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-400",
+    "value": "#DD926A",
+    "description": "VisionSync brand rust ramp shade 400"
+  },
+  {
+    "id": "brand/rust/500",
+    "name": "brand/rust/500",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-500",
+    "value": "#D06B34",
+    "description": "VisionSync brand rust ramp shade 500"
+  },
+  {
+    "id": "brand/rust/600",
+    "name": "brand/rust/600",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-600",
+    "value": "#C4622D",
+    "description": "VisionSync brand rust ramp shade 600"
+  },
+  {
+    "id": "brand/rust/700",
+    "name": "brand/rust/700",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-700",
+    "value": "#894520",
+    "description": "VisionSync brand rust ramp shade 700"
+  },
+  {
+    "id": "brand/rust/800",
+    "name": "brand/rust/800",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-800",
+    "value": "#603016",
+    "description": "VisionSync brand rust ramp shade 800"
+  },
+  {
+    "id": "brand/rust/900",
+    "name": "brand/rust/900",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-rust-900",
+    "value": "#3F1F0E",
+    "description": "VisionSync brand rust ramp shade 900"
+  },
+  {
+    "id": "brand/neutral/50",
+    "name": "brand/neutral/50",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-50",
+    "value": "#F6F6F6",
+    "description": "VisionSync brand neutral ramp shade 50"
+  },
+  {
+    "id": "brand/neutral/100",
+    "name": "brand/neutral/100",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-100",
+    "value": "#EBEBEB",
+    "description": "VisionSync brand neutral ramp shade 100"
+  },
+  {
+    "id": "brand/neutral/200",
+    "name": "brand/neutral/200",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-200",
+    "value": "#CCCCCC",
+    "description": "VisionSync brand neutral ramp shade 200"
+  },
+  {
+    "id": "brand/neutral/300",
+    "name": "brand/neutral/300",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-300",
+    "value": "#ADADAD",
+    "description": "VisionSync brand neutral ramp shade 300"
+  },
+  {
+    "id": "brand/neutral/400",
+    "name": "brand/neutral/400",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-400",
+    "value": "#9C9C9C",
+    "description": "VisionSync brand neutral ramp shade 400"
+  },
+  {
+    "id": "brand/neutral/500",
+    "name": "brand/neutral/500",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-500",
+    "value": "#8F8F8F",
+    "description": "VisionSync brand neutral ramp shade 500"
+  },
+  {
+    "id": "brand/neutral/600",
+    "name": "brand/neutral/600",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-600",
+    "value": "#6B6B6B",
+    "description": "VisionSync brand neutral ramp shade 600"
+  },
+  {
+    "id": "brand/neutral/650",
+    "name": "brand/neutral/650",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-650",
+    "value": "#696969",
+    "description": "VisionSync brand neutral ramp shade 650"
+  },
+  {
+    "id": "brand/neutral/700",
+    "name": "brand/neutral/700",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-700",
+    "value": "#474747",
+    "description": "VisionSync brand neutral ramp shade 700"
+  },
+  {
+    "id": "brand/neutral/800",
+    "name": "brand/neutral/800",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-800",
+    "value": "#1A1A1A",
+    "description": "VisionSync brand neutral ramp shade 800"
+  },
+  {
+    "id": "brand/neutral/900",
+    "name": "brand/neutral/900",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-900",
+    "value": "#0A0A0A",
+    "description": "VisionSync brand neutral ramp shade 900"
+  },
+  {
+    "id": "brand/neutral/950",
+    "name": "brand/neutral/950",
+    "collection": "Brand Ramps",
+    "type": "color",
+    "cssVariable": "--uedp-brand-neutral-950",
+    "value": "#050505",
+    "description": "VisionSync brand neutral ramp shade 950"
+  },
+  {
+    "id": "brand/cream",
+    "name": "brand/cream",
+    "collection": "Brand Colors",
+    "type": "color",
+    "cssVariable": "--uedp-brand-cream",
+    "value": "#F5F2EC",
+    "description": "VisionSync brand color cream"
+  },
+  {
+    "id": "brand/ink",
+    "name": "brand/ink",
+    "collection": "Brand Colors",
+    "type": "color",
+    "cssVariable": "--uedp-brand-ink",
+    "value": "#0A0A0A",
+    "description": "VisionSync brand color ink"
+  },
+  {
+    "id": "brand/deep",
+    "name": "brand/deep",
+    "collection": "Brand Colors",
+    "type": "color",
+    "cssVariable": "--uedp-brand-deep",
+    "value": "#1A1A1A",
+    "description": "VisionSync brand color deep"
+  },
+  {
+    "id": "brand/graphite",
+    "name": "brand/graphite",
+    "collection": "Brand Colors",
+    "type": "color",
+    "cssVariable": "--uedp-brand-graphite",
+    "value": "#2A2A2A",
+    "description": "VisionSync brand color graphite"
+  },
+  {
+    "id": "brand/white",
+    "name": "brand/white",
+    "collection": "Brand Colors",
+    "type": "color",
+    "cssVariable": "--uedp-brand-white",
+    "value": "#FFFFFF",
+    "description": "VisionSync brand color white"
+  },
+  {
+    "id": "brand/black",
+    "name": "brand/black",
+    "collection": "Brand Colors",
+    "type": "color",
+    "cssVariable": "--uedp-brand-black",
+    "value": "#000000",
+    "description": "VisionSync brand color black"
+  },
+  {
+    "id": "semantic/surface/primary",
+    "name": "surface/primary",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-surface-primary",
+    "value": "#0A0A0A",
+    "darkValue": "#0A0A0A",
+    "lightValue": "#F5F2EC",
+    "isThemed": true,
+    "description": "Semantic surface token for primary state/usage"
+  },
+  {
+    "id": "semantic/surface/secondary",
+    "name": "surface/secondary",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-surface-secondary",
+    "value": "#1A1A1A",
+    "darkValue": "#1A1A1A",
+    "lightValue": "#EBEBEB",
+    "isThemed": true,
+    "description": "Semantic surface token for secondary state/usage"
+  },
+  {
+    "id": "semantic/surface/tertiary",
+    "name": "surface/tertiary",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-surface-tertiary",
+    "value": "#474747",
+    "darkValue": "#474747",
+    "lightValue": "#CCCCCC",
+    "isThemed": true,
+    "description": "Semantic surface token for tertiary state/usage"
+  },
+  {
+    "id": "semantic/surface/elevated",
+    "name": "surface/elevated",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-surface-elevated",
+    "value": "#1A1A1A",
+    "darkValue": "#1A1A1A",
+    "lightValue": "#FFFFFF",
+    "isThemed": true,
+    "description": "Semantic surface token for elevated state/usage"
+  },
+  {
+    "id": "semantic/surface/inverse",
+    "name": "surface/inverse",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-surface-inverse",
+    "value": "#F5F2EC",
+    "darkValue": "#F5F2EC",
+    "lightValue": "#0A0A0A",
+    "isThemed": true,
+    "description": "Semantic surface token for inverse state/usage"
+  },
+  {
+    "id": "semantic/text/primary",
+    "name": "text/primary",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-text-primary",
+    "value": "#F5F2EC",
+    "darkValue": "#F5F2EC",
+    "lightValue": "#0A0A0A",
+    "isThemed": true,
+    "description": "Semantic text token for primary state/usage"
+  },
+  {
+    "id": "semantic/text/secondary",
+    "name": "text/secondary",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-text-secondary",
+    "value": "#ADADAD",
+    "darkValue": "#ADADAD",
+    "lightValue": "#474747",
+    "isThemed": true,
+    "description": "Semantic text token for secondary state/usage"
+  },
+  {
+    "id": "semantic/text/muted",
+    "name": "text/muted",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-text-muted",
+    "value": "#8F8F8F",
+    "darkValue": "#8F8F8F",
+    "lightValue": "#696969",
+    "isThemed": true,
+    "description": "Semantic text token for muted state/usage"
+  },
+  {
+    "id": "semantic/text/inverse",
+    "name": "text/inverse",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-text-inverse",
+    "value": "#0A0A0A",
+    "darkValue": "#0A0A0A",
+    "lightValue": "#F5F2EC",
+    "isThemed": true,
+    "description": "Semantic text token for inverse state/usage"
+  },
+  {
+    "id": "semantic/text/link",
+    "name": "text/link",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-text-link",
+    "value": "#B7FF4D",
+    "darkValue": "#B7FF4D",
+    "lightValue": "#315200",
+    "isThemed": true,
+    "description": "Semantic text token for link state/usage"
+  },
+  {
+    "id": "semantic/border/default",
+    "name": "border/default",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-border-default",
+    "value": "#474747",
+    "darkValue": "#474747",
+    "lightValue": "#CCCCCC",
+    "isThemed": true,
+    "description": "Semantic border token for default state/usage"
+  },
+  {
+    "id": "semantic/border/strong",
+    "name": "border/strong",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-border-strong",
+    "value": "#8F8F8F",
+    "darkValue": "#8F8F8F",
+    "lightValue": "#9C9C9C",
+    "isThemed": true,
+    "description": "Semantic border token for strong state/usage"
+  },
+  {
+    "id": "semantic/border/focus",
+    "name": "border/focus",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-border-focus",
+    "value": "#B5FF47",
+    "darkValue": "#B5FF47",
+    "lightValue": "#497B00",
+    "isThemed": true,
+    "description": "Semantic border token for focus state/usage"
+  },
+  {
+    "id": "semantic/interactive/default",
+    "name": "interactive/default",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-interactive-default",
+    "value": "#B5FF47",
+    "darkValue": "#B5FF47",
+    "lightValue": "#B5FF47",
+    "isThemed": true,
+    "description": "Semantic interactive token for default state/usage"
+  },
+  {
+    "id": "semantic/interactive/hover",
+    "name": "interactive/hover",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-interactive-hover",
+    "value": "#80D700",
+    "darkValue": "#80D700",
+    "lightValue": "#80D700",
+    "isThemed": true,
+    "description": "Semantic interactive token for hover state/usage"
+  },
+  {
+    "id": "semantic/interactive/pressed",
+    "name": "interactive/pressed",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-interactive-pressed",
+    "value": "#68AE00",
+    "darkValue": "#68AE00",
+    "lightValue": "#68AE00",
+    "isThemed": true,
+    "description": "Semantic interactive token for pressed state/usage"
+  },
+  {
+    "id": "semantic/interactive/disabled",
+    "name": "interactive/disabled",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-interactive-disabled",
+    "value": "#474747",
+    "darkValue": "#474747",
+    "lightValue": "#CCCCCC",
+    "isThemed": true,
+    "description": "Semantic interactive token for disabled state/usage"
+  },
+  {
+    "id": "semantic/interactiveText/default",
+    "name": "interactiveText/default",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-interactivetext-default",
+    "value": "#0A0A0A",
+    "darkValue": "#0A0A0A",
+    "lightValue": "#0A0A0A",
+    "isThemed": true,
+    "description": "Semantic interactiveText token for default state/usage"
+  },
+  {
+    "id": "semantic/interactiveText/disabled",
+    "name": "interactiveText/disabled",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-interactivetext-disabled",
+    "value": "#8F8F8F",
+    "darkValue": "#8F8F8F",
+    "lightValue": "#8F8F8F",
+    "isThemed": true,
+    "description": "Semantic interactiveText token for disabled state/usage"
+  },
+  {
+    "id": "semantic/feedback/success",
+    "name": "feedback/success",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-feedback-success",
+    "isThemed": true,
+    "description": "Semantic feedback token for success state/usage"
+  },
+  {
+    "id": "semantic/feedback/warning",
+    "name": "feedback/warning",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-feedback-warning",
+    "isThemed": true,
+    "description": "Semantic feedback token for warning state/usage"
+  },
+  {
+    "id": "semantic/feedback/error",
+    "name": "feedback/error",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-feedback-error",
+    "isThemed": true,
+    "description": "Semantic feedback token for error state/usage"
+  },
+  {
+    "id": "semantic/feedback/info",
+    "name": "feedback/info",
+    "collection": "Semantic Tokens",
+    "type": "color",
+    "cssVariable": "--uedp-feedback-info",
+    "isThemed": true,
+    "description": "Semantic feedback token for info state/usage"
+  },
+  {
+    "id": "typography/fontFamily/display",
+    "name": "fontFamily/display",
+    "collection": "Typography",
+    "type": "fontFamily",
+    "cssVariable": "--uedp-font-family-display",
+    "value": "'Playfair Display', Georgia, serif",
+    "description": "Display serif font family"
+  },
+  {
+    "id": "typography/fontFamily/body",
+    "name": "fontFamily/body",
+    "collection": "Typography",
+    "type": "fontFamily",
+    "cssVariable": "--uedp-font-family-body",
+    "value": "'Source Sans 3', -apple-system, sans-serif",
+    "description": "Body sans-serif font family"
+  },
+  {
+    "id": "typography/fontFamily/mono",
+    "name": "fontFamily/mono",
+    "collection": "Typography",
+    "type": "fontFamily",
+    "cssVariable": "--uedp-font-family-mono",
+    "value": "'Space Mono', SFMono-Regular, monospace",
+    "description": "Technical monospace font family"
+  },
+  {
+    "id": "typography/fontWeight/regular",
+    "name": "fontWeight/regular",
+    "collection": "Typography",
+    "type": "fontWeight",
+    "cssVariable": "--uedp-font-weight-regular",
+    "value": "400",
+    "description": "Font weight regular"
+  },
+  {
+    "id": "typography/fontWeight/medium",
+    "name": "fontWeight/medium",
+    "collection": "Typography",
+    "type": "fontWeight",
+    "cssVariable": "--uedp-font-weight-medium",
+    "value": "500",
+    "description": "Font weight medium"
+  },
+  {
+    "id": "typography/fontWeight/semibold",
+    "name": "fontWeight/semibold",
+    "collection": "Typography",
+    "type": "fontWeight",
+    "cssVariable": "--uedp-font-weight-semibold",
+    "value": "600",
+    "description": "Font weight semibold"
+  },
+  {
+    "id": "typography/fontWeight/bold",
+    "name": "fontWeight/bold",
+    "collection": "Typography",
+    "type": "fontWeight",
+    "cssVariable": "--uedp-font-weight-bold",
+    "value": "700",
+    "description": "Font weight bold"
+  },
+  {
+    "id": "typography/fontWeight/extrabold",
+    "name": "fontWeight/extrabold",
+    "collection": "Typography",
+    "type": "fontWeight",
+    "cssVariable": "--uedp-font-weight-extrabold",
+    "value": "800",
+    "description": "Font weight extrabold"
+  },
+  {
+    "id": "typography/fontWeight/black",
+    "name": "fontWeight/black",
+    "collection": "Typography",
+    "type": "fontWeight",
+    "cssVariable": "--uedp-font-weight-black",
+    "value": "900",
+    "description": "Font weight black"
+  },
+  {
+    "id": "typography/typeScale/display/size",
+    "name": "typeScale/display/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-display",
+    "value": "64px",
+    "description": "display font size"
+  },
+  {
+    "id": "typography/typeScale/h1/size",
+    "name": "typeScale/h1/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-h1",
+    "value": "36px",
+    "description": "h1 font size"
+  },
+  {
+    "id": "typography/typeScale/h2/size",
+    "name": "typeScale/h2/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-h2",
+    "value": "28px",
+    "description": "h2 font size"
+  },
+  {
+    "id": "typography/typeScale/h3/size",
+    "name": "typeScale/h3/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-h3",
+    "value": "22px",
+    "description": "h3 font size"
+  },
+  {
+    "id": "typography/typeScale/body-large/size",
+    "name": "typeScale/body-large/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-body-large",
+    "value": "16px",
+    "description": "body-large font size"
+  },
+  {
+    "id": "typography/typeScale/body/size",
+    "name": "typeScale/body/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-body",
+    "value": "14px",
+    "description": "body font size"
+  },
+  {
+    "id": "typography/typeScale/body-small/size",
+    "name": "typeScale/body-small/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-body-small",
+    "value": "12px",
+    "description": "body-small font size"
+  },
+  {
+    "id": "typography/typeScale/helper/size",
+    "name": "typeScale/helper/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-helper",
+    "value": "11px",
+    "description": "helper font size"
+  },
+  {
+    "id": "typography/typeScale/eyebrow/size",
+    "name": "typeScale/eyebrow/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-eyebrow",
+    "value": "12px",
+    "description": "eyebrow font size"
+  },
+  {
+    "id": "typography/typeScale/code/size",
+    "name": "typeScale/code/size",
+    "collection": "Typography",
+    "type": "fontSize",
+    "cssVariable": "--uedp-font-size-code",
+    "value": "14px",
+    "description": "code font size"
+  },
+  {
+    "id": "foundational/border radius/rounded-none",
+    "name": "border radius/rounded-none",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded-none",
+    "value": "0px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/border radius/rounded-sm",
+    "name": "border radius/rounded-sm",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded-sm",
+    "value": "2px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/border radius/rounded",
+    "name": "border radius/rounded",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded",
+    "value": "4px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/border radius/rounded-md",
+    "name": "border radius/rounded-md",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded-md",
+    "value": "6px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/border radius/rounded-lg",
+    "name": "border radius/rounded-lg",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded-lg",
+    "value": "8px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/border radius/rounded-xl",
+    "name": "border radius/rounded-xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded-xl",
+    "value": "12px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/border radius/rounded-2xl",
+    "name": "border radius/rounded-2xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded-2xl",
+    "value": "16px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/border radius/rounded-3xl",
+    "name": "border radius/rounded-3xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded-3xl",
+    "value": "24px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/border radius/rounded-full",
+    "name": "border radius/rounded-full",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-border-radius-rounded-full",
+    "value": "9999px",
+    "description": "Foundational border radius token"
+  },
+  {
+    "id": "foundational/gap/gap-0",
+    "name": "gap/gap-0",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-0",
+    "value": "0px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-px",
+    "name": "gap/gap-px",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-px",
+    "value": "1px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-0,5",
+    "name": "gap/gap-0,5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-0-5",
+    "value": "2px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-1",
+    "name": "gap/gap-1",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-1",
+    "value": "4px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-1,5",
+    "name": "gap/gap-1,5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-1-5",
+    "value": "6px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-2",
+    "name": "gap/gap-2",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-2",
+    "value": "8px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-3",
+    "name": "gap/gap-3",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-3",
+    "value": "12px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-4",
+    "name": "gap/gap-4",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-4",
+    "value": "16px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-5",
+    "name": "gap/gap-5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-5",
+    "value": "20px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-6",
+    "name": "gap/gap-6",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-6",
+    "value": "24px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-7",
+    "name": "gap/gap-7",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-7",
+    "value": "28px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-8",
+    "name": "gap/gap-8",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-8",
+    "value": "32px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-9",
+    "name": "gap/gap-9",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-9",
+    "value": "36px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-10",
+    "name": "gap/gap-10",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-10",
+    "value": "40px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-11",
+    "name": "gap/gap-11",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-11",
+    "value": "44px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-12",
+    "name": "gap/gap-12",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-12",
+    "value": "48px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-14",
+    "name": "gap/gap-14",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-14",
+    "value": "56px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-16",
+    "name": "gap/gap-16",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-16",
+    "value": "64px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-18",
+    "name": "gap/gap-18",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-18",
+    "value": "72px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-20",
+    "name": "gap/gap-20",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-20",
+    "value": "80px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-24",
+    "name": "gap/gap-24",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-24",
+    "value": "96px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-28",
+    "name": "gap/gap-28",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-28",
+    "value": "112px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-32",
+    "name": "gap/gap-32",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-32",
+    "value": "128px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/gap/gap-64",
+    "name": "gap/gap-64",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-gap-gap-64",
+    "value": "256px",
+    "description": "Foundational gap token"
+  },
+  {
+    "id": "foundational/padding/p-0",
+    "name": "padding/p-0",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-0",
+    "value": "0px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-0,5",
+    "name": "padding/p-0,5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-0-5",
+    "value": "2px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-1",
+    "name": "padding/p-1",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-1",
+    "value": "4px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-1,5",
+    "name": "padding/p-1,5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-1-5",
+    "value": "6px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-2",
+    "name": "padding/p-2",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-2",
+    "value": "8px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-2,5",
+    "name": "padding/p-2,5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-2-5",
+    "value": "10px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-3",
+    "name": "padding/p-3",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-3",
+    "value": "12px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-3,5",
+    "name": "padding/p-3,5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-3-5",
+    "value": "14px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-4",
+    "name": "padding/p-4",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-4",
+    "value": "16px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-5",
+    "name": "padding/p-5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-5",
+    "value": "20px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-6",
+    "name": "padding/p-6",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-6",
+    "value": "24px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-7",
+    "name": "padding/p-7",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-7",
+    "value": "28px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-8",
+    "name": "padding/p-8",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-8",
+    "value": "32px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-9",
+    "name": "padding/p-9",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-9",
+    "value": "36px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-10",
+    "name": "padding/p-10",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-10",
+    "value": "40px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-11",
+    "name": "padding/p-11",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-11",
+    "value": "44px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/padding/p-12",
+    "name": "padding/p-12",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-padding-p-12",
+    "value": "48px",
+    "description": "Foundational padding token"
+  },
+  {
+    "id": "foundational/opacity/opacity-0",
+    "name": "opacity/opacity-0",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-0",
+    "value": "0",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-5",
+    "name": "opacity/opacity-5",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-5",
+    "value": "5",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-10",
+    "name": "opacity/opacity-10",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-10",
+    "value": "10",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-20",
+    "name": "opacity/opacity-20",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-20",
+    "value": "20",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-25",
+    "name": "opacity/opacity-25",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-25",
+    "value": "25",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-30",
+    "name": "opacity/opacity-30",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-30",
+    "value": "30",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-40",
+    "name": "opacity/opacity-40",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-40",
+    "value": "40",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-50",
+    "name": "opacity/opacity-50",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-50",
+    "value": "50",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-60",
+    "name": "opacity/opacity-60",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-60",
+    "value": "60",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-70",
+    "name": "opacity/opacity-70",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-70",
+    "value": "70",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-80",
+    "name": "opacity/opacity-80",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-80",
+    "value": "80",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-90",
+    "name": "opacity/opacity-90",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-90",
+    "value": "90",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-95",
+    "name": "opacity/opacity-95",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-95",
+    "value": "95",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/opacity/opacity-100",
+    "name": "opacity/opacity-100",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-opacity-opacity-100",
+    "value": "100",
+    "description": "Foundational opacity token"
+  },
+  {
+    "id": "foundational/max-w/max-w-xs",
+    "name": "max-w/max-w-xs",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-xs",
+    "value": "320px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-sm",
+    "name": "max-w/max-w-sm",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-sm",
+    "value": "384px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-md",
+    "name": "max-w/max-w-md",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-md",
+    "value": "448px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-lg",
+    "name": "max-w/max-w-lg",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-lg",
+    "value": "512px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-xl",
+    "name": "max-w/max-w-xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-xl",
+    "value": "576px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-2xl",
+    "name": "max-w/max-w-2xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-2xl",
+    "value": "672px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-3xl",
+    "name": "max-w/max-w-3xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-3xl",
+    "value": "768px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-4xl",
+    "name": "max-w/max-w-4xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-4xl",
+    "value": "896px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-5xl",
+    "name": "max-w/max-w-5xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-5xl",
+    "value": "1024px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-6xl",
+    "name": "max-w/max-w-6xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-6xl",
+    "value": "1152px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-7xl",
+    "name": "max-w/max-w-7xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-7xl",
+    "value": "1280px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-screen-sm",
+    "name": "max-w/max-w-screen-sm",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-screen-sm",
+    "value": "640px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-screen-md",
+    "name": "max-w/max-w-screen-md",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-screen-md",
+    "value": "768px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-screen-lg",
+    "name": "max-w/max-w-screen-lg",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-screen-lg",
+    "value": "1024px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-screen-xl",
+    "name": "max-w/max-w-screen-xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-screen-xl",
+    "value": "1280px",
+    "description": "Foundational max-w token"
+  },
+  {
+    "id": "foundational/max-w/max-w-screen-2xl",
+    "name": "max-w/max-w-screen-2xl",
+    "collection": "Foundational",
+    "type": "number",
+    "cssVariable": "--uedp-max-w-max-w-screen-2xl",
+    "value": "1536px",
+    "description": "Foundational max-w token"
+  }
+]

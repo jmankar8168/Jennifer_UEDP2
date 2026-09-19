@@ -1,0 +1,285 @@
+{
+  "global": {
+    "fontFamilies": {
+      "display": { "value": "Playfair Display", "type": "fontFamilies" },
+      "body": { "value": "Source Sans 3", "type": "fontFamilies" },
+      "mono": { "value": "Space Mono", "type": "fontFamilies" }
+    },
+    "fontWeights": {
+      "displayBlack": { "value": "Black", "type": "fontWeights" },
+      "displayBold": { "value": "Bold", "type": "fontWeights" },
+      "displayBoldItalic": { "value": "Bold Italic", "type": "fontWeights" },
+      "bodyRegular": { "value": "Regular", "type": "fontWeights" },
+      "bodyBold": { "value": "Bold", "type": "fontWeights" },
+      "monoRegular": { "value": "Regular", "type": "fontWeights" },
+      "monoBold": { "value": "Bold", "type": "fontWeights" }
+    },
+    "fontSizes": {
+      "display": { "value": "64", "type": "fontSizes" },
+      "h1": { "value": "36", "type": "fontSizes" },
+      "bodyLarge": { "value": "16", "type": "fontSizes" },
+      "body": { "value": "14", "type": "fontSizes" },
+      "bodySmall": { "value": "12", "type": "fontSizes" },
+      "helper": { "value": "11", "type": "fontSizes" },
+      "eyebrow": { "value": "12", "type": "fontSizes" },
+      "tag": { "value": "10", "type": "fontSizes" },
+      "section": { "value": "14", "type": "fontSizes" },
+      "button": { "value": "11", "type": "fontSizes" },
+      "step": { "value": "10", "type": "fontSizes" },
+      "micro": { "value": "9", "type": "fontSizes" },
+      "nav": { "value": "11", "type": "fontSizes" },
+      "pill": { "value": "8", "type": "fontSizes" },
+      "meta": { "value": "14", "type": "fontSizes" }
+    },
+    "lineHeights": {
+      "display": { "value": "60.8", "type": "lineHeights" },
+      "h1": { "value": "39.6", "type": "lineHeights" },
+      "bodyLarge": { "value": "19.2", "type": "lineHeights" },
+      "body": { "value": "20", "type": "lineHeights" },
+      "bodySmall": { "value": "14.2", "type": "lineHeights" },
+      "helper": { "value": "19.2", "type": "lineHeights" },
+      "eyebrow": { "value": "AUTO", "type": "lineHeights" },
+      "tag": { "value": "AUTO", "type": "lineHeights" },
+      "section": { "value": "AUTO", "type": "lineHeights" },
+      "button": { "value": "AUTO", "type": "lineHeights" },
+      "step": { "value": "AUTO", "type": "lineHeights" },
+      "micro": { "value": "13.5", "type": "lineHeights" },
+      "nav": { "value": "AUTO", "type": "lineHeights" },
+      "pill": { "value": "AUTO", "type": "lineHeights" },
+      "meta": { "value": "14.2", "type": "lineHeights" }
+    },
+    "letterSpacing": {
+      "display": { "value": "-0.5", "type": "letterSpacing" },
+      "h1": { "value": "0", "type": "letterSpacing" },
+      "bodyLarge": { "value": "0", "type": "letterSpacing" },
+      "body": { "value": "0", "type": "letterSpacing" },
+      "bodySmall": { "value": "0", "type": "letterSpacing" },
+      "helper": { "value": "0", "type": "letterSpacing" },
+      "eyebrow": { "value": "1.2", "type": "letterSpacing" },
+      "tag": { "value": "1.2", "type": "letterSpacing" },
+      "section": { "value": "1.2", "type": "letterSpacing" },
+      "button": { "value": "1.76", "type": "letterSpacing" },
+      "step": { "value": "2.2", "type": "letterSpacing" },
+      "micro": { "value": "0.9", "type": "letterSpacing" },
+      "nav": { "value": "0.42", "type": "letterSpacing" },
+      "pill": { "value": "1.12", "type": "letterSpacing" },
+      "meta": { "value": "0", "type": "letterSpacing" }
+    },
+    "color": {
+      "cream": { "value": "#F5F2EC", "type": "color" },
+      "ink": { "value": "#0A0A0A", "type": "color" },
+      "deep": { "value": "#1A1A1A", "type": "color" },
+      "graphite": { "value": "#2A2A2A", "type": "color" },
+      "acid": { "value": "#B5FF47", "type": "color" },
+      "olive": { "value": "#5C6641", "type": "color" },
+      "rust": { "value": "#C4622D", "type": "color" },
+      "muted": { "value": "#888888", "type": "color" }
+    },
+    "typography": {
+      "display": {
+        "value": {
+          "fontFamily": "{fontFamilies.display}",
+          "fontWeight": "{fontWeights.displayBlack}",
+          "lineHeight": "{lineHeights.display}",
+          "fontSize": "{fontSizes.display}",
+          "letterSpacing": "{letterSpacing.display}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "system — Style Guide type scale. Labelled 96px in the file but the node is set to 64px."
+      },
+      "h1": {
+        "value": {
+          "fontFamily": "{fontFamilies.display}",
+          "fontWeight": "{fontWeights.displayBold}",
+          "lineHeight": "{lineHeights.h1}",
+          "fontSize": "{fontSizes.h1}",
+          "letterSpacing": "{letterSpacing.h1}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "confirmed — \"How would you like to use VisionSync?\""
+      },
+      "h1Accent": {
+        "value": {
+          "fontFamily": "{fontFamilies.display}",
+          "fontWeight": "{fontWeights.displayBoldItalic}",
+          "lineHeight": "{lineHeights.h1}",
+          "fontSize": "{fontSizes.h1}",
+          "letterSpacing": "{letterSpacing.h1}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "confirmed — highlighted word within h1, use color.acid for fill"
+      },
+      "h2": {
+        "value": {
+          "fontFamily": "{fontFamilies.display}",
+          "fontWeight": "{fontWeights.displayBold}",
+          "lineHeight": "{lineHeights.h1}",
+          "fontSize": "{fontSizes.h1}",
+          "letterSpacing": "{letterSpacing.h1}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "system — Style Guide type scale"
+      },
+      "bodyLarge": {
+        "value": {
+          "fontFamily": "{fontFamilies.body}",
+          "fontWeight": "{fontWeights.bodyRegular}",
+          "lineHeight": "{lineHeights.bodyLarge}",
+          "fontSize": "{fontSizes.bodyLarge}",
+          "letterSpacing": "{letterSpacing.bodyLarge}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "confirmed — \"Blind / Visually Impaired\""
+      },
+      "body": {
+        "value": {
+          "fontFamily": "{fontFamilies.body}",
+          "fontWeight": "{fontWeights.bodyRegular}",
+          "lineHeight": "{lineHeights.body}",
+          "fontSize": "{fontSizes.body}",
+          "letterSpacing": "{letterSpacing.body}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "confirmed — \"Choose your role for a personalised experience.\""
+      },
+      "bodySmall": {
+        "value": {
+          "fontFamily": "{fontFamilies.body}",
+          "fontWeight": "{fontWeights.bodyRegular}",
+          "lineHeight": "{lineHeights.bodySmall}",
+          "fontSize": "{fontSizes.bodySmall}",
+          "letterSpacing": "{letterSpacing.bodySmall}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "confirmed — \"Pick a scheduled session to volunteer at a later time.\""
+      },
+      "helper": {
+        "value": {
+          "fontFamily": "{fontFamilies.body}",
+          "fontWeight": "{fontWeights.bodyRegular}",
+          "lineHeight": "{lineHeights.helper}",
+          "fontSize": "{fontSizes.helper}",
+          "letterSpacing": "{letterSpacing.helper}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "confirmed — \"You can change your role anytime later from Settings.\" (color.acid)"
+      },
+      "eyebrow": {
+        "value": {
+          "fontFamily": "{fontFamilies.body}",
+          "fontWeight": "{fontWeights.bodyBold}",
+          "lineHeight": "{lineHeights.eyebrow}",
+          "fontSize": "{fontSizes.eyebrow}",
+          "letterSpacing": "{letterSpacing.eyebrow}",
+          "textCase": "uppercase"
+        },
+        "type": "typography",
+        "description": "confirmed — \"SCHEDULEd HELP\" (color.acid)"
+      },
+      "tag": {
+        "value": {
+          "fontFamily": "{fontFamilies.body}",
+          "fontWeight": "{fontWeights.bodyBold}",
+          "lineHeight": "{lineHeights.tag}",
+          "fontSize": "{fontSizes.tag}",
+          "letterSpacing": "{letterSpacing.tag}",
+          "textCase": "uppercase"
+        },
+        "type": "typography",
+        "description": "system — \"Donation Hub\""
+      },
+      "section": {
+        "value": {
+          "fontFamily": "{fontFamilies.mono}",
+          "fontWeight": "{fontWeights.monoRegular}",
+          "lineHeight": "{lineHeights.section}",
+          "fontSize": "{fontSizes.section}",
+          "letterSpacing": "{letterSpacing.section}",
+          "textCase": "uppercase"
+        },
+        "type": "typography",
+        "description": "confirmed — \"HELP REQUESTS\""
+      },
+      "button": {
+        "value": {
+          "fontFamily": "{fontFamilies.mono}",
+          "fontWeight": "{fontWeights.monoBold}",
+          "lineHeight": "{lineHeights.button}",
+          "fontSize": "{fontSizes.button}",
+          "letterSpacing": "{letterSpacing.button}",
+          "textCase": "uppercase"
+        },
+        "type": "typography",
+        "description": "confirmed — \"GET STARTED\""
+      },
+      "step": {
+        "value": {
+          "fontFamily": "{fontFamilies.mono}",
+          "fontWeight": "{fontWeights.monoRegular}",
+          "lineHeight": "{lineHeights.step}",
+          "fontSize": "{fontSizes.step}",
+          "letterSpacing": "{letterSpacing.step}",
+          "textCase": "uppercase"
+        },
+        "type": "typography",
+        "description": "confirmed — \"STEP 1 OF 2\""
+      },
+      "micro": {
+        "value": {
+          "fontFamily": "{fontFamilies.mono}",
+          "fontWeight": "{fontWeights.monoRegular}",
+          "lineHeight": "{lineHeights.micro}",
+          "fontSize": "{fontSizes.micro}",
+          "letterSpacing": "{letterSpacing.micro}",
+          "textCase": "uppercase"
+        },
+        "type": "typography",
+        "description": "confirmed — \"VOICE-FIRST · ACCESSIBILITY OPTIMISED\""
+      },
+      "nav": {
+        "value": {
+          "fontFamily": "{fontFamilies.mono}",
+          "fontWeight": "{fontWeights.monoRegular}",
+          "lineHeight": "{lineHeights.nav}",
+          "fontSize": "{fontSizes.nav}",
+          "letterSpacing": "{letterSpacing.nav}",
+          "textCase": "uppercase"
+        },
+        "type": "typography",
+        "description": "system — \"Profile\" / \"Switch role\""
+      },
+      "pill": {
+        "value": {
+          "fontFamily": "{fontFamilies.mono}",
+          "fontWeight": "{fontWeights.monoRegular}",
+          "lineHeight": "{lineHeights.pill}",
+          "fontSize": "{fontSizes.pill}",
+          "letterSpacing": "{letterSpacing.pill}",
+          "textCase": "uppercase"
+        },
+        "type": "typography",
+        "description": "system — \"Default\" / \"Hover\" / \"Disabled\""
+      },
+      "meta": {
+        "value": {
+          "fontFamily": "{fontFamilies.body}",
+          "fontWeight": "{fontWeights.bodyRegular}",
+          "lineHeight": "{lineHeights.meta}",
+          "fontSize": "{fontSizes.meta}",
+          "letterSpacing": "{letterSpacing.meta}",
+          "textCase": "none"
+        },
+        "type": "typography",
+        "description": "system — \"2:41 pm\" (color.muted)"
+      }
+    }
+  }
+}
