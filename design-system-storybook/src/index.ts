@@ -40,4 +40,5 @@ export {
   VoiceWaveVisualizer as AudioWaveBars,
   VoiceWaveVisualizer as Group32,
   VoicePromptSoftStar,
+  TypewriterText,
 } from './components/VoicePromptBox/VoicePromptBox';

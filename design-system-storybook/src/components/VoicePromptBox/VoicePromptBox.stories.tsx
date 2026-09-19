@@ -54,6 +54,18 @@ const meta: Meta<typeof VoicePromptBox> = {
       control: 'boolean',
       description: 'Whether the equalizer wave bars animate',
     },
+    typewriter: {
+      control: 'boolean',
+      description: 'Whether the transcript text streams with a typewriter animation',
+    },
+    typewriterSpeed: {
+      control: { type: 'range', min: 10, max: 100, step: 5 },
+      description: 'Typing speed in ms per character',
+    },
+    showCursor: {
+      control: 'boolean',
+      description: 'Whether to display the blinking typewriter cursor',
+    },
     waveFrame: {
       control: { type: 'inline-radio' },
       options: [1, 2, 3, 4],
@@ -68,6 +80,9 @@ const meta: Meta<typeof VoicePromptBox> = {
     property1: 'Default',
     mode: 'default',
     animated: true,
+    typewriter: true,
+    typewriterSpeed: 20,
+    showCursor: true,
   },
 };
 
@@ -343,6 +358,7 @@ export const InteractiveSpeechDemo: Story = {
           property1={isListening ? 'Default' : 'no text'}
           mode="default"
           animated={isListening}
+          typewriter={true}
           promptText={isListening ? 'SPEAK A COMMAND' : 'MIC PAUSED'}
           transcripts={isListening ? transcripts : []}
         />
@@ -350,3 +366,93 @@ export const InteractiveSpeechDemo: Story = {
     );
   },
 };
+
+/**
+ * Dedicated Typewriter Animation Showcase with interactive restart & speed controls
+ */
+export const TypewriterAnimationShowcase: Story = {
+  name: 'Typewriter Animation Showcase',
+  render: () => {
+    const [key, setKey] = useState(0);
+    const [speed, setSpeed] = useState(25);
+
+    const replay = () => setKey((k) => k + 1);
+
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '24px',
+          padding: '20px',
+        }}
+      >
+        <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+          <button
+            type="button"
+            onClick={replay}
+            style={{
+              padding: '8px 20px',
+              fontFamily: 'Space Mono, monospace',
+              fontSize: '11px',
+              backgroundColor: '#b7ff4d',
+              color: '#000',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: 700,
+            }}
+          >
+            ↻ REPLAY TYPEWRITER
+          </button>
+
+          <label
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              color: '#fff',
+              fontFamily: 'Space Mono, monospace',
+              fontSize: '11px',
+            }}
+          >
+            SPEED:
+            <select
+              value={speed}
+              onChange={(e) => {
+                setSpeed(Number(e.target.value));
+                replay();
+              }}
+              style={{
+                backgroundColor: '#262626',
+                color: '#b7ff4d',
+                border: '1px solid #444',
+                borderRadius: '4px',
+                padding: '4px 8px',
+                fontFamily: 'Space Mono, monospace',
+                fontSize: '11px',
+              }}
+            >
+              <option value={10}>Ultra Fast (10ms)</option>
+              <option value={22}>Normal (22ms)</option>
+              <option value={45}>Cinematic (45ms)</option>
+              <option value={75}>Slow Typewriter (75ms)</option>
+            </select>
+          </label>
+        </div>
+
+        <VoicePromptBox
+          key={key}
+          property1="2 lines"
+          mode="default"
+          animated={true}
+          typewriter={true}
+          typewriterSpeed={speed}
+          showCursor={true}
+        />
+      </div>
+    );
+  },
+};
+

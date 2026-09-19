@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './VoicePromptBox.css';
 
 export type VoicePromptVariant = 'Default' | '2 lines' | 'no text' | 'listening';
@@ -82,6 +82,88 @@ export const AudioWaveBars = VoiceWaveVisualizer;
 export const Group32 = VoiceWaveVisualizer;
 
 /* ==========================================================================
+   Typewriter Text Component
+   ========================================================================== */
+
+export interface TypewriterTextProps {
+  /** Full text string to type out */
+  text: string;
+  /** Typing speed in milliseconds per character (default: 22ms) */
+  speed?: number;
+  /** Initial delay in milliseconds before typing begins */
+  delay?: number;
+  /** Whether the typewriter animation is enabled (if false, shows text instantly) */
+  enabled?: boolean;
+  /** Whether to render the blinking cursor while typing */
+  showCursor?: boolean;
+  /** Callback fired when typing reaches the end */
+  onComplete?: () => void;
+  /** Additional CSS class */
+  className?: string;
+}
+
+export const TypewriterText: React.FC<TypewriterTextProps> = ({
+  text,
+  speed = 22,
+  delay = 0,
+  enabled = true,
+  showCursor = true,
+  onComplete,
+  className = '',
+}) => {
+  const [displayedCount, setDisplayedCount] = useState<number>(enabled ? 0 : text.length);
+  const [hasStarted, setHasStarted] = useState<boolean>(delay === 0);
+
+  useEffect(() => {
+    if (!enabled) {
+      setDisplayedCount(text.length);
+      return;
+    }
+
+    setDisplayedCount(0);
+    setHasStarted(delay === 0);
+
+    let delayTimer: ReturnType<typeof setTimeout> | null = null;
+    let interval: ReturnType<typeof setInterval> | null = null;
+
+    const startTyping = () => {
+      setHasStarted(true);
+      let current = 0;
+      interval = setInterval(() => {
+        current += 1;
+        setDisplayedCount(current);
+        if (current >= text.length) {
+          if (interval) clearInterval(interval);
+          onComplete?.();
+        }
+      }, speed);
+    };
+
+    if (delay > 0) {
+      delayTimer = setTimeout(startTyping, delay);
+    } else {
+      startTyping();
+    }
+
+    return () => {
+      if (delayTimer) clearTimeout(delayTimer);
+      if (interval) clearInterval(interval);
+    };
+  }, [text, speed, delay, enabled, onComplete]);
+
+  const isComplete = displayedCount >= text.length;
+
+  return (
+    <span className={`uedp-typewriter-text ${className}`.trim()}>
+      {text.slice(0, displayedCount)}
+      {enabled && showCursor && !isComplete && hasStarted && (
+        <span className="uedp-typewriter-cursor" aria-hidden="true" />
+      )}
+    </span>
+  );
+};
+
+/* ==========================================================================
    Voice Prompt Box Component (Node 53:6468)
    ========================================================================== */
 
@@ -95,6 +177,12 @@ export interface VoicePromptBoxProps extends React.HTMLAttributes<HTMLDivElement
   mode?: VoicePromptMode;
   /** Whether the voice equalizer waves are smoothly animated */
   animated?: boolean;
+  /** Whether the transcription text has typewriter animation */
+  typewriter?: boolean;
+  /** Typewriter typing speed in ms per character (default: 20ms) */
+  typewriterSpeed?: number;
+  /** Whether to show typewriter blinking cursor */
+  showCursor?: boolean;
   /** Static wave frame when animation is disabled (1-4) */
   waveFrame?: WaveFrame;
   /** Custom status prompt text */
@@ -107,6 +195,9 @@ export const VoicePromptBox: React.FC<VoicePromptBoxProps> = ({
   property1 = 'Default',
   mode = 'default',
   animated = true,
+  typewriter = true,
+  typewriterSpeed = 20,
+  showCursor = true,
   waveFrame = 1,
   promptText,
   transcripts,
@@ -165,7 +256,7 @@ export const VoicePromptBox: React.FC<VoicePromptBoxProps> = ({
         </span>
       </div>
 
-      {/* Real-time Transcription Lines */}
+      {/* Real-time Transcription Lines with Typewriter Animation */}
       {resolvedTranscripts.length > 0 && (
         <div className="uedp-voice-prompt-box__transcripts">
           {resolvedTranscripts.map((text, idx) => (
@@ -177,7 +268,15 @@ export const VoicePromptBox: React.FC<VoicePromptBoxProps> = ({
                 className="uedp-voice-prompt-box__divider"
                 aria-hidden="true"
               />
-              <p className="uedp-voice-prompt-box__text">{text}</p>
+              <p className="uedp-voice-prompt-box__text">
+                <TypewriterText
+                  text={text}
+                  speed={typewriterSpeed}
+                  delay={idx * 1400}
+                  enabled={typewriter}
+                  showCursor={showCursor}
+                />
+              </p>
             </div>
           ))}
         </div>
@@ -191,3 +290,4 @@ export const VoicePrompt = VoicePromptBox;
 export const VoicePromptBlock = VoicePromptBox;
 
 export default VoicePromptBox;
+

@@ -291,3 +291,39 @@
 .uedp-voice-prompt-box--mode-light .uedp-voice-prompt-box__text {
   color: var(--uedp-voice-transcript-light);
 }
+
+/* ==========================================================================
+   Typewriter Animation Styles & Cursor
+   ========================================================================== */
+
+.uedp-typewriter-text {
+  display: inline;
+}
+
+.uedp-typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 12px;
+  margin-left: 2px;
+  vertical-align: middle;
+  background-color: currentColor;
+  animation: uedp-cursor-blink 0.75s step-end infinite;
+}
+
+.uedp-voice-prompt-box--mode-default .uedp-typewriter-cursor,
+.uedp-voice-prompt-box--mode-dark .uedp-typewriter-cursor {
+  background-color: #b7ff4d;
+}
+
+.uedp-voice-prompt-box--mode-light .uedp-typewriter-cursor {
+  background-color: #497b00;
+}
+
+@keyframes uedp-cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
