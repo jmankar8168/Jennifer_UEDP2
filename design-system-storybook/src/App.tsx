@@ -5,7 +5,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'tokens' | 'foundational' | 'components'>('components');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [selectedComponent, setSelectedComponent] = useState<string>('ChooseYourRoleForAPersonalisedExperience');
+  const [selectedComponent, setSelectedComponent] = useState<string>('ButtonSmall');
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
   const toggleTheme = () => {
@@ -62,7 +62,7 @@ export default function App() {
           <input
             type="text"
             className="search-input"
-            placeholder="Search 60+ components..."
+            placeholder="Search components..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Background } from './Background';
+import { Button } from './Button';
 
-const meta: Meta<typeof Background> = {
-  title: 'Components/Background',
-  component: Background,
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
+  component: Button,
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -12,7 +12,7 @@ const meta: Meta<typeof Background> = {
 ### Figma Component Specifications
 | Property | Value |
 | --- | --- |
-| **Exact Layer Name** | \`Background\` |
+| **Exact Layer Name** | \`Button\` (\`Background\`) |
 | **Figma Node ID** | \`16:645\` |
 | **Component Type** | \`COMPONENT_SET\` (Button) |
 | **Variants Count** | 5 |
@@ -42,7 +42,7 @@ const meta: Meta<typeof Background> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Background>;
+type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
@@ -61,46 +61,57 @@ export const Selected: Story = {
 export const Disabled: Story = {
   args: {
     Text200: 'DISABLED BUTTON',
-    State: 'Disabled'
+    State: 'Disabled',
+    disabled: true
   }
 };
 
-export const HoverState: Story = {
+export const Hover: Story = {
   args: {
     Text200: 'HOVER STATE',
     State: 'Hover'
   }
 };
 
-export const DarkOutline: Story = {
+export const Default2: Story = {
   args: {
-    Text200: 'DEFAULT 2 (DARK OUTLINE)',
+    Text200: 'DARK OUTLINE',
     State: 'Default 2'
   }
 };
 
-export const AllStatesGallery: Story = {
+export const AllVariants: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '360px', padding: '24px', backgroundColor: '#0F172A', borderRadius: '12px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '342px', padding: '16px' }}>
       <div>
-        <div style={{ color: '#94A3B8', fontSize: '12px', marginBottom: '8px', fontFamily: 'monospace' }}>Default (White)</div>
-        <Background State="Default" Text200="CONTINUE" />
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          DEFAULT (16:646)
+        </p>
+        <Button State="Default" Text200="BUTTON" />
       </div>
       <div>
-        <div style={{ color: '#94A3B8', fontSize: '12px', marginBottom: '8px', fontFamily: 'monospace' }}>Selected (Lime Accent)</div>
-        <Background State="Selected" Text200="CONFIRMED" />
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          SELECTED (16:648)
+        </p>
+        <Button State="Selected" Text200="SELECTED" />
       </div>
       <div>
-        <div style={{ color: '#94A3B8', fontSize: '12px', marginBottom: '8px', fontFamily: 'monospace' }}>Disabled (Muted)</div>
-        <Background State="Disabled" Text200="PLEASE WAIT" />
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          DISABLED (30:136)
+        </p>
+        <Button State="Disabled" Text200="DISABLED" disabled />
       </div>
       <div>
-        <div style={{ color: '#94A3B8', fontSize: '12px', marginBottom: '8px', fontFamily: 'monospace' }}>Hover (Gray + White Border)</div>
-        <Background State="Hover" Text200="HOVER STATE" />
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          HOVER (30:147)
+        </p>
+        <Button State="Hover" Text200="HOVER STATE" />
       </div>
       <div>
-        <div style={{ color: '#94A3B8', fontSize: '12px', marginBottom: '8px', fontFamily: 'monospace' }}>Default 2 (Black + White Border)</div>
-        <Background State="Default 2" Text200="BACK TO HOME" />
+        <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
+          DEFAULT 2 / OUTLINE (30:149)
+        </p>
+        <Button State="Default 2" Text200="DEFAULT 2" />
       </div>
     </div>
   )

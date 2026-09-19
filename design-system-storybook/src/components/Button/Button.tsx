@@ -1,8 +1,8 @@
 import React from 'react';
-import './Background.css';
+import './Button.css';
 
-export interface BackgroundProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Literal Figma Layer Name: "Background" */
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Literal Figma Layer Name: "Button" (Node ID: 16:645) */
   className?: string;
   children?: React.ReactNode;
   /** Text content displayed inside the button */
@@ -16,10 +16,10 @@ export interface BackgroundProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 }
 
 /**
- * Background (Button) Component
- * Preserved Figma Layer Name: "Background" (Node ID: 16:645)
+ * Button Component
+ * Preserved Figma Layer Name: "Button" (Node ID: 16:645)
  */
-export const Background: React.FC<BackgroundProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   className = '',
   children,
   Text200 = 'BUTTON',
@@ -46,4 +46,5 @@ export const Background: React.FC<BackgroundProps> = ({
   );
 };
 
-export default Background;
+export const Background = Button;
+export default Button;

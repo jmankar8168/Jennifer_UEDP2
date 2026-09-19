@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ModeToggle } from './ModeToggle';
 
 const meta: Meta<typeof ModeToggle> = {
-  title: 'Components/ModeToggle',
+  title: 'Components/Mode Toggle',
   component: ModeToggle,
   tags: ['autodocs'],
   parameters: {

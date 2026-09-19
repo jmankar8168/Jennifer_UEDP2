@@ -22,7 +22,7 @@ import { JobCards } from './JobCards';
  *   - Light Hover: `#FFFFFF` fill, `#4D8014` green border & button
  */
 const meta: Meta<typeof JobCards> = {
-  title: 'Components/JobCards',
+  title: 'Components/Job Cards',
   component: JobCards,
   tags: ['autodocs'],
   parameters: {
