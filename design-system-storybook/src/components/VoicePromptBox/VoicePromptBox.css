@@ -1,0 +1,293 @@
+/* ==========================================================================
+   Voice Prompt Box Component (Figma Node 53:6468)
+   Audio Wave Bars (Figma Node 16:1948)
+   ========================================================================== */
+
+:root {
+  --uedp-voice-bg-dark: #171717;
+  --uedp-voice-bg-light: #ffffff;
+  --uedp-voice-border-dark: #222222;
+  --uedp-voice-border-light: #e5e7eb;
+  --uedp-voice-star-dark: #a3e635; /* Neon Star */
+  --uedp-voice-star-light: #4d7c0f; /* Olive Star */
+  --uedp-voice-prompt-dark: #a3e635;
+  --uedp-voice-prompt-light: #000000;
+  --uedp-voice-transcript-dark: #ffffff;
+  --uedp-voice-transcript-light: #000000;
+  --uedp-voice-divider-dark: #ffffff;
+  --uedp-voice-divider-light: #000000;
+}
+
+/* Voice Prompt Box Container */
+.uedp-voice-prompt-box {
+  box-sizing: border-box;
+  width: 342px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 16px;
+  border-radius: 4px;
+  user-select: none;
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease, height 0.25s ease;
+}
+
+/* Mode: Default (Dark) */
+.uedp-voice-prompt-box--mode-default,
+.uedp-voice-prompt-box--mode-dark {
+  background-color: var(--uedp-voice-bg-dark);
+  border: 1px solid var(--uedp-voice-border-dark);
+  color: #ffffff;
+}
+
+/* Mode: Light */
+.uedp-voice-prompt-box--mode-light {
+  background-color: var(--uedp-voice-bg-light);
+  border: 1px solid var(--uedp-voice-border-light);
+  color: #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Header Section (Star + Wave Bars + Prompt Text) */
+.uedp-voice-prompt-box__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Soft Star Graphic (62x62) */
+.uedp-voice-prompt-box__star {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.uedp-voice-prompt-box--mode-default .uedp-voice-prompt-box__star,
+.uedp-voice-prompt-box--mode-dark .uedp-voice-prompt-box__star {
+  color: var(--uedp-voice-star-dark);
+  filter: drop-shadow(0 0 12px rgba(163, 230, 53, 0.25));
+}
+
+.uedp-voice-prompt-box--mode-light .uedp-voice-prompt-box__star {
+  color: var(--uedp-voice-star-light);
+}
+
+/* Audio Wave Visualizer (Node 16:1948) */
+.uedp-voice-wave {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 46px;
+  height: 24px;
+  margin-bottom: 12px;
+}
+
+/* Equalizer Bars (4px width, pill shape) */
+.uedp-voice-wave__bar {
+  width: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  transition: height 0.15s ease-in-out;
+}
+
+/* Custom Curated Color Mapping per Figma specs */
+.uedp-voice-wave__bar--1 { background-color: #315200; }
+.uedp-voice-wave__bar--2 { background-color: #b5ff47; }
+.uedp-voice-wave__bar--3 { background-color: #497b00; }
+.uedp-voice-wave__bar--4 { background-color: #b7ff4d; }
+.uedp-voice-wave__bar--5 { background-color: #68ae00; }
+.uedp-voice-wave__bar--6 { background-color: #80d700; }
+.uedp-voice-wave__bar--7 { background-color: #315200; }
+
+/* Static Frame Heights (Node 16:1948 Variants) */
+.uedp-voice-wave--frame-1 .uedp-voice-wave__bar--1 { height: 6px; }
+.uedp-voice-wave--frame-1 .uedp-voice-wave__bar--2 { height: 14px; }
+.uedp-voice-wave--frame-1 .uedp-voice-wave__bar--3 { height: 8px; }
+.uedp-voice-wave--frame-1 .uedp-voice-wave__bar--4 { height: 20px; }
+.uedp-voice-wave--frame-1 .uedp-voice-wave__bar--5 { height: 12px; }
+.uedp-voice-wave--frame-1 .uedp-voice-wave__bar--6 { height: 18px; }
+.uedp-voice-wave--frame-1 .uedp-voice-wave__bar--7 { height: 6px; }
+
+.uedp-voice-wave--frame-2 .uedp-voice-wave__bar--1 { height: 14px; }
+.uedp-voice-wave--frame-2 .uedp-voice-wave__bar--2 { height: 22px; }
+.uedp-voice-wave--frame-2 .uedp-voice-wave__bar--3 { height: 16px; }
+.uedp-voice-wave--frame-2 .uedp-voice-wave__bar--4 { height: 11px; }
+.uedp-voice-wave--frame-2 .uedp-voice-wave__bar--5 { height: 16px; }
+.uedp-voice-wave--frame-2 .uedp-voice-wave__bar--6 { height: 13px; }
+.uedp-voice-wave--frame-2 .uedp-voice-wave__bar--7 { height: 17px; }
+
+.uedp-voice-wave--frame-3 .uedp-voice-wave__bar--1 { height: 20px; }
+.uedp-voice-wave--frame-3 .uedp-voice-wave__bar--2 { height: 15px; }
+.uedp-voice-wave--frame-3 .uedp-voice-wave__bar--3 { height: 22px; }
+.uedp-voice-wave--frame-3 .uedp-voice-wave__bar--4 { height: 8px; }
+.uedp-voice-wave--frame-3 .uedp-voice-wave__bar--5 { height: 12px; }
+.uedp-voice-wave--frame-3 .uedp-voice-wave__bar--6 { height: 20px; }
+.uedp-voice-wave--frame-3 .uedp-voice-wave__bar--7 { height: 12px; }
+
+.uedp-voice-wave--frame-4 .uedp-voice-wave__bar--1 { height: 11px; }
+.uedp-voice-wave--frame-4 .uedp-voice-wave__bar--2 { height: 8px; }
+.uedp-voice-wave--frame-4 .uedp-voice-wave__bar--3 { height: 13px; }
+.uedp-voice-wave--frame-4 .uedp-voice-wave__bar--4 { height: 19px; }
+.uedp-voice-wave--frame-4 .uedp-voice-wave__bar--5 { height: 24px; }
+.uedp-voice-wave--frame-4 .uedp-voice-wave__bar--6 { height: 15px; }
+.uedp-voice-wave--frame-4 .uedp-voice-wave__bar--7 { height: 9px; }
+
+/* ==========================================================================
+   Smooth Animated Equalizer Wave (Oscillating through Figma Variants 1-4)
+   ========================================================================== */
+
+@keyframes uedp-wave-bar-1 {
+  0%, 100% { height: 6px; }
+  25% { height: 14px; }
+  50% { height: 20px; }
+  75% { height: 11px; }
+}
+
+@keyframes uedp-wave-bar-2 {
+  0%, 100% { height: 14px; }
+  25% { height: 22px; }
+  50% { height: 15px; }
+  75% { height: 8px; }
+}
+
+@keyframes uedp-wave-bar-3 {
+  0%, 100% { height: 8px; }
+  25% { height: 16px; }
+  50% { height: 22px; }
+  75% { height: 13px; }
+}
+
+@keyframes uedp-wave-bar-4 {
+  0%, 100% { height: 20px; }
+  25% { height: 11px; }
+  50% { height: 8px; }
+  75% { height: 19px; }
+}
+
+@keyframes uedp-wave-bar-5 {
+  0%, 100% { height: 12px; }
+  25% { height: 16px; }
+  50% { height: 12px; }
+  75% { height: 24px; }
+}
+
+@keyframes uedp-wave-bar-6 {
+  0%, 100% { height: 18px; }
+  25% { height: 13px; }
+  50% { height: 20px; }
+  75% { height: 15px; }
+}
+
+@keyframes uedp-wave-bar-7 {
+  0%, 100% { height: 6px; }
+  25% { height: 17px; }
+  50% { height: 12px; }
+  75% { height: 9px; }
+}
+
+/* When animated is active */
+.uedp-voice-wave--animated .uedp-voice-wave__bar--1 {
+  animation: uedp-wave-bar-1 1.2s infinite ease-in-out;
+}
+.uedp-voice-wave--animated .uedp-voice-wave__bar--2 {
+  animation: uedp-wave-bar-2 1.2s infinite ease-in-out 0.1s;
+}
+.uedp-voice-wave--animated .uedp-voice-wave__bar--3 {
+  animation: uedp-wave-bar-3 1.2s infinite ease-in-out 0.2s;
+}
+.uedp-voice-wave--animated .uedp-voice-wave__bar--4 {
+  animation: uedp-wave-bar-4 1.2s infinite ease-in-out 0.3s;
+}
+.uedp-voice-wave--animated .uedp-voice-wave__bar--5 {
+  animation: uedp-wave-bar-5 1.2s infinite ease-in-out 0.4s;
+}
+.uedp-voice-wave--animated .uedp-voice-wave__bar--6 {
+  animation: uedp-wave-bar-6 1.2s infinite ease-in-out 0.5s;
+}
+.uedp-voice-wave--animated .uedp-voice-wave__bar--7 {
+  animation: uedp-wave-bar-7 1.2s infinite ease-in-out 0.6s;
+}
+
+/* Prompt Status Text (SPEAK A COMMAND / LISTENING...) */
+.uedp-voice-prompt-box__prompt {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.uedp-voice-prompt-box--mode-default .uedp-voice-prompt-box__prompt,
+.uedp-voice-prompt-box--mode-dark .uedp-voice-prompt-box__prompt {
+  color: var(--uedp-voice-prompt-dark);
+}
+
+.uedp-voice-prompt-box--mode-light .uedp-voice-prompt-box__prompt {
+  color: var(--uedp-voice-prompt-light);
+}
+
+/* Transcript Lines Section */
+.uedp-voice-prompt-box__transcripts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Individual Transcript Row */
+.uedp-voice-prompt-box__transcript-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 11px;
+  width: 100%;
+}
+
+/* Vertical Accent Divider Line */
+.uedp-voice-prompt-box__divider {
+  width: 2px;
+  height: 29px;
+  flex-shrink: 0;
+  border-radius: 1px;
+}
+
+.uedp-voice-prompt-box--mode-default .uedp-voice-prompt-box__divider,
+.uedp-voice-prompt-box--mode-dark .uedp-voice-prompt-box__divider {
+  background-color: var(--uedp-voice-divider-dark);
+}
+
+.uedp-voice-prompt-box--mode-light .uedp-voice-prompt-box__divider {
+  background-color: var(--uedp-voice-divider-light);
+}
+
+/* Real-time speech transcription text */
+.uedp-voice-prompt-box__text {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19.2px;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.uedp-voice-prompt-box--mode-default .uedp-voice-prompt-box__text,
+.uedp-voice-prompt-box--mode-dark .uedp-voice-prompt-box__text {
+  color: var(--uedp-voice-transcript-dark);
+}
+
+.uedp-voice-prompt-box--mode-light .uedp-voice-prompt-box__text {
+  color: var(--uedp-voice-transcript-light);
+}

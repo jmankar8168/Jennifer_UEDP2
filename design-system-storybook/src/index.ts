@@ -33,3 +33,11 @@ export {
   JobsIcon,
   SupportIcon,
 } from './components/NavBar/NavBar';
+export {
+  VoicePromptBox,
+  VoicePromptBox as VoicePrompt,
+  VoiceWaveVisualizer,
+  VoiceWaveVisualizer as AudioWaveBars,
+  VoiceWaveVisualizer as Group32,
+  VoicePromptSoftStar,
+} from './components/VoicePromptBox/VoicePromptBox';
