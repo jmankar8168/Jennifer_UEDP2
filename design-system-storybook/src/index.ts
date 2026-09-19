@@ -42,3 +42,18 @@ export {
   VoicePromptSoftStar,
   TypewriterText,
 } from './components/VoicePromptBox/VoicePromptBox';
+export {
+  Logs,
+  Logs as ActivityLogs,
+  Logs as CallLogs,
+  Logs as LogsList,
+  LogItem,
+  LogItem as LogEntry,
+  LogItem as Component33,
+  LogIcon,
+  LogIcon as Component32,
+  MeetIcon,
+  VideoCallIcon,
+  InfoOutlineIcon,
+  DEFAULT_LOG_ENTRIES,
+} from './components/Logs/Logs';

@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Logs Component (Figma Node 53:6381 - Component 33 & Node 53:6380 - Component 32)
+   ========================================================================== */
+
+:root {
+  --uedp-log-bg-dark: #171717;
+  --uedp-log-bg-light: #ffffff;
+  --uedp-log-border-dark: #222222;
+  --uedp-log-border-light: #e5e7eb;
+  --uedp-log-divider-dark: #262626;
+  --uedp-log-divider-light: #e5e7eb;
+  --uedp-log-text-dark: #ffffff;
+  --uedp-log-text-light: #000000;
+  --uedp-log-subtext-dark: #737373;
+  --uedp-log-subtext-light: #666666;
+  --uedp-log-missed: #c4622d; /* Terracotta Orange */
+  --uedp-log-info-green: #497b00; /* Olive Green */
+}
+
+/* Individual Log Item Row (Component 33) */
+.uedp-log-item {
+  box-sizing: border-box;
+  width: 338px;
+  max-width: 100%;
+  height: 68px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  border-bottom: 1px solid var(--uedp-log-divider-dark);
+  background: transparent;
+  user-select: none;
+  transition: background-color 0.15s ease;
+}
+
+/* Mode: Dark (Default) */
+.uedp-log-item--mode-default,
+.uedp-log-item--mode-dark {
+  color: var(--uedp-log-text-dark);
+  border-bottom-color: var(--uedp-log-divider-dark);
+}
+
+.uedp-log-item--mode-default:hover,
+.uedp-log-item--mode-dark:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Mode: Light */
+.uedp-log-item--mode-light {
+  color: var(--uedp-log-text-light);
+  border-bottom-color: var(--uedp-log-divider-light);
+}
+
+.uedp-log-item--mode-light:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Left Group (Icon + Texts) */
+.uedp-log-item__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Log Icon (29px x 29px) */
+.uedp-log-icon {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.uedp-log-icon svg {
+  display: block;
+}
+
+/* Missed Call Type - Terracotta Accent */
+.uedp-log-item--missed .uedp-log-icon {
+  color: var(--uedp-log-missed);
+}
+
+.uedp-log-item--missed .uedp-log-item__title {
+  color: var(--uedp-log-missed);
+}
+
+/* Text Container */
+.uedp-log-item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* Title (e.g. "Friday" or Contact Name) */
+.uedp-log-item__title {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+  color: inherit;
+}
+
+/* Subtitle / Timestamp */
+.uedp-log-item__subtitle {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+}
+
+.uedp-log-item--mode-default .uedp-log-item__subtitle,
+.uedp-log-item--mode-dark .uedp-log-item__subtitle {
+  color: var(--uedp-log-subtext-dark);
+}
+
+.uedp-log-item--mode-light .uedp-log-item__subtitle {
+  color: var(--uedp-log-subtext-light);
+}
+
+/* Info Icon Button (24px x 24px) */
+.uedp-log-item__info-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--uedp-log-info-green);
+  border-radius: 50%;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.uedp-log-item__info-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.08);
+}
+
+.uedp-log-item__info-btn:focus-visible {
+  outline: 2px solid var(--uedp-log-info-green);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Logs List Container
+   ========================================================================== */
+
+.uedp-logs-list {
+  box-sizing: border-box;
+  width: 342px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.uedp-logs-list--mode-default,
+.uedp-logs-list--mode-dark {
+  background-color: var(--uedp-log-bg-dark);
+}
+
+.uedp-logs-list--mode-light {
+  background-color: var(--uedp-log-bg-light);
+  border: 1px solid var(--uedp-log-border-light);
+}
+
+/* Remove bottom border on the last log item */
+.uedp-logs-list .uedp-log-item:last-child {
+  border-bottom: none;
+}
