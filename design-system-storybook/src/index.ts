@@ -13,3 +13,4 @@ export { JobCards } from './components/JobCards/JobCards';
 export { Tab } from './components/Tab/Tab';
 export { ProgressBar } from './components/ProgressBar/ProgressBar';
 export { AlertBox, AlertBox as Toast } from './components/AlertBox/AlertBox';
+export { Stars, Stars as Rating, Stars as StarRating } from './components/Stars/Stars';

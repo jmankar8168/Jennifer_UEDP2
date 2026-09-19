@@ -1,0 +1,84 @@
+/**
+ * CSS for Stars component
+ * Figma Node ID: 53:6306
+ * Layer Name: "stars"
+ */
+
+.uedp-stars {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+  width: fit-content;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.uedp-star-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  line-height: 0;
+}
+
+.uedp-stars--interactive .uedp-star-item {
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uedp-stars--interactive .uedp-star-item:hover {
+  transform: scale(1.15);
+}
+
+.uedp-stars--interactive .uedp-star-item:focus-visible {
+  outline: 2px solid #b7ff4d;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Modes (Figma: default = dark canvas, light = light canvas)
+   ========================================================================== */
+
+/* Mode: default (Dark canvas / vibrant neon green) */
+.uedp-stars--mode-default,
+.uedp-stars--mode-dark {
+  --uedp-star-filled: #b7ff4d;
+  --uedp-star-empty: #ffffff;
+}
+
+/* Mode: light (Light canvas / olive green & black strokes) */
+.uedp-stars--mode-light {
+  --uedp-star-filled: #497b00;
+  --uedp-star-empty: #000000;
+}
+
+/* Star SVG styles */
+.uedp-star-svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  transition: color 0.15s ease, fill 0.15s ease;
+}
+
+.uedp-star-svg--filled {
+  color: var(--uedp-star-filled);
+  fill: var(--uedp-star-filled);
+  stroke: none;
+}
+
+.uedp-star-svg--empty {
+  color: var(--uedp-star-empty);
+  fill: none;
+  stroke: var(--uedp-star-empty);
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
