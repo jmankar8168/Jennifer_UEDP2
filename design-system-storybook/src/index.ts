@@ -22,3 +22,14 @@ export {
   ToggleSwitch,
   ToggleSwitch as IonToggle,
 } from './components/AvailibilityToggle/AvailibilityToggle';
+export {
+  NavBar,
+  NavBar as Navbar,
+  NavBar as NavigationBar,
+  NavBar as BackgroundHorizontalBorder,
+  DEFAULT_NAV_ITEMS,
+  AssistIcon,
+  ScanIcon,
+  JobsIcon,
+  SupportIcon,
+} from './components/NavBar/NavBar';

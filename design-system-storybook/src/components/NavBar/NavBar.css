@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Nav Bar Component (Figma: Background+HorizontalBorder / Node 52:5699)
+   ========================================================================== */
+
+:root {
+  --uedp-navbar-width: 402px;
+  --uedp-navbar-height: 86px;
+  --uedp-navbar-bg-dark: #111111;
+  --uedp-navbar-bg-light: #ffffff;
+  --uedp-navbar-border-dark: #222222;
+  --uedp-navbar-border-light: #000000;
+  --uedp-navbar-text-dark: #ffffff;
+  --uedp-navbar-text-light: #000000;
+  --uedp-navbar-selected-dark: #b7ff4d; /* Neon Green */
+  --uedp-navbar-selected-light: #497b00; /* Olive Green */
+}
+
+/* Nav Bar Container */
+.uedp-navbar {
+  box-sizing: border-box;
+  width: var(--uedp-navbar-width);
+  max-width: 100%;
+  height: var(--uedp-navbar-height);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 16.5px 8px 32px 8px;
+  user-select: none;
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Mode: Default (Dark) */
+.uedp-navbar--mode-default,
+.uedp-navbar--mode-dark {
+  background-color: var(--uedp-navbar-bg-dark);
+  border-top: 1px solid var(--uedp-navbar-border-dark);
+  color: var(--uedp-navbar-text-dark);
+}
+
+/* Mode: Light */
+.uedp-navbar--mode-light {
+  background-color: var(--uedp-navbar-bg-light);
+  border-top: 1px solid var(--uedp-navbar-border-light);
+  color: var(--uedp-navbar-text-light);
+}
+
+/* Individual Nav Item Button */
+.uedp-navbar__item {
+  box-sizing: border-box;
+  background: transparent;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5px;
+  padding: 0;
+  height: 37.5px;
+  color: inherit;
+  font-family: 'Space Mono', monospace;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Specific item widths to match Figma artboard precisely */
+.uedp-navbar__item--assist {
+  width: 43px;
+}
+
+.uedp-navbar__item--scan {
+  width: 67px;
+}
+
+.uedp-navbar__item--jobs {
+  width: 53px;
+}
+
+.uedp-navbar__item--support {
+  width: 67px;
+}
+
+/* Icon Frame */
+.uedp-navbar__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.uedp-navbar__icon svg {
+  display: block;
+}
+
+.uedp-navbar__item--support .uedp-navbar__icon {
+  width: 42px;
+  height: 27px;
+  margin-bottom: -3px;
+}
+
+/* Text Label */
+.uedp-navbar__label {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  text-align: center;
+  color: inherit;
+  white-space: nowrap;
+}
+
+/* Hover State - 1px crisp outline box */
+.uedp-navbar__item:hover,
+.uedp-navbar__item.uedp-navbar__item--hovered {
+  border: 1px solid currentColor;
+}
+
+.uedp-navbar--mode-default .uedp-navbar__item:hover,
+.uedp-navbar--mode-default .uedp-navbar__item.uedp-navbar__item--hovered,
+.uedp-navbar--mode-dark .uedp-navbar__item:hover,
+.uedp-navbar--mode-dark .uedp-navbar__item.uedp-navbar__item--hovered {
+  border-color: #ffffff;
+}
+
+.uedp-navbar--mode-light .uedp-navbar__item:hover,
+.uedp-navbar--mode-light .uedp-navbar__item.uedp-navbar__item--hovered {
+  border-color: #000000;
+}
+
+/* Selected State - Vibrant Accent Green */
+.uedp-navbar--mode-default .uedp-navbar__item--selected,
+.uedp-navbar--mode-dark .uedp-navbar__item--selected {
+  color: var(--uedp-navbar-selected-dark);
+}
+
+.uedp-navbar--mode-light .uedp-navbar__item--selected {
+  color: var(--uedp-navbar-selected-light);
+}
+
+/* Selected and Hovered simultaneously keeps green color with stroke */
+.uedp-navbar--mode-default .uedp-navbar__item--selected:hover,
+.uedp-navbar--mode-default .uedp-navbar__item--selected.uedp-navbar__item--hovered,
+.uedp-navbar--mode-dark .uedp-navbar__item--selected:hover,
+.uedp-navbar--mode-dark .uedp-navbar__item--selected.uedp-navbar__item--hovered {
+  border-color: #ffffff;
+  color: var(--uedp-navbar-selected-dark);
+}
+
+.uedp-navbar--mode-light .uedp-navbar__item--selected:hover,
+.uedp-navbar--mode-light .uedp-navbar__item--selected.uedp-navbar__item--hovered {
+  border-color: #000000;
+  color: var(--uedp-navbar-selected-light);
+}
+
+/* Focus styles for keyboard navigation accessibility */
+.uedp-navbar__item:focus-visible {
+  outline: 2px solid #b7ff4d;
+  outline-offset: 2px;
+}
+
+.uedp-navbar--mode-light .uedp-navbar__item:focus-visible {
+  outline: 2px solid #497b00;
+}
