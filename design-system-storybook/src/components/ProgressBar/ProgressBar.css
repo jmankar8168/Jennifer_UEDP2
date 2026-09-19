@@ -1,0 +1,45 @@
+/**
+ * CSS for ProgressBar
+ * Figma Layer Name: "ProgressBar"
+ * Node ID: 54:6523
+ */
+
+.uedp-progressbar {
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+  height: 5px;
+  background-color: #000000;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.uedp-progressbar__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #68ae00;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Variant Presets (Node 54:6523) */
+.uedp-progressbar--0 .uedp-progressbar__fill {
+  width: 0%;
+}
+
+.uedp-progressbar--25 .uedp-progressbar__fill {
+  width: 25%;
+}
+
+.uedp-progressbar--50 .uedp-progressbar__fill {
+  width: 50%;
+}
+
+.uedp-progressbar--75 .uedp-progressbar__fill {
+  width: 75%;
+}
+
+.uedp-progressbar--100 .uedp-progressbar__fill {
+  width: 100%;
+}

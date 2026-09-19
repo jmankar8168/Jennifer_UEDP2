@@ -11,3 +11,4 @@ export { Search } from './components/Search/Search';
 export { Radio } from './components/Radio/Radio';
 export { JobCards } from './components/JobCards/JobCards';
 export { Tab } from './components/Tab/Tab';
+export { ProgressBar } from './components/ProgressBar/ProgressBar';
