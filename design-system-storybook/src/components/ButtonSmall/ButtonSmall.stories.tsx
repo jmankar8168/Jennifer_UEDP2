@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
-import { Button } from './Button';
+import { ButtonSmall } from './ButtonSmall';
 
-const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
-  component: Button,
+const meta: Meta<typeof ButtonSmall> = {
+  title: 'Components/Button Small',
+  component: ButtonSmall,
   tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
-        component: `Figma Layer Name: **Button**\n\n
+        component: `Figma Layer Name: **Button Small**\n\n
 ### Figma Component Specifications
 | Property | Value |
 | --- | --- |
-| **Exact Layer Name** | \`Button\` |
+| **Exact Layer Name** | \`Button Small\` |
 | **Figma Node ID** | \`54:6477\` |
 | **Component Type** | \`COMPONENT_SET\` (Pill Button Matrix) |
 | **Dimensions** | Height: \`32px\`, Width: \`~74px\` (No icon) / \`~92px\` (With icon) |
@@ -70,7 +70,7 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof ButtonSmall>;
 
 // 1. Primary Default
 export const Primary_Default: Story = {
@@ -191,7 +191,7 @@ export const InteractiveShowcase: Story = {
               textTransform: 'uppercase',
             }}
           >
-            Interactive Button Showcase
+            Interactive Button Small Showcase
           </span>
           <span
             style={{
@@ -208,37 +208,37 @@ export const InteractiveShowcase: Story = {
         </div>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center' }}>
-          <Button variant="primary" onClick={() => setClickCount((c) => c + 1)}>
+          <ButtonSmall variant="primary" onClick={() => setClickCount((c) => c + 1)}>
             Button
-          </Button>
+          </ButtonSmall>
 
-          <Button variant="primary" hasIcon onClick={() => setClickCount((c) => c + 1)}>
+          <ButtonSmall variant="primary" hasIcon onClick={() => setClickCount((c) => c + 1)}>
             Button
-          </Button>
+          </ButtonSmall>
 
-          <Button variant="secondary" onClick={() => setClickCount((c) => c + 1)}>
+          <ButtonSmall variant="secondary" onClick={() => setClickCount((c) => c + 1)}>
             Button
-          </Button>
+          </ButtonSmall>
 
-          <Button variant="secondary" hasIcon onClick={() => setClickCount((c) => c + 1)}>
+          <ButtonSmall variant="secondary" hasIcon onClick={() => setClickCount((c) => c + 1)}>
             Button
-          </Button>
+          </ButtonSmall>
 
-          <Button variant="accent" onClick={() => setClickCount((c) => c + 1)}>
+          <ButtonSmall variant="accent" onClick={() => setClickCount((c) => c + 1)}>
             Button
-          </Button>
+          </ButtonSmall>
 
-          <Button variant="accent" hasIcon onClick={() => setClickCount((c) => c + 1)}>
+          <ButtonSmall variant="accent" hasIcon onClick={() => setClickCount((c) => c + 1)}>
             Button
-          </Button>
+          </ButtonSmall>
 
-          <Button variant="primary" disabled>
+          <ButtonSmall variant="primary" disabled>
             Button
-          </Button>
+          </ButtonSmall>
 
-          <Button variant="accent" disabled hasIcon>
+          <ButtonSmall variant="accent" disabled hasIcon>
             Button
-          </Button>
+          </ButtonSmall>
         </div>
       </div>
     );
@@ -267,35 +267,35 @@ export const AllFigmaVariants: Story = {
     >
       {/* ROW 1 */}
       {/* Col 1: Solid White (No icon) */}
-      <Button variant="primary">Button</Button>
+      <ButtonSmall variant="primary">Button</ButtonSmall>
       {/* Col 2: Outline White (No icon) */}
-      <Button variant="secondary">Button</Button>
+      <ButtonSmall variant="secondary">Button</ButtonSmall>
       {/* Col 3: Disabled Primary (No icon) */}
-      <Button variant="primary" disabled>Button</Button>
+      <ButtonSmall variant="primary" disabled>Button</ButtonSmall>
 
       {/* ROW 2 */}
       {/* Col 1: Solid White (With icon) */}
-      <Button variant="primary" hasIcon>Button</Button>
+      <ButtonSmall variant="primary" hasIcon>Button</ButtonSmall>
       {/* Col 2: Outline White (With icon) */}
-      <Button variant="secondary" hasIcon>Button</Button>
+      <ButtonSmall variant="secondary" hasIcon>Button</ButtonSmall>
       {/* Col 3: Disabled Primary (With icon) */}
-      <Button variant="primary" hasIcon disabled>Button</Button>
+      <ButtonSmall variant="primary" hasIcon disabled>Button</ButtonSmall>
 
       {/* ROW 3 */}
       {/* Col 1: Lime Accent (No icon) */}
-      <Button variant="accent">Button</Button>
+      <ButtonSmall variant="accent">Button</ButtonSmall>
       {/* Col 2: Outline White (No icon) */}
-      <Button variant="secondary">Button</Button>
+      <ButtonSmall variant="secondary">Button</ButtonSmall>
       {/* Col 3: Disabled Accent (No icon) */}
-      <Button variant="accent" disabled>Button</Button>
+      <ButtonSmall variant="accent" disabled>Button</ButtonSmall>
 
       {/* ROW 4 */}
       {/* Col 1: Lime Accent (With icon) */}
-      <Button variant="accent" hasIcon>Button</Button>
+      <ButtonSmall variant="accent" hasIcon>Button</ButtonSmall>
       {/* Col 2: Outline White (With icon) */}
-      <Button variant="secondary" hasIcon>Button</Button>
+      <ButtonSmall variant="secondary" hasIcon>Button</ButtonSmall>
       {/* Col 3: Disabled Accent (With icon) */}
-      <Button variant="accent" hasIcon disabled>Button</Button>
+      <ButtonSmall variant="accent" hasIcon disabled>Button</ButtonSmall>
     </div>
   ),
 };

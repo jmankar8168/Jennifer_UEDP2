@@ -1,8 +1,8 @@
 import React from 'react';
-import './Button.css';
+import './ButtonSmall.css';
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Literal Figma Layer Name: "Button" */
+export interface ButtonSmallProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Literal Figma Layer Name: "Button Small" */
   className?: string;
   /** Button style variant */
   variant?: 'primary' | 'accent' | 'secondary';
@@ -21,7 +21,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  */
 export const PlayArrowIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-    className={`uedp-button-icon ${className}`.trim()}
+    className={`uedp-button-small-icon ${className}`.trim()}
     width="7"
     height="8"
     viewBox="0 0 7 8"
@@ -34,11 +34,11 @@ export const PlayArrowIcon: React.FC<{ className?: string }> = ({ className = ''
 );
 
 /**
- * Button Component
- * Preserved Figma Layer Name: "Button"
+ * Button Small Component
+ * Preserved Figma Layer Name: "Button Small"
  * Node ID: 54:6477
  */
-export const Button: React.FC<ButtonProps> = ({
+export const ButtonSmall: React.FC<ButtonSmallProps> = ({
   className = '',
   variant = 'primary',
   state,
@@ -65,10 +65,10 @@ export const Button: React.FC<ButtonProps> = ({
   const isActuallyDisabled = disabled || resolvedState === 'disabled';
 
   const classList = [
-    'uedp-button',
-    `uedp-button--${resolvedVariant}`,
-    resolvedState ? `uedp-button--state-${resolvedState}` : '',
-    resolvedHasIcon ? 'uedp-button--has-icon' : '',
+    'uedp-button-small',
+    `uedp-button-small--${resolvedVariant}`,
+    resolvedState ? `uedp-button-small--state-${resolvedState}` : '',
+    resolvedHasIcon ? 'uedp-button-small--has-icon' : '',
     isActuallyDisabled ? 'is-disabled' : '',
     className,
   ]
@@ -82,10 +82,13 @@ export const Button: React.FC<ButtonProps> = ({
       type="button"
       {...rest}
     >
-      <span className="uedp-button-label">{children}</span>
+      <span className="uedp-button-small-label">{children}</span>
       {resolvedHasIcon && <PlayArrowIcon />}
     </button>
   );
 };
 
-export default Button;
+// Also export as Button for convenience
+export const Button = ButtonSmall;
+
+export default ButtonSmall;

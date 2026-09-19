@@ -1,13 +1,13 @@
 /**
- * CSS for Button Component
- * Preserved Figma Layer Name: "Button"
+ * CSS for Button Small Component
+ * Preserved Figma Layer Name: "Button Small"
  * Node ID: 54:6477
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600;700&display=swap');
 
 /* Base Button (Pill Shape) */
-.uedp-button {
+.uedp-button-small {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
@@ -29,7 +29,7 @@
 }
 
 /* Right-pointing triangle arrow icon */
-.uedp-button-icon {
+.uedp-button-small-icon {
   display: inline-block;
   width: 7px;
   height: 8px;
@@ -39,22 +39,22 @@
 /* ==========================================================================
    PRIMARY VARIANT (Solid White -> Inverted Dark)
    ========================================================================== */
-.uedp-button--primary {
+.uedp-button-small--primary {
   background-color: #FFFFFF;
   border: 1px solid #FFFFFF;
   color: #000000;
 }
 
-.uedp-button--primary:hover:not(:disabled),
-.uedp-button--primary.uedp-button--state-hover {
+.uedp-button-small--primary:hover:not(:disabled),
+.uedp-button-small--primary.uedp-button-small--state-hover {
   background-color: #000000;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
 }
 
-.uedp-button--primary.is-disabled,
-.uedp-button--primary:disabled,
-.uedp-button--primary.uedp-button--state-disabled {
+.uedp-button-small--primary.is-disabled,
+.uedp-button-small--primary:disabled,
+.uedp-button-small--primary.uedp-button-small--state-disabled {
   background-color: #5C5C5C;
   border: 1px solid transparent;
   color: #2E2E2E;
@@ -64,34 +64,34 @@
 /* ==========================================================================
    ACCENT VARIANT (Dark Outline -> Neon Lime Accent)
    ========================================================================== */
-.uedp-button--accent {
+.uedp-button-small--accent {
   background-color: #000000;
   border: 1px solid #FFFFFF;
   color: #B7FF4D;
 }
 
-.uedp-button--accent:hover:not(:disabled),
-.uedp-button--accent.uedp-button--state-hover {
+.uedp-button-small--accent:hover:not(:disabled),
+.uedp-button-small--accent.uedp-button-small--state-hover {
   background-color: #000000;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
 }
 
-.uedp-button--accent.uedp-button--state-default {
+.uedp-button-small--accent.uedp-button-small--state-default {
   background-color: #000000;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
 }
 
-.uedp-button--accent.uedp-button--state-active {
+.uedp-button-small--accent.uedp-button-small--state-active {
   background-color: #000000;
   border: 1px solid #FFFFFF;
   color: #B7FF4D;
 }
 
-.uedp-button--accent.is-disabled,
-.uedp-button--accent:disabled,
-.uedp-button--accent.uedp-button--state-disabled {
+.uedp-button-small--accent.is-disabled,
+.uedp-button-small--accent:disabled,
+.uedp-button-small--accent.uedp-button-small--state-disabled {
   background-color: #1C1C1C;
   border: 1px solid #333333;
   color: #4A5C2F;
@@ -101,22 +101,22 @@
 /* ==========================================================================
    SECONDARY VARIANT (Dark Outline White)
    ========================================================================== */
-.uedp-button--secondary {
+.uedp-button-small--secondary {
   background-color: #000000;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
 }
 
-.uedp-button--secondary:hover:not(:disabled),
-.uedp-button--secondary.uedp-button--state-hover {
+.uedp-button-small--secondary:hover:not(:disabled),
+.uedp-button-small--secondary.uedp-button-small--state-hover {
   background-color: #FFFFFF;
   border: 1px solid #FFFFFF;
   color: #000000;
 }
 
-.uedp-button--secondary.is-disabled,
-.uedp-button--secondary:disabled,
-.uedp-button--secondary.uedp-button--state-disabled {
+.uedp-button-small--secondary.is-disabled,
+.uedp-button-small--secondary:disabled,
+.uedp-button-small--secondary.uedp-button-small--state-disabled {
   background-color: #1C1C1C;
   border: 1px solid #333333;
   color: #555555;
@@ -124,7 +124,7 @@
 }
 
 /* Focus Visible */
-.uedp-button:focus-visible {
+.uedp-button-small:focus-visible {
   outline: 2px solid #B7FF4D;
   outline-offset: 2px;
 }

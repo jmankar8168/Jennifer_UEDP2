@@ -25,7 +25,8 @@ const PROTECTED = new Set([
   'Component15',
   'JobCards',
   'Tab',
-  'Button'
+  'Button',
+  'ButtonSmall'
 ]);
 
 
