@@ -5,7 +5,7 @@
 
 export { Button } from './components/Button/Button';
 export { ButtonSmall } from './components/ButtonSmall/ButtonSmall';
-export { HelpTypeOptionsLargeTouchTargets } from './components/HelpTypeOptionsLargeTouchTargets/HelpTypeOptionsLargeTouchTargets';
+export { OptionsButton, OptionsButton as HelpTypeOptionsLargeTouchTargets } from './components/OptionsButton/OptionsButton';
 export { ModeToggle } from './components/ModeToggle/ModeToggle';
 export { Search } from './components/Search/Search';
 export { Radio } from './components/Radio/Radio';

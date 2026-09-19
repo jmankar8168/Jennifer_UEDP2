@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './HelpTypeOptionsLargeTouchTargets.css';
+import './OptionsButton.css';
 
-export interface HelpTypeOptionsLargeTouchTargetsProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Literal Figma Layer Name: "help type options — large touch targets" */
+export interface OptionsButtonProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Literal Figma Layer Name: "help type options — large touch targets" (Options Button) */
   className?: string;
   children?: React.ReactNode;
   State?: 'Default' | 'Hover' | 'job cards/Default' | 'job cards/Hover';
@@ -12,11 +12,11 @@ export interface HelpTypeOptionsLargeTouchTargetsProps extends React.HTMLAttribu
 }
 
 /**
- * HelpTypeOptionsLargeTouchTargets Component
+ * Options Button Component
  * Preserved Figma Layer Name: "help type options — large touch targets"
  * Node ID: 16:841
  */
-export const HelpTypeOptionsLargeTouchTargets: React.FC<HelpTypeOptionsLargeTouchTargetsProps> = ({
+export const OptionsButton: React.FC<OptionsButtonProps> = ({
   className = '',
   children,
   State = 'Default',
@@ -42,13 +42,13 @@ export const HelpTypeOptionsLargeTouchTargets: React.FC<HelpTypeOptionsLargeTouc
   const isJobCard = effectiveState.startsWith('job cards');
   const isHover = effectiveState === 'Hover' || effectiveState === 'job cards/Hover';
 
-  const stateClass = `uedp-helptypeoptionslargetouchtargets--state-${effectiveState
+  const stateClass = `uedp-options-button--state-${effectiveState
     .toLowerCase()
     .replace(/[^a-z0-9]/g, '-')}`;
 
   return (
     <div
-      className={`uedp-helptypeoptionslargetouchtargets ${stateClass} ${className}`.trim()}
+      className={`uedp-options-button ${stateClass} ${className}`.trim()}
       onMouseEnter={(e) => {
         setIsHovered(true);
         onMouseEnter?.(e);
@@ -65,16 +65,16 @@ export const HelpTypeOptionsLargeTouchTargets: React.FC<HelpTypeOptionsLargeTouc
         children
       ) : (
         <>
-          <div className="uedp-helptype-text-group">
-            <span className="uedp-helptype-tag">{tag}</span>
-            <span className="uedp-helptype-title">{title}</span>
+          <div className="uedp-options-button-text-group">
+            <span className="uedp-options-button-tag">{tag}</span>
+            <span className="uedp-options-button-title">{title}</span>
           </div>
 
-          <div className="uedp-helptype-icon-container" aria-hidden="true">
+          <div className="uedp-options-button-icon-container" aria-hidden="true">
             {isJobCard ? (
               /* 24x24 Arrow Right (Node ID 30:159 / 30:174) */
               <svg
-                className="uedp-helptype-arrow-icon"
+                className="uedp-options-button-arrow-icon"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -97,8 +97,8 @@ export const HelpTypeOptionsLargeTouchTargets: React.FC<HelpTypeOptionsLargeTouc
             ) : (
               /* Chevron Right Border (Node ID 16:845 / 16:849) */
               <div
-                className={`uedp-helptype-chevron-icon ${
-                  isHover ? 'uedp-helptype-chevron-icon--hover' : ''
+                className={`uedp-options-button-chevron-icon ${
+                  isHover ? 'uedp-options-button-chevron-icon--hover' : ''
                 }`}
               />
             )}
@@ -109,4 +109,8 @@ export const HelpTypeOptionsLargeTouchTargets: React.FC<HelpTypeOptionsLargeTouc
   );
 };
 
-export default HelpTypeOptionsLargeTouchTargets;
+// Backwards compatibility alias
+export const HelpTypeOptionsLargeTouchTargets = OptionsButton;
+export type HelpTypeOptionsLargeTouchTargetsProps = OptionsButtonProps;
+
+export default OptionsButton;

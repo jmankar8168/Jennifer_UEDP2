@@ -1,19 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
-import { HelpTypeOptionsLargeTouchTargets } from './HelpTypeOptionsLargeTouchTargets';
+import { OptionsButton } from './OptionsButton';
 
-const meta: Meta<typeof HelpTypeOptionsLargeTouchTargets> = {
-  title: 'Components/HelpTypeOptionsLargeTouchTargets',
-  component: HelpTypeOptionsLargeTouchTargets,
+const meta: Meta<typeof OptionsButton> = {
+  title: 'Components/Options Button',
+  component: OptionsButton,
   tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
-        component: `Figma Layer Name: **help type options — large touch targets**\n\n
+        component: `Figma Layer Name: **help type options — large touch targets** (Options Button)\n\n
 ### Figma Component Specifications
 | Property | Value |
 | --- | --- |
 | **Exact Layer Name** | \`help type options — large touch targets\` |
+| **Component Name** | \`Options Button\` |
 | **Figma Node ID** | \`16:841\` |
 | **Component Type** | \`COMPONENT_SET\` |
 | **Variants** | \`Default\` (16:842), \`Hover\` (16:846), \`job cards/Default\` (30:155), \`job cards/Hover\` (30:170) |
@@ -64,7 +65,7 @@ const meta: Meta<typeof HelpTypeOptionsLargeTouchTargets> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof HelpTypeOptionsLargeTouchTargets>;
+type Story = StoryObj<typeof OptionsButton>;
 
 export const Default: Story = {
   args: {
@@ -126,7 +127,7 @@ export const InteractiveDemo: Story = {
           </h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {helpOptions.map((opt) => (
-              <HelpTypeOptionsLargeTouchTargets
+              <OptionsButton
                 key={opt.id}
                 tag={opt.tag}
                 title={opt.title}
@@ -146,7 +147,7 @@ export const InteractiveDemo: Story = {
           </h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {jobCardOptions.map((opt) => (
-              <HelpTypeOptionsLargeTouchTargets
+              <OptionsButton
                 key={opt.id}
                 State="job cards/Default"
                 tag={opt.tag}
@@ -175,28 +176,28 @@ export const AllVariants: Story = {
         <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
           VARIANT: Default (82px)
         </p>
-        <HelpTypeOptionsLargeTouchTargets State="Default" />
+        <OptionsButton State="Default" />
       </div>
 
       <div>
         <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
           VARIANT: Hover (82px, White Border)
         </p>
-        <HelpTypeOptionsLargeTouchTargets State="Hover" />
+        <OptionsButton State="Hover" />
       </div>
 
       <div>
         <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
           VARIANT: job cards/Default (70px, White Border + Arrow)
         </p>
-        <HelpTypeOptionsLargeTouchTargets State="job cards/Default" />
+        <OptionsButton State="job cards/Default" />
       </div>
 
       <div>
         <p style={{ color: '#888', fontFamily: 'Space Mono, monospace', fontSize: '10px', marginBottom: '8px' }}>
           VARIANT: job cards/Hover (70px, Green Border + Green Arrow)
         </p>
-        <HelpTypeOptionsLargeTouchTargets State="job cards/Hover" />
+        <OptionsButton State="job cards/Hover" />
       </div>
     </div>
   ),
