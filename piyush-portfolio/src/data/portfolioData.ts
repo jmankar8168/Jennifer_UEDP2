@@ -291,7 +291,6 @@ export const BUILDS_PROJECTS: BuildProject[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'Behance', url: 'https://www.behance.net/jennimankar' },
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/jennifer-mankar-733658363/' },
-  { label: 'Instagram', url: 'https://www.instagram.com/jennifermankar/' },
   { label: 'Email', email: 'jennifermankar000@gmail.com' },
 ];
 
