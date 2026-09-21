@@ -20,11 +20,17 @@ export default function FigmaRightSidebar({
   onToggleTheme,
 }: FigmaRightSidebarProps) {
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [downloadedResume, setDownloadedResume] = useState(false);
 
   const handleCopyEmail = (email: string) => {
     navigator.clipboard.writeText(email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  const handleDownloadResume = () => {
+    setDownloadedResume(true);
+    setTimeout(() => setDownloadedResume(false), 2500);
   };
 
   const bgSwatches = [
@@ -180,14 +186,41 @@ export default function FigmaRightSidebar({
                 </a>
               );
             })}
+
+            {/* Resume Row */}
+            <a
+              href="/Jennifer_Mankar_Resume.pdf"
+              download="Jennifer_Mankar_Resume.pdf"
+              onClick={handleDownloadResume}
+              className="flex items-center justify-between px-2.5 py-1.5 rounded hover:bg-[var(--figma-hover)] text-[var(--figma-text)] transition-colors group cursor-pointer"
+              title="Download Resume"
+            >
+              <span className="font-medium text-[11px]">Resume</span>
+              <span className="text-[var(--figma-blue)] flex items-center justify-center p-0.5 group-hover:scale-110 transition-transform">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Copy Toast Indicator */}
-      {copiedEmail && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-[#1e1e1e] text-white text-[11px] font-medium rounded-full shadow-lg pointer-events-none animate-fade-in-up-centered">
-          Email copied ✓
+      {/* Toast Indicator */}
+      {(copiedEmail || downloadedResume) && (
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-[#1e1e1e] text-white text-[11px] font-medium rounded-full shadow-lg pointer-events-none animate-fade-in-up-centered z-50">
+          {copiedEmail ? 'Email copied ✓' : 'Resume downloaded ✓'}
         </div>
       )}
 
