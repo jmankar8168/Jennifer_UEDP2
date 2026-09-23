@@ -42,7 +42,7 @@ export interface WorkProject {
   appHero?: string;
   video?: string;
   videoBottom?: string;
-  gallery: string[];
+  gallery?: string[];
   x: number;
   y: number;
 }
@@ -114,6 +114,10 @@ export const TAG_STYLES: Record<string, { color: string; bg: string }> = {
   'Website Design': { color: '#8253FF', bg: 'rgba(130, 83, 255, 0.10)' },
   'Mini App Design': { color: '#FF2ADF', bg: 'rgba(255, 42, 223, 0.10)' },
   'Rebrand': { color: '#009EFF', bg: 'rgba(0, 158, 255, 0.10)' },
+  'Concept & Research': { color: '#8E7CC3', bg: 'rgba(142, 124, 195, 0.14)' },
+  'Storyboarding': { color: '#D98E5F', bg: 'rgba(217, 142, 95, 0.14)' },
+  'Wireframes & Testing': { color: '#8FAE86', bg: 'rgba(143, 174, 134, 0.14)' },
+  'AR Design': { color: '#009EFF', bg: 'rgba(0, 158, 255, 0.10)' },
 };
 
 export const ABOUT_COLLAGE: CollageItem[] = [
@@ -135,22 +139,20 @@ export const WORK_PROJECTS: WorkProject[] = [
   {
     id: 'bento',
     title: 'Beyond sign',
-    description: 'Bento.fun is a social prediction market platform built to turn predictions into playable, repeatable community experiences',
+    description: 'Beyond Sign is an AR learning app that helps sign-language learners and non-signers practice and communicate through real-time gesture recognition',
     image: '/work/bento/card.webp',
     logo: '/work/bento/logo.webp',
-    tags: ['Rebrand', 'Visual Design', 'Product Design'],
+    tags: ['Concept & Research', 'Storyboarding', 'Wireframes & Testing'],
     url: 'https://www.behance.net/gallery/249531545/Beyond-Sign-Learning-Communication-Through-AR',
-    role: 'Brand Designer · Product Designer',
-    problem: 'Prediction markets focus on bets, not behaviour. They lack social features and shared memory, making them overwhelming and exclusive. Bento aims to be the opposite.',
-    brandTiles: ['/work/bento/tile-orange.webp', '/work/bento/tile-black.webp', '/work/bento/tile-green.webp', '/work/bento/tile-blue.webp'],
+    role: 'Augmented Product Design · AR & UI/UX',
+    problem: 'An AR-based learning and communication app that helps sign-language learners and non-signers practice, understand, and communicate through immersive 3D hand-gesture recognition and real-time contextual overlays — reducing the barrier between signers and non-signers in daily situations.',
     approach: [
-      'Built visual identity to make predictions fun, social, and accessible to all.',
-      'Designed website to be inviting and clear, matching product personality.',
-      'Led product design for alpha MVP, including user-generated markets and contests.',
-      'Focused on community-driven flexible gameplay.',
-      'Created launch videos and social creatives to extend brand energy.'
+      'Mapped the concept to a brainstorm — Branched the core idea into Learning, Communication, Accessibility, Immersion, and Technology & Interaction, narrowing to research-supported directions.',
+      'Storyboarded two user journeys — Maya (a learner building confidence with a deaf friend) and David (a store owner serving a deaf customer) across 6-frame struggle-to-resolution arcs.',
+      'Built wireframes in Figma — Prototyped the interactive flows established by the storyboards before moving into environment-specific design.',
+      'Designed the AR experience for indoor vs. outdoor use — Tuned hand-tracking, overlay size, contrast outlines, and feedback per lighting and distraction levels.',
+      'Shared prototypes with target groups and collected feedback — Tested with learners and non-signers, translating responses into a concrete refinement plan (gamification & hands-free modes).',
     ],
-    gallery: ['/work/bento/all-tournaments.webp', '/work/bento/tournament.webp', '/work/bento/create-details.webp'],
     x: 2200,
     y: 80,
   },
