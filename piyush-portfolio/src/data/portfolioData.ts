@@ -134,12 +134,12 @@ export const ABOUT_COLLAGE: CollageItem[] = [
 export const WORK_PROJECTS: WorkProject[] = [
   {
     id: 'bento',
-    title: 'Bento.fun',
+    title: 'Beyond sign',
     description: 'Bento.fun is a social prediction market platform built to turn predictions into playable, repeatable community experiences',
     image: '/work/bento/card.webp',
     logo: '/work/bento/logo.webp',
     tags: ['Rebrand', 'Visual Design', 'Product Design'],
-    url: 'https://bento.fun',
+    url: 'https://www.behance.net/gallery/249531545/Beyond-Sign-Learning-Communication-Through-AR',
     role: 'Brand Designer · Product Designer',
     problem: 'Prediction markets focus on bets, not behaviour. They lack social features and shared memory, making them overwhelming and exclusive. Bento aims to be the opposite.',
     brandTiles: ['/work/bento/tile-orange.webp', '/work/bento/tile-black.webp', '/work/bento/tile-green.webp', '/work/bento/tile-blue.webp'],

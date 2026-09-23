@@ -52,7 +52,7 @@ export default function CaseStudyModal({ project, onClose }: CaseStudyModalProps
                 rel="noopener noreferrer"
                 className="px-3.5 py-1.5 rounded-lg bg-[var(--figma-blue)] hover:bg-[#0088ee] text-white text-[12px] font-semibold flex items-center gap-1.5 transition-colors"
               >
-                <span>Live Site</span>
+                <span>View Project</span>
                 <span className="text-[10px]">↗</span>
               </a>
             )}

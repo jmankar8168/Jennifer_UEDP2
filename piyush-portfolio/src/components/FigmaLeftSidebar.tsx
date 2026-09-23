@@ -124,7 +124,7 @@ export default function FigmaLeftSidebar({
       { id: 'about-bio', label: 'Bio & Overview' },
     ],
     work: [
-      { id: 'bento', label: 'Bento.fun' },
+      { id: 'bento', label: 'Beyond sign' },
       { id: 'inner-circle', label: 'Inner Circle' },
       { id: 'velar', label: 'Velar' },
       { id: 'emerge', label: 'First Dollar' },
